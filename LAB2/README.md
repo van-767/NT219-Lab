@@ -1,93 +1,88 @@
-# Lab 2 — Manual AES-128 CTR Implementation
+# Lab 2 — AES-128 CTR thủ công (FIPS-197)
 
-- Triển khai thủ công chuẩn xác thuật toán `AES-128` theo FIPS-197 hoàn toàn bằng C++ thuần, không sử dụng thư viện ngoài.
-- Triển khai chế độ `CTR` (Counter Mode) biến AES thành một stream cipher thực thụ.
-- Đo lường hiệu suất (Benchmark) vòng lặp tùy chỉnh chính xác tới microsecond (us), tự động xuất kết quả ra file `benchmark_ctr.csv`.
-- Đi kèm tính năng kiểm tra tính đúng đắn (KAT) với vector chuẩn từ NIST FIPS-197 và SP 800-38A với output log siêu chi tiết.
-- Đi kèm giao diện GUI trực quan (được viết bằng `customtkinter` của Python) giao tiếp với C++ qua DLL.
+NT219 — Mật mã ứng dụng — UIT.
+Implement AES-128 (S-box, ShiftRows, MixColumns, KeyExpansion) **từ con số 0**
+bằng C++ thuần, không thư viện ngoài. Mode CTR theo NIST SP 800-38A,
+KAT theo FIPS-197 + SP 800-38A. DLL export cho GUI Python.
 
-## Cấu trúc thư mục
-- `ctr_mode.cpp`: Toàn bộ logic thuật toán AES, chế độ CTR, bộ đếm (Counter) và các công cụ CLI (Benchmark, KAT, Encrypt/Decrypt) được đóng gói gọn gàng, tối ưu trong một file duy nhất. File này cũng đóng vai trò làm thư viện DLL xuất ra cho Python gọi.
-- `fips_197.txt`: File chứa các test vector chuẩn trích xuất từ tài liệu FIPS-197 để phục vụ cho tính năng chạy KAT.
-- `aes_gui.py`: Giao diện người dùng bằng Python, sử dụng thư viện `customtkinter` để tương tác trực tiếp với lõi `ctr_mode`.
+## Cấu trúc
 
----
-
-## 1. Hướng dẫn Biên dịch (Build Instructions)
-
-Vui lòng mở Terminal/Command Prompt tại thư mục `LAB2` và chạy các lệnh dưới đây. Do mã nguồn đã được gom gọn vào một file duy nhất, việc biên dịch cực kỳ đơn giản.
-
-### Trên Windows (MinGW)
-
-**1. Build công cụ CLI (Console):**
-```bash
-g++ -O3 ctr_mode.cpp -o ctr_mode.exe
+```
+LAB2/
+├── ctr_mode.cpp          Toàn bộ logic AES + CTR + CLI + DLL export
+├── fips_197.txt          NIST FIPS-197 test vectors
+├── aes_gui.py            GUI Python (customtkinter)
+├── ctr_mode.exe / .dll   Binary build sẵn
+├── ctr_mode.so           Binary Linux
+└── output/windows/       CSV benchmark
 ```
 
-**2. Build thư viện DLL cho Python GUI:**
-```bash
+Single-file design — toàn bộ ~600 dòng C++, không build system rườm rà.
+
+## Yêu cầu
+
+- C++17, MinGW g++ (MSYS2) hoặc gcc Linux
+- Python ≥ 3.10 + `customtkinter` (chỉ GUI)
+- **Không** cần Crypto++ / OpenSSL
+
+## Build — Windows (MinGW)
+
+```powershell
+$env:PATH = "C:\msys64\mingw64\bin;$env:PATH"
+
+# CLI
+g++ -O3 ctr_mode.cpp -o ctr_mode.exe
+
+# DLL cho GUI
 g++ -O3 -shared -static ctr_mode.cpp -o ctr_mode.dll
 ```
 
-### Trên Linux
+## Build — Linux
 
-**1. Build công cụ CLI (Console):**
 ```bash
 g++ -O3 ctr_mode.cpp -o ctr_mode
-```
-
-**2. Build thư viện .so cho Python GUI:**
-```bash
 g++ -O3 -shared -fPIC ctr_mode.cpp -o ctr_mode.so
 ```
 
----
+## Sử dụng
 
-## 2. Hướng dẫn Sử dụng Công cụ (CLI & GUI)
+### KAT (FIPS-197 + SP 800-38A vectors)
 
-### 2.1. Chạy Benchmark 
-Đo lường hiệu suất của bộ code thủ công với các kích thước dữ liệu khác nhau (1KiB - 8MiB):
-```bash
-.\ctr_mode.exe --mode benchmark
-```
-Kết quả hiển thị trực tiếp ra Terminal và đồng thời tự động lưu báo cáo vào thư mục `output/windows/benchmark_ctr.csv` để bạn phân tích.
-
-### 2.2. Kiểm tra tính đúng đắn (KAT)
-Chương trình sẽ tự động đọc file `fips_197.txt` và chạy bộ test nội bộ để đảm bảo thuật toán chuẩn xác 100%:
-```bash
+```powershell
 .\ctr_mode.exe --mode kat
 ```
 
-### 2.3. Terminal Mode (Mã hóa / Giải mã chuỗi Hex)
+### Benchmark (1 KiB → 8 MiB)
 
-**Mã hóa (Encrypt):**
-Truyền vào Plaintext, Key và IV dưới dạng chuỗi Hex. Ví dụ:
-```bash
-.\ctr_mode.exe --mode encrypt --input 6bc1bee22e409f96e93d7e117393172a --key 2b7e151628aed2a6abf7158809cf4f3c --iv f0f1f2f3f4f5f6f7f8f9fafbfcfdfeff
+```powershell
+.\ctr_mode.exe --mode benchmark
 ```
+→ Output `output/windows/benchmark_ctr.csv`.
 
-**Giải mã (Decrypt):**
-Truyền vào Ciphertext, Key và IV dưới dạng chuỗi Hex.
-```bash
+### Encrypt / Decrypt (hex)
+
+```powershell
+# Encrypt — key, IV, plaintext đều là hex
+.\ctr_mode.exe --mode encrypt `
+    --input 6bc1bee22e409f96e93d7e117393172a `
+    --key   2b7e151628aed2a6abf7158809cf4f3c `
+    --iv    f0f1f2f3f4f5f6f7f8f9fafbfcfdfeff
+
+# Decrypt
 .\ctr_mode.exe --mode decrypt --input <cipher_hex> --key <key_hex> --iv <iv_hex>
 ```
 
-### 2.4. Giao diện Python GUI
-Sau khi biên dịch thành công file thư viện động `ctr_mode.dll` (hoặc `.so`), khởi chạy GUI bằng lệnh:
-```bash
+### GUI
+
+```powershell
+pip install customtkinter
 python aes_gui.py
 ```
-Trong giao diện này, việc **Sinh Key / IV (Hex)** hoàn toàn tự động và an toàn bằng hàm cấp hệ điều hành (os.urandom). Hỗ trợ mã hóa/giải mã dạng Text trực tiếp hoặc thao tác trên File cực lớn (hàng trăm MB) một cách vô cùng mượt mà.
 
----
+GUI hỗ trợ text mode hoặc file lớn (>100 MiB) qua DLL `ctr_mode.dll`.
 
-## 3. Một Số Lưu Ý Quan Trọng
+## Lưu ý
 
-1. **Không Dùng Padding**:
-   - Do CTR biến Cipher thành luồng Stream Cipher, nó không yêu cầu kích thước Plaintext phải là bội số của 16 như CBC. Bản mã tạo ra có kích thước đúng bằng bản rõ (từng byte một), vì thế chương trình **không cần** và **không sử dụng** bất kỳ thuật toán Padding nào.
-   
-2. **Thiết kế Single-File Architecture**:
-   - Việc đưa toàn bộ logic (Core, Cipher, CLI, Benchmark, DLL Exporter) vào một file `ctr_mode.cpp` duy nhất giúp mã nguồn cực kỳ dễ đọc, dễ bảo trì và đặc biệt là dễ dàng mang đi biên dịch trên mọi môi trường (Windows/Linux) mà không lo lỗi cấu hình Build system rườm rà.
-
-3. **Giới hạn đầu vào (CLI)**:
-   - Khi dùng tính năng encrypt/decrypt trên CLI, các tham số `--input`, `--key`, `--iv` bắt buộc phải là chuỗi Hex hợp lệ. Key và IV phải có độ dài đúng 32 ký tự Hex (16 bytes = 128-bit) do mã nguồn được thiết kế chuyên biệt và tối ưu hóa chặt chẽ cho thuật toán AES-128.
+1. **Không có padding** — CTR là stream cipher, ciphertext kích thước **bằng đúng** plaintext.
+2. **Key + IV phải 16 byte** (32 ký tự hex) — implementation chuyên biệt AES-128.
+3. **Single-file architecture** — build/port dễ, không cần CMake hay tasks.json.
