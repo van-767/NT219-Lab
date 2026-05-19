@@ -1,0 +1,2 @@
+C:\msys64\mingw64\bin\ar.exe qc D:\Study\NT219\CODE\BTVN\LAB3\bin\windows\librsa_core.a CMakeFiles/rsa_core.dir/src/rsa_core.cpp.obj
+C:\msys64\mingw64\bin\ranlib.exe D:\Study\NT219\CODE\BTVN\LAB3\bin\windows\librsa_core.a

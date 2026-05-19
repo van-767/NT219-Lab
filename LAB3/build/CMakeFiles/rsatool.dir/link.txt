@@ -1,0 +1,3 @@
+"C:\Program Files\CMake\bin\cmake.exe" -E rm -f CMakeFiles\rsatool.dir/objects.a
+C:\msys64\mingw64\bin\ar.exe qc CMakeFiles\rsatool.dir/objects.a @CMakeFiles\rsatool.dir\objects1.rsp
+C:\msys64\mingw64\bin\g++.exe -O3 -DNDEBUG -Wl,--whole-archive CMakeFiles\rsatool.dir/objects.a -Wl,--no-whole-archive -o D:\Study\NT219\CODE\BTVN\LAB3\bin\windows\rsatool.exe -Wl,--out-implib,D:\Study\NT219\CODE\BTVN\LAB3\bin\windows\librsatool.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\rsatool.dir\linkLibs.rsp

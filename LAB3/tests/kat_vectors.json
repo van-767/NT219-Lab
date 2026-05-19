@@ -1,0 +1,66 @@
+{
+  "description": "Lab 3 Section 4 'Correctness & Negative Tests', bundled under the common --kat runner. Layout: positive correctness first, then the five mandated negative cases, then fail-closed parsing. All cryptographic values are generated on-the-fly inside the runner so each test is self-contained; no fabricated NIST vectors.",
+  "tests": [
+    {
+      "name": "[POS-1] AES-256-GCM roundtrip",
+      "type": "aes_gcm_roundtrip",
+      "pt_hex": "00112233445566778899aabbccddeeff"
+    },
+    {
+      "name": "[POS-2] RSA-3072 OAEP/SHA-256 roundtrip (no label)",
+      "type": "rsa_oaep_roundtrip",
+      "bits": 3072,
+      "pt_hex": "0001020304050607080910111213141516171819202122232425262728293031",
+      "label": ""
+    },
+    {
+      "name": "[POS-3] RSA-3072 OAEP/SHA-256 roundtrip (with label)",
+      "type": "rsa_oaep_roundtrip",
+      "bits": 3072,
+      "pt_hex": "deadbeefcafef00d",
+      "label": "Lab3-UIT"
+    },
+
+    {
+      "name": "[NEG-1] Altered RSA ciphertext must fail (Lab 3 Sec.4 case 1)",
+      "type": "rsa_oaep_altered_ct",
+      "bits": 3072,
+      "pt_hex": "cafef00ddeadbeef"
+    },
+    {
+      "name": "[NEG-2] Altered AES-GCM ciphertext must fail (Lab 3 Sec.4 case 2)",
+      "type": "aes_gcm_tamper_roundtrip",
+      "pt_hex": "00112233445566778899aabbccddeeff",
+      "tamper": "ct"
+    },
+    {
+      "name": "[NEG-3] Wrong private key must fail (Lab 3 Sec.4 case 3)",
+      "type": "rsa_oaep_wrong_key",
+      "bits": 3072,
+      "pt_hex": "0011223344556677"
+    },
+    {
+      "name": "[NEG-4] Wrong OAEP label must fail (Lab 3 Sec.4 case 4)",
+      "type": "rsa_oaep_wrong_label",
+      "bits": 3072,
+      "pt_hex": "0011223344556677"
+    },
+    {
+      "name": "[NEG-5] Tampered envelope header (GCM tag) must fail (Lab 3 Sec.4 case 5)",
+      "type": "aes_gcm_tamper_roundtrip",
+      "pt_hex": "00112233445566778899aabbccddeeff",
+      "tamper": "tag"
+    },
+
+    {
+      "name": "[CLOSE-1] Malformed envelope JSON must fail closed",
+      "type": "envelope_malformed",
+      "envelope_text": "{ \"mode\": \"RSA-OAEP-AES-GCM\", \"rsa_modulus\": 3072 }"
+    },
+    {
+      "name": "[CLOSE-2] Modulus < 3072 must be refused at keygen",
+      "type": "rsa_modulus_too_small",
+      "bits": 2048
+    }
+  ]
+}

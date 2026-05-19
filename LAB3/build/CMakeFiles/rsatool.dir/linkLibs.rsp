@@ -1,0 +1,1 @@
+ D:/Study/NT219/CODE/BTVN/LAB3/bin/windows/librsa_core.a D:/Study/NT219/CODE/Crypto++/lib/cryptopp/gcc/libcryptopp.a -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 

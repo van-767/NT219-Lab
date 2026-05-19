@@ -1,0 +1,88 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "type": "shell",
+            "label": "C/C++: g++.exe build active file (MinGW)",
+            "command": "C:\\msys64\\mingw64\\bin\\g++.exe",
+            "args": [
+                "-g2",
+                "-O3",
+                "-DNDEBUG",
+                "${file}",
+                "-o",
+                "${fileDirname}\\${fileBasenameNoExtension}.exe",
+                "-D_WIN32_WINNT=0x0501",
+                "-lpthread",
+                "-I",
+                "D:\\Study\\NT219\\CODE\\Crypto++\\include",
+                "-L",
+                "D:\\Study\\NT219\\CODE\\Crypto++\\lib\\cryptopp\\gcc",
+                "-l:libcryptopp.a",
+                "-Wall"
+            ],
+            "options": {
+                "cwd": "C:\\msys64\\mingw64\\bin"
+            },
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "group": "build",
+            "detail": "compiler: MinGW g++.exe"
+        },
+        {
+            "type": "shell",
+            "label": "Build Crypto++ MSVC Debug Chuan",
+            "command": "cl.exe",
+            "args": [
+                "/Zi",
+                "/EHsc",
+                "/MTd",        
+                "/Od",         
+                "/Fe:",
+                "${fileDirname}\\${fileBasenameNoExtension}.exe",
+                "${file}",
+                "/I", 
+                "D:\\Study\\NT219\\CODE\\Crypto++\\include",
+                "/link",
+                "/LIBPATH:D:\\Study\\NT219\\CODE\\Crypto++\\lib\\cryptopp\\msvc",
+                "cryptlib.lib"
+            ],
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
+            "problemMatcher": ["$msCompile"],
+            "group": "build",
+            "detail": "compiler: MSVC cl.exe"
+        },
+        {
+            "type": "shell",
+            "label": "C/C++: clang++ build active file (Clang)",
+            "command": "C:\\msys64\\mingw64\\bin\\clang++.exe",
+            "args": [
+                "-std=c++17",
+                "-O3",
+                "-DNDEBUG",
+                "${file}",
+                "-o",
+                "${fileDirname}\\${fileBasenameNoExtension}.exe",
+                "-D_WIN32_WINNT=0x0501",
+                "-lpthread",
+                "-I",
+                "D:\\Study\\NT219\\CODE\\Crypto++\\include",
+                "-L",
+                "D:\\Study\\NT219\\CODE\\Crypto++\\lib\\cryptopp\\clang",
+                "-l:libcryptopp.a",
+                "-Wall"
+            ],
+            "options": {
+                "cwd": "C:\\msys64\\mingw64\\bin"
+            },
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "group": "build",
+            "detail": "compiler: Clang++"
+        },
+    ]
+}
