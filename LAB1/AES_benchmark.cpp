@@ -29,6 +29,15 @@ namespace fs = std::filesystem;
 using namespace std;
 using namespace CryptoPP;
 
+string GetBenchmarkOutputDir()
+{
+#ifdef _WIN32
+    return "output/windows";
+#else
+    return "output/linux";
+#endif
+}
+
 // --- helpers for encoding/decoding ---
 string base64encode(const CryptoPP::byte *data, size_t size)
 {
@@ -577,16 +586,16 @@ void GenerateKeyAndIV(const char *mode, int keySize, const char *format, const c
 // Print help message
 void PrintHelp()
 {
-    std::cout << "Usage: AES_benchmark.exe <action> <args...\n"
+    std::cout << "Usage: AES_benchmark[.exe] <action> <args...\n"
             << "Actions:\n"
             << "  genKeyIV <mode> <keySize> <format> <keyFile> <ivFile>\n"
-            << "  encrypt <mode> <keyFile> <ivFile> <inFormat> <inputFile> <outFormat> <outputFile> [--runs <n>] [--totalRounds <n>] [--aad <hex>] [--tagSize <n>]\n"
-            << "  decrypt <mode> <keyFile> <ivFile> <inFormat> <inputFile> <outFormat> <outputFile> [--runs <n>] [--totalRounds <n>] [--aad <hex>] [--tagSize <n>]\n"
+            << "  encrypt <mode> <keyIVFormat> <keyFile> <ivFile> <cipherFormat> <inputFile> <outputFile> [--runs <n>] [--totalRounds <n>] [--aad <hex>] [--tagSize <n>]\n"
+            << "  decrypt <mode> <keyIVFormat> <keyFile> <ivFile> <cipherFormat> <inputFile> <outputFile> [--runs <n>] [--totalRounds <n>] [--aad <hex>] [--tagSize <n>]\n"
             << "  help\n"
             << "  full_auto: Run full benchmark suite (no additional args)\n"
             << "Modes: ECB, CBC, CFB, OFB, CTR, XTS, GCM, CCM\n"
             << "Key Sizes: 16, 24, 32 bytes\n"
-            << "Formats: Binary, Hex, Base64\n"
+            << "Formats: Binary, Hex, Base64 (decrypt output is written as raw bytes)\n"
             << "Options:\n"
             << "  --runs <n>: Number of runs per round (default: 30)\n"
             << "  --totalRounds <n>: Total number of rounds (default: 1)\n"
@@ -620,17 +629,18 @@ int main(int argc, char *argv[])
         if (strcmp(argv[i], "--aad") == 0 && i + 1 < argc) aadHex = argv[i+1];
     }
     string aad = aadHex.empty() ? "" : hexdecode(aadHex);
-        if (action == "full_auto")
+    const string benchmarkOutputDir = GetBenchmarkOutputDir();
+    if (action == "full_auto")
     {
         // Tạo thư mục đầu ra nếu chưa có
-        fs::create_directories("output/windows");
+        fs::create_directories(benchmarkOutputDir);
         vector<string> files = {"1KiB.bin", "4KiB.bin", "16KiB.bin", "256KiB.bin", "1MiB.bin", "8MiB.bin"};
         vector<size_t> sizes = {1024, 4096, 16384, 262144, 1048576, 8388608};
         vector<string> modes = {"ECB", "CBC", "CFB", "OFB", "CTR", "XTS", "GCM", "CCM"};
 
         for (size_t f = 0; f < files.size(); ++f) {
             EnsureFileExists(files[f], sizes[f]);
-            string csvPath = "output/windows/benchmark_" + files[f] + ".csv";
+            string csvPath = benchmarkOutputDir + "/benchmark_" + files[f] + ".csv";
             ofstream csv(csvPath);
             csv << "Mode,File,Size,Operation,Run,Time(s),Throughput(MB/s)\n";
             cout << "\n========== Benchmarking " << files[f] << " ==========" << endl;
@@ -699,7 +709,7 @@ int main(int argc, char *argv[])
             }
             csv.close();
         }
-        cout << "\nFull-Auto benchmark completed. CSV files saved to output/windows/" << endl;
+        cout << "\nFull-Auto benchmark completed. CSV files saved to " << benchmarkOutputDir << "/" << endl;
         return 0;
     }
     else
@@ -714,8 +724,8 @@ int main(int argc, char *argv[])
         double sizeMB = fileSize / (1024.0 * 1024.0);
 
         // Mở file CSV
-        fs::create_directories("output/windows");
-        string csvPath = string("output/windows/benchmark_") + argv[7] + ".csv";
+        fs::create_directories(benchmarkOutputDir);
+        string csvPath = benchmarkOutputDir + "/benchmark_" + argv[7] + ".csv";
         ofstream csv(csvPath);
         csv << "Mode,File,Size,Operation,Run,Time(s),Throughput(MB/s)\n";
 
@@ -765,8 +775,8 @@ int main(int argc, char *argv[])
         double sizeMB = fileSize / (1024.0 * 1024.0);
 
         // Mở file CSV
-        fs::create_directories("output/windows");
-        string csvPath = string("output/windows/benchmark_") + argv[7] + ".csv";
+        fs::create_directories(benchmarkOutputDir);
+        string csvPath = benchmarkOutputDir + "/benchmark_" + argv[7] + ".csv";
         ofstream csv(csvPath);
         csv << "Mode,File,Size,Operation,Run,Time(s),Throughput(MB/s)\n";
 
@@ -810,4 +820,3 @@ int main(int argc, char *argv[])
     }
     return 0;
 }
-

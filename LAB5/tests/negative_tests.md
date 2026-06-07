@@ -1,9 +1,16 @@
 # Lab 5 — Correctness & Negative Tests (CLI demo)
 
 File này chứa toàn bộ lệnh CLI để **chạy tay** từng case theo spec Lab 5 §3.
-Copy từng block, dán vào terminal là chạy được. Ở Windows dùng PowerShell,
-Linux/MSYS2 dùng bash — phần lệnh `ECDSA / RSAPSS` giống nhau (Windows thay
-bằng `.\bin\windows\ECDSA.exe` v.v).
+Copy từng block, dán vào terminal là chạy được.
+
+- Windows: dùng PowerShell, binary ở `bin/windows/`
+- Linux: dùng bash, binary ở `bin/linux/`
+
+Phần lớn ví dụ bên dưới viết theo PowerShell để tiện demo. Khi chạy trên
+Linux, chỉ cần đổi đường dẫn executable:
+
+- `..\..\bin\windows\ECDSA.exe` -> `../../bin/linux/ECDSA`
+- `..\..\bin\windows\RSAPSS.exe` -> `../../bin/linux/RSAPSS`
 
 Để chạy nhanh toàn bộ một lượt:
 
@@ -12,8 +19,14 @@ bằng `.\bin\windows\ECDSA.exe` v.v).
 .\bin\windows\RSAPSS.exe kat
 ```
 
+```bash
+./bin/linux/ECDSA kat
+./bin/linux/RSAPSS kat
+```
+
 `kat` tự sinh khoá + chữ ký trong `%TEMP%` rồi in `PASS/FAIL` từng case.
-Phần dưới là **bản chạy tay tương đương**, kèm output mong đợi để báo cáo.
+Trên Linux, tool sinh file tạm trong `/tmp`. Phần dưới là **bản chạy tay
+tương đương**, kèm output mong đợi để báo cáo.
 
 ---
 
@@ -36,7 +49,21 @@ Set-Content -NoNewline -Encoding utf8 msg1.bin "Hello Lab5"
 Set-Content -NoNewline -Encoding utf8 msg2.bin "Other msg"
 ```
 
-(Bash: dùng `mkdir -p tests/work && cd tests/work` và `printf 'Hello Lab5' > msg1.bin`.)
+Phiên bản Linux tương đương:
+
+```bash
+mkdir -p tests/work
+cd tests/work
+
+../../bin/linux/ECDSA keygen --algo ecdsa-p256 --priv ec_A_priv.pem --pub ec_A_pub.pem
+../../bin/linux/ECDSA keygen --algo ecdsa-p256 --priv ec_B_priv.pem --pub ec_B_pub.pem
+
+../../bin/linux/RSAPSS keygen --bits 3072 --priv rsa_A_priv.pem --pub rsa_A_pub.pem
+../../bin/linux/RSAPSS keygen --bits 3072 --priv rsa_B_priv.pem --pub rsa_B_pub.pem
+
+printf 'Hello Lab5' > msg1.bin
+printf 'Other msg' > msg2.bin
+```
 
 ---
 
@@ -248,6 +275,11 @@ Sau khi đã demo thủ công ở trên, chạy:
 ```powershell
 ..\..\bin\windows\ECDSA.exe  kat
 ..\..\bin\windows\RSAPSS.exe kat
+```
+
+```bash
+../../bin/linux/ECDSA kat
+../../bin/linux/RSAPSS kat
 ```
 
 Mỗi case in `PASS` / `FAIL` rồi `Summary: N/N cases passed`. Exit code 0

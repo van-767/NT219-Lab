@@ -14,7 +14,7 @@ LAB1/
 ├── aes_core.cpp / .h     Lõi DLL cho GUI (extern "C")
 ├── aes_gui.py            GUI Python (customtkinter)
 ├── KAT/                  NIST test vectors (CCM, GCM, AES KAT)
-├── output/windows/       CSV benchmark output
+├── output/               CSV benchmark output theo hệ điều hành
 ├── run_negative_tests.py Negative test driver
 └── .vscode/tasks.json    Lệnh build cho từng file
 ```
@@ -57,12 +57,21 @@ g++ -O3 -shared -fPIC -DAES_CORE_EXPORTS aes_core.cpp -lcryptopp -o aes_core.so
 ```powershell
 .\AES_benchmark.exe full_auto
 ```
-→ Output CSV vào `output/windows/benchmark_*.csv` với cột `Mode,File,Size,Operation,Run,Time(s),Throughput(MB/s)`.
+
+```bash
+./AES_benchmark full_auto
+```
+
+→ Windows ghi CSV vào `output/windows/benchmark_*.csv`, Linux ghi vào `output/linux/benchmark_*.csv`, với cột `Mode,File,Size,Operation,Run,Time(s),Throughput(MB/s)`.
 
 ### KAT (NIST vectors)
 
 ```powershell
 .\AES_KAT.exe --kat
+```
+
+```bash
+./AES_KAT --kat
 ```
 
 ### Sinh khoá + mã hoá thủ công
@@ -71,11 +80,22 @@ g++ -O3 -shared -fPIC -DAES_CORE_EXPORTS aes_core.cpp -lcryptopp -o aes_core.so
 # Sinh Key + IV ngẫu nhiên (ví dụ CBC, 16 byte)
 .\AES_benchmark.exe genKeyIV CBC 16 Hex key.hex iv.hex
 
-# Mã hoá
-.\AES_benchmark.exe encrypt CBC key.hex iv.hex Hex plain.txt Hex cipher.hex --runs 30 --totalRounds 1
+# Mã hoá (key/iv đang ở định dạng Hex, ciphertext output dạng Hex)
+.\AES_benchmark.exe encrypt CBC Hex key.hex iv.hex Hex plain.txt cipher.hex --runs 30 --totalRounds 1
 
-# Giải mã
-.\AES_benchmark.exe decrypt CBC key.hex iv.hex Hex cipher.hex Binary recovered.bin --runs 30 --totalRounds 1
+# Giải mã (đầu ra plaintext được ghi raw bytes ra file)
+.\AES_benchmark.exe decrypt CBC Hex key.hex iv.hex Hex cipher.hex recovered.bin --runs 30 --totalRounds 1
+```
+
+```bash
+# Sinh Key + IV ngẫu nhiên (ví dụ CBC, 16 byte)
+./AES_benchmark genKeyIV CBC 16 Hex key.hex iv.hex
+
+# Mã hoá (key/iv đang ở định dạng Hex, ciphertext output dạng Hex)
+./AES_benchmark encrypt CBC Hex key.hex iv.hex Hex plain.txt cipher.hex --runs 30 --totalRounds 1
+
+# Giải mã (đầu ra plaintext được ghi raw bytes ra file)
+./AES_benchmark decrypt CBC Hex key.hex iv.hex Hex cipher.hex recovered.bin --runs 30 --totalRounds 1
 ```
 
 ### Negative tests

@@ -1,8 +1,8 @@
-#define SIG_BUILDING_DLL
 #include "c_api.h"
 #include "ecdsa_core.h"
 #include "rsapss_core.h"
 
+#include <stdexcept>
 #include <string>
 #include <mutex>
 

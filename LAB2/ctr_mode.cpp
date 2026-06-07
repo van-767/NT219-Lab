@@ -2,6 +2,7 @@
 // No external crypto libraries. Single-file demo with KATs.
 
 #include <bits/stdc++.h>
+#include <filesystem>
 using namespace std;
 
 using u8  = uint8_t;
@@ -502,14 +503,22 @@ void runBenchmark() {
 
     cout << "Benchmarking AES-128 CTR...\n";
 
-    // Mở file CSV
+    // Create the output directory without spawning a shell.
     #ifdef _WIN32
-    system("mkdir output\\windows 2> nul");
-    ofstream csv("output/windows/benchmark_ctr.csv");
+    const filesystem::path output_dir = "output/windows";
     #else
-    system("mkdir -p output/linux");
-    ofstream csv("output/linux/benchmark_ctr.csv");
+    const filesystem::path output_dir = "output/linux";
     #endif
+    error_code ec;
+    filesystem::create_directories(output_dir, ec);
+    if (ec) {
+        throw runtime_error("Failed to create output directory: " + ec.message());
+    }
+
+    ofstream csv(output_dir / "benchmark_ctr.csv");
+    if (!csv) {
+        throw runtime_error("Failed to open benchmark output CSV");
+    }
     csv << "Mode,InputSize,Operation,Run,Time(s),Throughput(MB/s)\n";
 
     for (size_t s = 0; s < sizes.size(); ++s) {

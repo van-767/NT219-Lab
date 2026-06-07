@@ -3,86 +3,117 @@
     "tasks": [
         {
             "type": "shell",
-            "label": "C/C++: g++.exe build active file (MinGW)",
-            "command": "C:\\msys64\\mingw64\\bin\\g++.exe",
+            "label": "C/C++: g++ build active file (Crypto++)",
+            "command": "/usr/bin/g++",
             "args": [
                 "-g2",
                 "-O3",
                 "-DNDEBUG",
                 "${file}",
                 "-o",
-                "${fileDirname}\\${fileBasenameNoExtension}.exe",
-                "-D_WIN32_WINNT=0x0501",
+                "${fileDirname}/${fileBasenameNoExtension}",
                 "-lpthread",
                 "-I",
-                "D:\\Study\\NT219\\CODE\\Crypto++\\include",
+                "/home/van767/Study/CryptoPP/include",
                 "-L",
-                "D:\\Study\\NT219\\CODE\\Crypto++\\lib\\cryptopp\\gcc",
+                "/home/van767/Study/CryptoPP/lib/gcc",
                 "-l:libcryptopp.a",
                 "-Wall"
             ],
             "options": {
-                "cwd": "C:\\msys64\\mingw64\\bin"
+                "cwd": "${workspaceFolder}"
             },
             "problemMatcher": [
                 "$gcc"
             ],
             "group": "build",
-            "detail": "compiler: MinGW g++.exe"
+            "detail": "compiler: g++ (Crypto++ static, Linux)"
         },
         {
             "type": "shell",
-            "label": "Build Crypto++ MSVC Debug Chuan",
-            "command": "cl.exe",
+            "label": "Build EXE with OpenSSL (g++)",
+            "command": "/usr/bin/g++",
             "args": [
-                "/Zi",
-                "/EHsc",
-                "/MTd",        
-                "/Od",         
-                "/Fe:",
-                "${fileDirname}\\${fileBasenameNoExtension}.exe",
+                "-g2",
+                "-O3",
+                "-DNDEBUG",
                 "${file}",
-                "/I", 
-                "D:\\Study\\NT219\\CODE\\Crypto++\\include",
-                "/link",
-                "/LIBPATH:D:\\Study\\NT219\\CODE\\Crypto++\\lib\\cryptopp\\msvc",
-                "cryptlib.lib"
+                "-o",
+                "${fileDirname}/${fileBasenameNoExtension}",
+                "-I", "/usr/include",
+                "-L", "/usr/lib/x86_64-linux-gnu",
+                "-l:libssl.a",
+                "-l:libcrypto.a",
+                "-ldl",
+                "-lpthread",
+                "-Wall"
             ],
             "options": {
                 "cwd": "${workspaceFolder}"
             },
-            "problemMatcher": ["$msCompile"],
-            "group": "build",
-            "detail": "compiler: MSVC cl.exe"
+            "problemMatcher": ["$gcc"],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "detail": "Build active file → ELF binary using OpenSSL (g++, static link)"
         },
         {
             "type": "shell",
-            "label": "C/C++: clang++ build active file (Clang)",
-            "command": "C:\\msys64\\mingw64\\bin\\clang++.exe",
+            "label": "Build SO with OpenSSL (g++)",
+            "command": "/usr/bin/g++",
+            "args": [
+                "-shared",
+                "-fPIC",
+                "-O3",
+                "-DNDEBUG",
+                "-DLIB_EXPORTS",
+                "-DRSAKEYGEN_BUILD_DLL",
+                "${file}",
+                "-o",
+                "${fileDirname}/lib${fileBasenameNoExtension}.so",
+                "-I", "/usr/include",
+                "-L", "/usr/lib/x86_64-linux-gnu",
+                "-l:libssl.a",
+                "-l:libcrypto.a",
+                "-ldl",
+                "-lpthread",
+                "-Wall"
+            ],
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
+            "problemMatcher": ["$gcc"],
+            "group": "build",
+            "detail": "Build active file → lib<name>.so using OpenSSL (g++, static link, -fPIC -shared)"
+        },
+        {
+            "type": "shell",
+            "label": "C/C++: clang++ build active file (Crypto++)",
+            "command": "/usr/bin/clang++",
             "args": [
                 "-std=c++17",
                 "-O3",
                 "-DNDEBUG",
                 "${file}",
                 "-o",
-                "${fileDirname}\\${fileBasenameNoExtension}.exe",
-                "-D_WIN32_WINNT=0x0501",
+                "${fileDirname}/${fileBasenameNoExtension}",
                 "-lpthread",
                 "-I",
-                "D:\\Study\\NT219\\CODE\\Crypto++\\include",
+                "/home/van767/Study/CryptoPP/include",
                 "-L",
-                "D:\\Study\\NT219\\CODE\\Crypto++\\lib\\cryptopp\\clang",
+                "/home/van767/Study/CryptoPP/lib/clang",
                 "-l:libcryptopp.a",
                 "-Wall"
             ],
             "options": {
-                "cwd": "C:\\msys64\\mingw64\\bin"
+                "cwd": "${workspaceFolder}"
             },
             "problemMatcher": [
                 "$gcc"
             ],
             "group": "build",
-            "detail": "compiler: Clang++"
-        },
+            "detail": "compiler: clang++ (Crypto++ static, Linux)"
+        }
     ]
 }

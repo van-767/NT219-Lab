@@ -18,6 +18,10 @@ LAB5/
 │   └── rsapss_cli.cpp         chương trình dòng lệnh RSA-PSS
 ├── gui/
 │   └── sig_gui.py             GUI PySide6 (gọi DLL qua ctypes)
+├── scripts/
+│   ├── run_bench.ps1          benchmark batch cho Windows
+│   ├── run_bench.bat          wrapper chạy PowerShell script
+│   └── run_bench.sh           benchmark batch cho Linux
 ├── tests/                     (thư mục dành cho batch verify + tài liệu test)
 ├── CMakeLists.txt
 └── README.md
@@ -58,6 +62,7 @@ File ra (Release) nằm ở `bin/windows/`:
 - `bin/windows/ECDSA.exe`        — CLI ECDSA
 - `bin/windows/RSAPSS.exe`       — CLI RSA-PSS
 - `bin/windows/libsig_core.dll`  — DLL cho GUI
+- `scripts/run_bench.ps1` / `scripts/run_bench.bat` — chạy benchmark hàng loạt
 
 ### Build bằng MSVC (tuỳ chọn)
 
@@ -76,6 +81,7 @@ cmake --build build -j
 
 File ra `bin/linux/`:
 - `bin/linux/ECDSA`, `bin/linux/RSAPSS`, `bin/linux/libsig_core.so`
+- `scripts/run_bench.sh` — chạy benchmark hàng loạt trên Linux
 
 Vì binary Windows và Linux nằm ở hai thư mục con riêng (`bin/windows/`
 vs `bin/linux/`), build lại bên nào **không ghi đè** lên bên kia.
@@ -152,6 +158,35 @@ sign,ecdsa-p256,30,1000,1024,0,87.3
 ...
 # summary,mean,87.21,median,86.50,sd,1.42,ci95_lo,86.71,ci95_hi,87.71
 ```
+
+## Chạy benchmark hàng loạt
+
+### Windows
+
+```powershell
+powershell -ExecutionPolicy Bypass -File scripts\run_bench.ps1
+```
+
+Hoặc chạy:
+
+```powershell
+scripts\run_bench.bat
+```
+
+Log CSV sẽ được ghi vào `logs/windows/`.
+
+### Linux
+
+```bash
+chmod +x scripts/run_bench.sh
+./scripts/run_bench.sh
+```
+
+Log CSV sẽ được ghi vào `logs/linux/`.
+
+Lưu ý:
+- Script giữ cùng bộ benchmark như bản Windows.
+- `RSA-PSS keygen` với `--block 1000` sẽ chạy rất lâu; nếu chỉ test nhanh, nên chạy lệnh `bench` thủ công với `--block 1`.
 
 ## Chạy GUI
 
