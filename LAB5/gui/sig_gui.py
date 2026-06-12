@@ -35,7 +35,37 @@ def _candidate_paths() -> list[Path]:
     return out
 
 
+def _add_windows_dll_dirs() -> list[str]:
+    """Python 3.8+: PATH không còn được dùng để dò DLL dependency.
+    Phải gọi os.add_dll_directory() cho MinGW runtime + OpenSSL trước khi load.
+    """
+    if platform.system() != "Windows" or not hasattr(os, "add_dll_directory"):
+        return []
+    candidates = [
+        os.environ.get("MINGW_PREFIX", ""),
+        r"C:\msys64\mingw64\bin",
+        r"C:\msys64\ucrt64\bin",
+        r"C:\msys64\clang64\bin",
+        r"C:\Program Files\OpenSSL-Win64\bin",
+        r"C:\Program Files\OpenSSL\bin",
+        r"C:\OpenSSL-Win64\bin",
+    ]
+    # MINGW_PREFIX là root → thêm /bin
+    if candidates[0] and not candidates[0].lower().endswith("bin"):
+        candidates[0] = str(Path(candidates[0]) / "bin")
+    added: list[str] = []
+    for d in candidates:
+        if d and Path(d).is_dir():
+            try:
+                os.add_dll_directory(d)
+                added.append(d)
+            except (OSError, FileNotFoundError):
+                pass
+    return added
+
+
 def _load_lib() -> C.CDLL:
+    extra_dirs = _add_windows_dll_dirs()
     tried: list[str] = []
     for p in _candidate_paths():
         if p.exists():
@@ -43,9 +73,17 @@ def _load_lib() -> C.CDLL:
                 return C.CDLL(str(p))
             except OSError as e:
                 tried.append(f"{p}: {e}")
-    msg = "Không tìm thấy libsig_core.\nĐã thử:\n" + "\n".join(str(p) for p in _candidate_paths())
+    msg = "Không tìm thấy / không load được libsig_core."
+    if extra_dirs:
+        msg += "\nĐã thêm DLL dirs: " + ", ".join(extra_dirs)
+    msg += "\n\nĐã thử các path:\n" + "\n".join(str(p) for p in _candidate_paths())
     if tried:
         msg += "\n\nLỗi cụ thể:\n" + "\n".join(tried)
+        msg += ("\n\nGợi ý: nếu báo 'one of its dependencies', mở bin\\windows\\libsig_core.dll "
+                "bằng `dumpbin /dependents` hoặc 'Dependencies' GUI để xem DLL nào thiếu.\n"
+                "Thường là libgcc_s_seh-1.dll / libstdc++-6.dll / libwinpthread-1.dll "
+                "(MinGW) hoặc libcrypto-3-x64.dll (OpenSSL). Thêm thư mục chứa chúng vào "
+                "MINGW_PREFIX hoặc copy cạnh libsig_core.dll.")
     raise SystemExit(msg)
 
 
