@@ -55,7 +55,7 @@ size_t algo_fixed_outlen(Algo a) {
     }
 }
 
-// Tạo hash transformation tương ứng với algo. Caller phải free.
+// Create the hash transformation for the selected algorithm. Caller frees it.
 static HashTransformation* make_hash(Algo a, size_t xof_len = 0) {
     switch (a) {
         case Algo::SHA224:   return new SHA224();
@@ -67,10 +67,10 @@ static HashTransformation* make_hash(Algo a, size_t xof_len = 0) {
         case Algo::SHA3_384: return new SHA3_384();
         case Algo::SHA3_512: return new SHA3_512();
         case Algo::SHAKE128:
-            if (xof_len == 0) throw std::runtime_error("SHAKE128 cần --outlen > 0");
+            if (xof_len == 0) throw std::runtime_error("SHAKE128 requires --outlen > 0");
             return new SHAKE128(xof_len);
         case Algo::SHAKE256:
-            if (xof_len == 0) throw std::runtime_error("SHAKE256 cần --outlen > 0");
+            if (xof_len == 0) throw std::runtime_error("SHAKE256 requires --outlen > 0");
             return new SHAKE256(xof_len);
     }
     throw std::runtime_error("Unknown algo");
@@ -109,7 +109,7 @@ Bytes hash_file_streamed(Algo a, const std::string& path, size_t xof_len) {
     return digest;
 }
 
-// ──── Helpers ────────────────────────────────────────────────────────
+// Helpers
 Bytes read_file(const std::string& path) {
     std::ifstream f(path, std::ios::binary);
     if (!f) throw std::runtime_error("Cannot open: " + path);

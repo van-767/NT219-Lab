@@ -1,5 +1,5 @@
-// Lab 4 Task 1 — Hashing core (SHA-2, SHA-3, SHAKE) qua Crypto++.
-// Dùng chung cho CLI + DLL export.
+// Lab 4 Task 1 - Hashing core (SHA-2, SHA-3, SHAKE) through Crypto++.
+// Shared by CLI and DLL export.
 #pragma once
 #include <string>
 #include <vector>
@@ -18,13 +18,13 @@ enum class Algo {
 Algo        algo_from_string(const std::string& s);
 const char* algo_to_string(Algo a);
 bool        algo_is_xof(Algo a);            // true cho SHAKE128/256
-size_t      algo_fixed_outlen(Algo a);      // 0 nếu XOF
+size_t      algo_fixed_outlen(Algo a);      // 0 for XOF
 
-// Hash buffer / file. Với XOF phải truyền out_len > 0.
+// Hash buffer / file. XOF algorithms require out_len > 0.
 Bytes hash_bytes(Algo a, const Bytes& msg, size_t xof_len = 0);
 Bytes hash_file (Algo a, const std::string& path, size_t xof_len = 0);
 
-// Streamed (cho file lớn nhiều GB) — đọc theo chunk 64 KiB.
+// Streamed file hashing for large files. Reads 64 KiB chunks.
 Bytes hash_file_streamed(Algo a, const std::string& path, size_t xof_len = 0);
 
 // Helpers

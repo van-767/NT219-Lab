@@ -1,4 +1,4 @@
-// HASH_LAB_BUILD_DLL được CMake set qua target_compile_definitions.
+// HASH_LAB_BUILD_DLL is set by CMake through target_compile_definitions.
 #include "c_api.h"
 #include "hash_core.h"
 

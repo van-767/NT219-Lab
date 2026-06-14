@@ -46,6 +46,7 @@ else()
       "$ENV{LIBOQS_ROOT}"
       "C:/msys64/mingw64"
       "C:/liboqs"
+      "D:/liboqs"
       "D:/Study/NT219/CODE/liboqs"
       "/usr/local"
       "/usr")

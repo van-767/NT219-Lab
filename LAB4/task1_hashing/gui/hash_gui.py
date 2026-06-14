@@ -1,5 +1,5 @@
 """
-PySide6 GUI cho Lab 4 Task 1 — gọi libhash_core.dll qua ctypes.
+PySide6 GUI for Lab 4 Task 1. Calls libhash_core through ctypes.
 """
 from __future__ import annotations
 
@@ -17,7 +17,7 @@ from PySide6.QtWidgets import (
 )
 
 
-# ── load DLL ──────────────────────────────────────────────────────────
+# load DLL
 def _candidates() -> list[str]:
     here = os.path.dirname(os.path.abspath(__file__))
     subdir = ("windows" if platform.system() == "Windows"
@@ -47,7 +47,7 @@ def load_lib() -> ctypes.CDLL:
     for p in _candidates():
         tried.append(p)
         if os.path.isfile(p): return ctypes.CDLL(p)
-    raise FileNotFoundError("libhash_core not found. Build trước.\n  " + "\n  ".join(tried))
+    raise FileNotFoundError("libhash_core not found. Build first.\n  " + "\n  ".join(tried))
 
 
 lib = load_lib()
@@ -70,12 +70,12 @@ def _b(s: str) -> bytes: return s.encode("utf-8")
 def _err() -> str: return lib.hash_last_error().decode("utf-8", errors="replace")
 
 
-# ── UI helper ─────────────────────────────────────────────────────────
+# UI helper
 class _FilePicker(QWidget):
     def __init__(self, parent=None):
         super().__init__(parent)
         self.edit = QLineEdit()
-        btn = QPushButton("…"); btn.setFixedWidth(28); btn.clicked.connect(self._browse)
+        btn = QPushButton("..."); btn.setFixedWidth(28); btn.clicked.connect(self._browse)
         lay = QHBoxLayout(self); lay.setContentsMargins(0,0,0,0)
         lay.addWidget(self.edit, 1); lay.addWidget(btn)
     def _browse(self):
@@ -89,7 +89,7 @@ ALGOS = ["sha224","sha256","sha384","sha512",
          "shake128","shake256"]
 
 
-# ── Tabs ──────────────────────────────────────────────────────────────
+# Tabs
 class DigestTab(QWidget):
     def __init__(self):
         super().__init__()
@@ -119,7 +119,7 @@ class DigestTab(QWidget):
 
     def do_file(self):
         if not self.file.text():
-            self.log.append("ERROR: chọn file trước"); return
+            self.log.append("ERROR: choose a file first"); return
         buf = create_string_buffer(self.outlen.value() * 2 + 32)
         rc = lib.hash_file(_b(self.algo.currentText()), _b(self.file.text()),
                            self.outlen.value(), buf, len(buf))
@@ -171,15 +171,15 @@ class BenchTab(QWidget):
         if rc != 0: self.log.append(f"FAIL: {_err()}"); return
         self.log.append(
             f"{self.algo.currentText():>10} {self.size.value():>9}B  "
-            f"mean={m.value:.3f}μs  median={med.value:.3f}μs  "
-            f"sd={s.value:.3f}  95%CI=[{lo.value:.3f}, {hi.value:.3f}]μs  "
-            f"≈ {tp.value:.1f} MiB/s")
+            f"mean={m.value:.3f}us  median={med.value:.3f}us  "
+            f"sd={s.value:.3f}  95%CI=[{lo.value:.3f}, {hi.value:.3f}]us  "
+            f"~= {tp.value:.1f} MiB/s")
 
 
 class Main(QMainWindow):
     def __init__(self):
         super().__init__()
-        self.setWindowTitle("Lab 4 Task 1 — Hashing (SHA-2 / SHA-3 / SHAKE)")
+        self.setWindowTitle("Lab 4 Task 1 - Hashing (SHA-2 / SHA-3 / SHAKE)")
         self.resize(720, 520)
         tabs = QTabWidget()
         tabs.addTab(DigestTab(), "Digest")

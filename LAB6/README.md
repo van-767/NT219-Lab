@@ -1,10 +1,5 @@
 # Lab 6 — Post-Quantum Signatures & Certificates (ML-DSA + ML-KEM)
 
-NT219 — Mật mã ứng dụng — UIT.
-Implement ML-DSA (FIPS 204) sign/verify + ML-KEM (FIPS 203) encaps/decaps
-qua **liboqs** (Open Quantum Safe). Hỗ trợ ML-DSA-44/65/87 và ML-KEM-512/768/1024.
-Kèm PQ Certificate mini-project (ML-DSA-signed JSON).
-
 ## Cấu trúc
 
 ```
@@ -33,22 +28,57 @@ LAB6/
 ```bash
 # Trong MSYS2 MINGW64 shell
 pacman -Syu
-pacman -S mingw-w64-x86_64-liboqs mingw-w64-x86_64-cmake mingw-w64-x86_64-gcc
+pacman -S mingw-w64-x86_64-cmake mingw-w64-x86_64-gcc mingw-w64-x86_64-make git
 ```
 
-→ Lib và header tự đặt vào `C:\msys64\mingw64\{include,lib}\`. CMake tự dò ra.
+cài `liboqs` vào ổ D tại `D:/Study/NT219/CODE/liboqs`
+để không phụ thuộc vào thư mục hệ thống.
 
-Nếu pacman không có liboqs sẵn (gói cũ), build từ source:
 ```bash
+# Cach A: chay trong MSYS2 MINGW64 shell
+cd /d/Study/NT219/CODE
 git clone --depth 1 https://github.com/open-quantum-safe/liboqs
-cd liboqs && mkdir build && cd build
+cd liboqs
+mkdir build && cd build
 cmake -G "MinGW Makefiles" .. \
-      -DCMAKE_INSTALL_PREFIX=C:/liboqs \
-      -DBUILD_SHARED_LIBS=OFF
-mingw32-make -j
+      -DCMAKE_INSTALL_PREFIX=D:/Study/NT219/CODE/liboqs \
+      -DBUILD_SHARED_LIBS=OFF \
+      -DOQS_BUILD_ONLY_LIB=ON \
+      -DOQS_DIST_BUILD=OFF \
+      -DOQS_MINIMAL_BUILD="KEM_ml_kem_512;KEM_ml_kem_768;KEM_ml_kem_1024;SIG_ml_dsa_44;SIG_ml_dsa_65;SIG_ml_dsa_87"
+mingw32-make -j2
 mingw32-make install
 ```
-Rồi build Lab 6 với `-DLIBOQS_ROOT=C:/liboqs`.
+
+Neu chay trong PowerShell thi dung cu phap PowerShell. Khong dung `cd /d/...`,
+khong dung dau `\` de xuong dong, va PowerShell cu khong ho tro `&&`:
+
+```powershell
+# Cach B: chay trong PowerShell
+Set-Location D:\Study\NT219\CODE
+git clone --depth 1 https://github.com/open-quantum-safe/liboqs
+Set-Location D:\Study\NT219\CODE\liboqs
+New-Item -ItemType Directory -Force build
+Set-Location build
+cmake -G "MinGW Makefiles" .. -DCMAKE_INSTALL_PREFIX=D:/Study/NT219/CODE/liboqs -DBUILD_SHARED_LIBS=OFF -DOQS_BUILD_ONLY_LIB=ON -DOQS_DIST_BUILD=OFF -DOQS_MINIMAL_BUILD='KEM_ml_kem_512;KEM_ml_kem_768;KEM_ml_kem_1024;SIG_ml_dsa_44;SIG_ml_dsa_65;SIG_ml_dsa_87'
+mingw32-make -j2
+mingw32-make install
+```
+
+Sau khi cài xong, phải có các file chính:
+
+```text
+D:/Study/NT219/CODE/liboqs/include/oqs/oqs.h
+D:/Study/NT219/CODE/liboqs/lib/liboqs.a
+```
+
+Nếu muốn dùng gói có sẵn của MSYS2 thay vì build source:
+
+```bash
+pacman -S mingw-w64-x86_64-liboqs
+```
+
+Khi đó lib và header nằm trong `C:\msys64\mingw64\{include,lib}` và CMake cũng tự dò được.
 
 ## Cài liboqs — Linux (Ubuntu LTS)
 
@@ -69,10 +99,16 @@ sudo ldconfig
 
 ```powershell
 # Windows
+Set-Location D:\Study\NT219\CODE\BTVN\LAB6
 $env:PATH = "C:\msys64\mingw64\bin;$env:PATH"
-cmake -B build -S . -G "MinGW Makefiles" -DCMAKE_BUILD_TYPE=Release -DCMAKE_CXX_COMPILER=g++
-cmake --build build -j
+Remove-Item -Recurse -Force build -ErrorAction SilentlyContinue
+cmake -B build -S . -G "MinGW Makefiles" -DCMAKE_BUILD_TYPE=Release -DCMAKE_CXX_COMPILER=g++ -DLIBOQS_ROOT=D:/Study/NT219/CODE/liboqs
+cmake --build build --parallel
+Get-ChildItem .\bin\windows
 ```
+
+Nếu trước đó đã cấu hình sai path hoặc thiếu `mingw32-make`, xoá thư mục `build/`
+rồi chạy lại 2 lệnh build ở trên.
 
 ```bash
 # Linux
@@ -85,65 +121,139 @@ cmake --build build -j
 - `bin/{windows,linux}/MLKEM{,.exe}` — CLI ML-KEM
 - `bin/{windows,linux}/libpq_core.{dll,so}` — shared lib cho GUI
 
+## Windows copy-paste commands
+
+Tất cả lệnh trong mục này chạy trực tiếp trong PowerShell từ bất kỳ thư mục nào.
+Copy nguyên block là chạy được.
+
+### Quick check sau khi build
+
+```powershell
+Set-Location D:\Study\NT219\CODE\BTVN\LAB6
+$env:PATH = "C:\msys64\mingw64\bin;$env:PATH"
+Get-ChildItem .\bin\windows
+.\bin\windows\MLDSA.exe kat --algo mldsa-44
+.\bin\windows\MLKEM.exe kat --algo mlkem-512
+```
+
+### ML-DSA demo
+
+```powershell
+Set-Location D:\Study\NT219\CODE\BTVN\LAB6
+$env:PATH = "C:\msys64\mingw64\bin;$env:PATH"
+.\bin\windows\MLDSA.exe keygen --algo mldsa-44 --priv priv.pem --pub pub.pem
+Set-Content -Path msg.txt -Value "Hello Lab 6 - ML-DSA" -Encoding ASCII
+.\bin\windows\MLDSA.exe sign --priv priv.pem --in msg.txt --out msg.sig
+.\bin\windows\MLDSA.exe verify --pub pub.pem --in msg.txt --sig msg.sig
+```
+
+### ML-KEM demo
+
+```powershell
+Set-Location D:\Study\NT219\CODE\BTVN\LAB6
+$env:PATH = "C:\msys64\mingw64\bin;$env:PATH"
+.\bin\windows\MLKEM.exe keygen --algo mlkem-512 --priv kem_priv.pem --pub kem_pub.pem
+.\bin\windows\MLKEM.exe encaps --pub kem_pub.pem --ct ct.bin --ss ss_send.bin
+.\bin\windows\MLKEM.exe decaps --priv kem_priv.pem --ct ct.bin --ss ss_recv.bin
+(Get-FileHash ss_send.bin).Hash -eq (Get-FileHash ss_recv.bin).Hash
+```
+
+### PQ certificate demo
+
+```powershell
+Set-Location D:\Study\NT219\CODE\BTVN\LAB6
+$env:PATH = "C:\msys64\mingw64\bin;$env:PATH"
+.\bin\windows\MLDSA.exe keygen --algo mldsa-44 --priv ca_priv.pem --pub ca_pub.pem
+.\bin\windows\MLDSA.exe keygen --algo mldsa-44 --priv sub_priv.pem --pub sub_pub.pem
+.\bin\windows\MLDSA.exe cert --make --ca-priv ca_priv.pem --ca-pub ca_pub.pem --subj-pub sub_pub.pem --subject "UIT-Student-22520123" --algo mldsa-44 --out cert.json
+.\bin\windows\MLDSA.exe cert --verify --ca-pub ca_pub.pem --cert cert.json
+```
+
+### Quick benchmark
+
+```powershell
+Set-Location D:\Study\NT219\CODE\BTVN\LAB6
+$env:PATH = "C:\msys64\mingw64\bin;$env:PATH"
+.\bin\windows\MLDSA.exe bench --op sign --algo mldsa-44 --n 3 --block 100 --size 1024 --log logs\windows\quick_mldsa_sign.csv
+.\bin\windows\MLKEM.exe bench --op encaps --algo mlkem-512 --n 3 --block 100 --log logs\windows\quick_mlkem_encaps.csv
+```
+
+### Full benchmark
+
+```powershell
+Set-Location D:\Study\NT219\CODE\BTVN\LAB6
+$env:PATH = "C:\msys64\mingw64\bin;$env:PATH"
+.\scripts\run_bench.ps1
+```
+
 ## CLI — ML-DSA
 
-```bash
+```powershell
+Set-Location D:\Study\NT219\CODE\BTVN\LAB6
+$env:PATH = "C:\msys64\mingw64\bin;$env:PATH"
+
 # Sinh khoá
-MLDSA keygen --algo mldsa-44 --priv priv.pem --pub pub.pem
+.\bin\windows\MLDSA.exe keygen --algo mldsa-44 --priv priv.pem --pub pub.pem
+
+# Tạo message mẫu
+Set-Content -Path msg.txt -Value "Hello Lab 6 - ML-DSA" -Encoding ASCII
 
 # Ký (signature detached, raw bytes)
-MLDSA sign --priv priv.pem --in msg.bin --out msg.sig
+.\bin\windows\MLDSA.exe sign --priv priv.pem --in msg.txt --out msg.sig
 
 # Verify
-MLDSA verify --pub pub.pem --in msg.bin --sig msg.sig
+.\bin\windows\MLDSA.exe verify --pub pub.pem --in msg.txt --sig msg.sig
 
 # Negative + correctness tests
-MLDSA kat --algo mldsa-44
+.\bin\windows\MLDSA.exe kat --algo mldsa-44
 ```
 
 ## CLI — ML-KEM
 
-```bash
+```powershell
+Set-Location D:\Study\NT219\CODE\BTVN\LAB6
+$env:PATH = "C:\msys64\mingw64\bin;$env:PATH"
+
 # Sinh khoá
-MLKEM keygen --algo mlkem-512 --priv priv.pem --pub pub.pem
+.\bin\windows\MLKEM.exe keygen --algo mlkem-512 --priv kem_priv.pem --pub kem_pub.pem
 
 # Encapsulation (sender): ra ciphertext + shared secret
-MLKEM encaps --pub pub.pem --ct ct.bin --ss ss_send.bin
+.\bin\windows\MLKEM.exe encaps --pub kem_pub.pem --ct ct.bin --ss ss_send.bin
 
 # Decapsulation (receiver): lấy lại shared secret
-MLKEM decaps --priv priv.pem --ct ct.bin --ss ss_recv.bin
+.\bin\windows\MLKEM.exe decaps --priv kem_priv.pem --ct ct.bin --ss ss_recv.bin
 
 # Verify shared secret match: file ss_send.bin và ss_recv.bin phải giống nhau
-diff ss_send.bin ss_recv.bin   # không có output = OK
+(Get-FileHash ss_send.bin).Hash -eq (Get-FileHash ss_recv.bin).Hash
 
 # KAT
-MLKEM kat --algo mlkem-512
+.\bin\windows\MLKEM.exe kat --algo mlkem-512
 ```
 
 ## PQ Certificate Mini-Project
 
 JSON certificate được ML-DSA ký bởi CA:
 
-```bash
+```powershell
+Set-Location D:\Study\NT219\CODE\BTVN\LAB6
+$env:PATH = "C:\msys64\mingw64\bin;$env:PATH"
+
 # 1) Tạo CA + subject
-MLDSA keygen --algo mldsa-44 --priv ca_priv.pem  --pub ca_pub.pem
-MLDSA keygen --algo mldsa-44 --priv sub_priv.pem --pub sub_pub.pem
+.\bin\windows\MLDSA.exe keygen --algo mldsa-44 --priv ca_priv.pem  --pub ca_pub.pem
+.\bin\windows\MLDSA.exe keygen --algo mldsa-44 --priv sub_priv.pem --pub sub_pub.pem
 
 # 2) CA ký pubkey của subject → cert.json
-MLDSA cert --make \
-    --ca-priv ca_priv.pem --ca-pub ca_pub.pem \
-    --subj-pub sub_pub.pem --subject "UIT-Student-22520123" \
-    --algo mldsa-44 --out cert.json
+.\bin\windows\MLDSA.exe cert --make --ca-priv ca_priv.pem --ca-pub ca_pub.pem --subj-pub sub_pub.pem --subject "UIT-Student-24521973" --algo mldsa-44 --out cert.json
 
 # 3) Verify cert bằng CA pubkey
-MLDSA cert --verify --ca-pub ca_pub.pem --cert cert.json
+.\bin\windows\MLDSA.exe cert --verify --ca-pub ca_pub.pem --cert cert.json
 # → CERT VERIFY OK
 ```
 
 Cert format:
 ```json
 {
-  "subject": "UIT-Student-22520123",
+  "subject": "UIT-Student-24521973",
   "algorithm": "ML-DSA-44",
   "public_key": "<base64 raw>",
   "issuer": "PQ-CA",
@@ -164,7 +274,21 @@ GUI gọi `libpq_core.dll` qua ctypes, không lặp crypto logic (đáp ứng bo
 
 ## Benchmark tự động
 
-- **Windows**: double-click `scripts\run_bench.bat`
+- **Windows**:
+```powershell
+Set-Location D:\Study\NT219\CODE\BTVN\LAB6
+$env:PATH = "C:\msys64\mingw64\bin;$env:PATH"
+.\scripts\run_bench.ps1
+```
+
+- **Windows quick benchmark**:
+```powershell
+Set-Location D:\Study\NT219\CODE\BTVN\LAB6
+$env:PATH = "C:\msys64\mingw64\bin;$env:PATH"
+.\bin\windows\MLDSA.exe bench --op sign --algo mldsa-44 --n 3 --block 100 --size 1024 --log logs\windows\quick_mldsa_sign.csv
+.\bin\windows\MLKEM.exe bench --op encaps --algo mlkem-512 --n 3 --block 100 --log logs\windows\quick_mlkem_encaps.csv
+```
+
 - **Linux**: `chmod +x scripts/run_bench.sh && ./scripts/run_bench.sh`
 
 Chạy 22 case: ML-DSA-44/65 (keygen + sign×4size + verify×4size) +

@@ -1,4 +1,4 @@
-// Lab 4 Task 1 — hashtool CLI: digest / kat / bench.
+// Lab 4 Task 1 - hashtool CLI: digest / kat / bench.
 #include "hash_core.h"
 
 #include <chrono>
@@ -44,7 +44,7 @@ static Args parse(int argc, char** argv) {
 
 static void usage() {
     std::cout <<
-"hashtool — Lab 4 Task 1 (SHA-2/3/SHAKE qua Crypto++)\n"
+"hashtool - Lab 4 Task 1 (SHA-2/3/SHAKE through Crypto++)\n"
 "\n"
 "  hashtool digest --algo <ALG> [--in FILE] [--text STR] [--outlen N]\n"
 "                  [--out FILE] [--encode hex|raw]\n"
@@ -53,14 +53,18 @@ static void usage() {
 "                  [--outlen 32] [--log out.csv]\n"
 "\n"
 "ALG: sha224|sha256|sha384|sha512|sha3-224|sha3-256|sha3-384|sha3-512\n"
-"   | shake128|shake256  (XOF, bắt buộc --outlen)\n";
+"   | shake128|shake256  (XOF, requires --outlen)\n";
 }
 
-// ── digest ───────────────────────────────────────────────────────────
+// digest
 static int cmd_digest(const Args& a) {
     auto algo = hashlab::algo_from_string(a.get("--algo"));
     size_t outlen = (size_t)a.get_int("--outlen", 32);
     std::string enc = a.get("--encode", "hex");
+    if (enc != "hex" && enc != "raw") {
+        std::cerr << "Invalid --encode. Use hex or raw.\n";
+        return 2;
+    }
     Bytes d;
     if (a.has("--in")) {
         d = hashlab::hash_file_streamed(algo, a.get("--in"), outlen);
@@ -69,13 +73,17 @@ static int cmd_digest(const Args& a) {
         d = hashlab::hash_bytes(algo, Bytes(t.begin(), t.end()), outlen);
     } else { std::cerr << "Need --in FILE or --text STR\n"; return 2; }
 
-    if (a.has("--out")) hashlab::write_file(a.get("--out"), d);
-    else std::cout << (enc == "raw" ? std::string(d.begin(), d.end())
+    if (a.has("--out")) {
+        if (enc == "raw") hashlab::write_file(a.get("--out"), d);
+        else hashlab::write_file(a.get("--out"), hashlab::hex_encode(d) + "\n");
+    } else {
+        std::cout << (enc == "raw" ? std::string(d.begin(), d.end())
                                     : hashlab::hex_encode(d)) << "\n";
+    }
     return 0;
 }
 
-// ── kat ──────────────────────────────────────────────────────────────
+// kat
 static std::string json_get_str(const std::string& j, const std::string& key) {
     auto p = j.find("\"" + key + "\"");
     if (p == std::string::npos) throw std::runtime_error("missing field: " + key);
@@ -136,7 +144,7 @@ static int cmd_kat(const Args& a) {
     return fail == 0 ? 0 : 1;
 }
 
-// ── bench ────────────────────────────────────────────────────────────
+// bench
 struct Stat { double mean=0, median=0, sd=0, ci_lo=0, ci_hi=0; };
 static Stat stats(std::vector<double>& v) {
     Stat s; if (v.empty()) return s;
@@ -176,11 +184,11 @@ static int cmd_bench(const Args& a) {
 
     std::cout << "hashtool bench  algo=" << hashlab::algo_to_string(algo)
               << "  N=" << N << "  block=" << B << "  size=" << size << "B\n"
-              << "  mean   = " << s.mean   << " μs/op\n"
-              << "  median = " << s.median << " μs/op\n"
-              << "  stddev = " << s.sd     << " μs\n"
-              << "  95% CI = [" << s.ci_lo << ", " << s.ci_hi << "] μs\n"
-              << "  throughput ≈ " << throughput_MBps << " MiB/s\n";
+              << "  mean   = " << s.mean   << " us/op\n"
+              << "  median = " << s.median << " us/op\n"
+              << "  stddev = " << s.sd     << " us\n"
+              << "  95% CI = [" << s.ci_lo << ", " << s.ci_hi << "] us\n"
+              << "  throughput ~= " << throughput_MBps << " MiB/s\n";
 
     if (!logp.empty()) {
         if (auto pp = fs::path(logp).parent_path(); !pp.empty()) fs::create_directories(pp);
@@ -192,7 +200,7 @@ static int cmd_bench(const Args& a) {
         f << "# summary,mean," << s.mean << ",median," << s.median
           << ",sd," << s.sd << ",ci95_lo," << s.ci_lo << ",ci95_hi," << s.ci_hi
           << ",throughput_MiBps," << throughput_MBps << "\n";
-        std::cout << "  log → " << logp << "\n";
+        std::cout << "  log: " << logp << "\n";
     }
     return 0;
 }

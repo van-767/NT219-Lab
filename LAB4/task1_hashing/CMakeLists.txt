@@ -26,10 +26,10 @@ foreach(_cfg DEBUG RELEASE RELWITHDEBINFO MINSIZEREL)
   set(CMAKE_LIBRARY_OUTPUT_DIRECTORY_${_cfg} "${_HASH_BIN_DIR}")
   set(CMAKE_ARCHIVE_OUTPUT_DIRECTORY_${_cfg} "${_HASH_BIN_DIR}")
 endforeach()
-message(STATUS "Binaries → ${_HASH_BIN_DIR}")
+message(STATUS "Binaries: ${_HASH_BIN_DIR}")
 
 # ---------------------------------------------------------------------------
-# Locate Crypto++. Tự dò D:/Study/NT219/CODE/Crypto++ trước, fallback các path khác.
+# Locate Crypto++. Check D:/Study/NT219/CODE/Crypto++ first, then fallback paths.
 # ---------------------------------------------------------------------------
 set(CRYPTOPP_TARGET "")
 find_package(cryptopp CONFIG QUIET)
@@ -64,7 +64,7 @@ else()
   if(NOT CRYPTOPP_INCLUDE_DIR OR NOT CRYPTOPP_LIBRARY)
     message(FATAL_ERROR "Crypto++ not found. Pass -DCRYPTOPP_ROOT=...")
   endif()
-  # Code dùng style #include <cryptopp/sha.h> nên include dir là parent của cryptopp/.
+  # Code uses #include <cryptopp/sha.h>, so include dir is the parent of cryptopp/.
   get_filename_component(_cpp_inc_parent "${CRYPTOPP_INCLUDE_DIR}" DIRECTORY)
   add_library(cryptopp_imported UNKNOWN IMPORTED)
   set_target_properties(cryptopp_imported PROPERTIES

@@ -1,77 +1,113 @@
-# Lab 5 — Classical Digital Signatures (ECDSA, RSA-PSS)
+# Lab 5 - Classical Digital Signatures (ECDSA, RSA-PSS)
 
-Bài này hiện thực ECDSA (P-256 mặc định, P-384 tùy chọn) và RSA-PSS-3072
-(SHA-256, salt = 32 byte) theo yêu cầu Lab 5. Cùng một core C++ được
-build ra hai CLI `ECDSA` / `RSAPSS` và một shared lib `libsig_core` cho
-GUI Python gọi qua `ctypes` — đúng yêu cầu bonus của lab về
-"GUI calls compiled library".
+Lab này hiện thực chữ ký số cổ điển bằng ECDSA và RSA-PSS. Chương trình có
+CLI cho Windows/Linux, thư viện động cho GUI Python, test đúng/sai và script
+benchmark tự động.
 
-## Cấu trúc thư mục
+> Tất cả lệnh bên dưới chạy từ thư mục gốc `LAB5/`.
 
-```
+## Cấu Trúc Thư Mục
+
+```text
 LAB5/
-├── src/
-│   ├── ecdsa_core.{h,cpp}     phần lõi ECDSA (P-256 / P-384)
-│   ├── rsapss_core.{h,cpp}    phần lõi RSA-PSS
-│   ├── c_api.{h,cpp}          extern "C" cho file DLL/.so
-│   ├── ecdsa_cli.cpp          chương trình dòng lệnh ECDSA
-│   └── rsapss_cli.cpp         chương trình dòng lệnh RSA-PSS
+├── bin/
+│   ├── windows/
+│   │   ├── ECDSA.exe
+│   │   ├── RSAPSS.exe
+│   │   └── libsig_core.dll
+│   └── linux/
+│       ├── ECDSA
+│       ├── RSAPSS
+│       └── libsig_core.so
 ├── gui/
-│   └── sig_gui.py             GUI PySide6 (gọi DLL qua ctypes)
+│   └── sig_gui.py
+├── logs/
+│   ├── windows/
+│   └── linux/
 ├── scripts/
-│   ├── run_bench.ps1          benchmark batch cho Windows
-│   ├── run_bench.bat          wrapper chạy PowerShell script
-│   └── run_bench.sh           benchmark batch cho Linux
-├── tests/                     (thư mục dành cho batch verify + tài liệu test)
+│   ├── run_bench.ps1
+│   ├── run_bench.bat
+│   └── run_bench.sh
+├── src/
+│   ├── ecdsa_core.cpp / ecdsa_core.h
+│   ├── rsapss_core.cpp / rsapss_core.h
+│   ├── ecdsa_cli.cpp
+│   ├── rsapss_cli.cpp
+│   ├── c_api.cpp
+│   └── c_api.h
+├── tests/
+│   └── negative_tests.md
 ├── CMakeLists.txt
 └── README.md
 ```
 
-## Yêu cầu môi trường
+## Yêu Cầu Môi Trường
 
-| Thành phần | Phiên bản |
-|------------|-----------|
-| C++        | C++17     |
-| CMake      | ≥ 3.16    |
-| OpenSSL    | ≥ 1.1.1 (khuyến nghị 3.x) |
-| Python     | ≥ 3.10  (chỉ cho GUI) |
-| PySide6    | mới nhất (chỉ cho GUI) |
+| Thành phần | Yêu cầu |
+|---|---|
+| C++ | C++17 |
+| CMake | >= 3.16 |
+| OpenSSL | OpenSSL 3.x khuyến nghị |
+| Windows compiler | MSYS2 MinGW64 g++ |
+| Linux compiler | g++ / build-essential |
+| GUI | Python 3 + PySide6 |
 
-## Build trên Windows (MinGW / g++ từ MSYS2)
+## Chạy Nhanh Trên Windows
+
+Mở PowerShell tại thư mục `LAB5/`, sau đó chạy:
 
 ```powershell
-# Mở PowerShell tại thư mục LAB5, đảm bảo MinGW có trong PATH:
+.\bin\windows\ECDSA.exe help
+.\bin\windows\RSAPSS.exe help
+```
+
+Nếu chương trình không chạy do thiếu DLL, thêm MSYS2 MinGW64 vào `PATH`:
+
+```powershell
+$env:PATH = "C:\msys64\mingw64\bin;$env:PATH"
+```
+
+Sau đó chạy lại:
+
+```powershell
+.\bin\windows\ECDSA.exe help
+.\bin\windows\RSAPSS.exe help
+```
+
+## Chạy Nhanh Trên Linux
+
+Mở terminal tại thư mục `LAB5/`, sau đó chạy:
+
+```bash
+chmod +x ./bin/linux/ECDSA ./bin/linux/RSAPSS
+./bin/linux/ECDSA help
+./bin/linux/RSAPSS help
+```
+
+## Build Trên Windows
+
+Mở PowerShell tại thư mục `LAB5/`:
+
+```powershell
 $env:PATH = "C:\msys64\mingw64\bin;$env:PATH"
 
 cmake -B build -S . -G "MinGW Makefiles" `
       -DCMAKE_BUILD_TYPE=Release `
       -DCMAKE_C_COMPILER=gcc `
       -DCMAKE_CXX_COMPILER=g++
+
 cmake --build build -j
 ```
 
-Nếu OpenSSL không nằm trong PATH:
+File build ra nằm ở:
 
-```powershell
-cmake -B build -S . -G "MinGW Makefiles" `
-      -DOPENSSL_ROOT_DIR="C:/Program Files/OpenSSL-Win64"
+```text
+bin/windows/ECDSA.exe
+bin/windows/RSAPSS.exe
+bin/windows/libsig_core.dll
 ```
 
-File ra (Release) nằm ở `bin/windows/`:
-
-- `bin/windows/ECDSA.exe`        — CLI ECDSA
-- `bin/windows/RSAPSS.exe`       — CLI RSA-PSS
-- `bin/windows/libsig_core.dll`  — DLL cho GUI
-- `scripts/run_bench.ps1` / `scripts/run_bench.bat` — chạy benchmark hàng loạt
-
-### Build bằng MSVC (tuỳ chọn)
-
-```powershell
-cmake -B build-msvc -S . -A x64
-cmake --build build-msvc --config Release
-```
-
-## Build trên Linux (Ubuntu LTS)
+## Build Trên Linux
 
 ```bash
 sudo apt install build-essential cmake libssl-dev
@@ -79,87 +115,191 @@ cmake -B build -S .
 cmake --build build -j
 ```
 
-File ra `bin/linux/`:
-- `bin/linux/ECDSA`, `bin/linux/RSAPSS`, `bin/linux/libsig_core.so`
-- `scripts/run_bench.sh` — chạy benchmark hàng loạt trên Linux
+File build ra nằm ở:
 
-Vì binary Windows và Linux nằm ở hai thư mục con riêng (`bin/windows/`
-vs `bin/linux/`), build lại bên nào **không ghi đè** lên bên kia.
+```text
+bin/linux/ECDSA
+bin/linux/RSAPSS
+bin/linux/libsig_core.so
+```
 
-## Cách dùng CLI
+## Lệnh ECDSA Trên Windows
 
-### ECDSA
+### Sinh Khóa
+
+```powershell
+.\bin\windows\ECDSA.exe keygen --algo ecdsa-p256 --priv ec_priv.pem --pub ec_pub.pem
+```
+
+P-384:
+
+```powershell
+.\bin\windows\ECDSA.exe keygen --algo ecdsa-p384 --priv ec384_priv.pem --pub ec384_pub.pem
+```
+
+### Ký File
+
+Tạo file message mẫu:
+
+```powershell
+Set-Content -NoNewline -Encoding utf8 msg.txt "Hello Lab5 ECDSA"
+```
+
+Ký dạng DER mặc định:
+
+```powershell
+.\bin\windows\ECDSA.exe sign --priv ec_priv.pem --in msg.txt --out msg.sig
+```
+
+Ký dạng raw:
+
+```powershell
+.\bin\windows\ECDSA.exe sign --priv ec_priv.pem --in msg.txt --out msg.raw --encode raw
+```
+
+Ký dạng Base64:
+
+```powershell
+.\bin\windows\ECDSA.exe sign --priv ec_priv.pem --in msg.txt --out msg.b64 --encode base64
+```
+
+### Xác Minh Chữ Ký
+
+```powershell
+.\bin\windows\ECDSA.exe verify --pub ec_pub.pem --in msg.txt --sig msg.sig
+```
+
+Verify chữ ký raw:
+
+```powershell
+.\bin\windows\ECDSA.exe verify --pub ec_pub.pem --in msg.txt --sig msg.raw --encode raw
+```
+
+### Benchmark ECDSA
+
+```powershell
+.\bin\windows\ECDSA.exe bench --op keygen --algo ecdsa-p256 --n 30 --block 1000 --log logs\windows\ecdsa_p256_keygen.csv
+.\bin\windows\ECDSA.exe bench --op sign   --algo ecdsa-p256 --n 30 --block 1000 --size 1024 --log logs\windows\ecdsa_p256_sign_1KiB.csv
+.\bin\windows\ECDSA.exe bench --op verify --algo ecdsa-p256 --n 30 --block 1000 --size 1024 --log logs\windows\ecdsa_p256_verify_1KiB.csv
+```
+
+## Lệnh RSA-PSS Trên Windows
+
+### Sinh Khóa
+
+RSA-PSS 3072-bit:
+
+```powershell
+.\bin\windows\RSAPSS.exe keygen --bits 3072 --priv rsa_priv.pem --pub rsa_pub.pem
+```
+
+RSA-PSS 4096-bit:
+
+```powershell
+.\bin\windows\RSAPSS.exe keygen --bits 4096 --priv rsa4096_priv.pem --pub rsa4096_pub.pem
+```
+
+### Ký File
+
+Tạo file message mẫu:
+
+```powershell
+Set-Content -NoNewline -Encoding utf8 msg.txt "Hello Lab5 RSA-PSS"
+```
+
+Ký mặc định SHA-256, salt length bằng hash length:
+
+```powershell
+.\bin\windows\RSAPSS.exe sign --priv rsa_priv.pem --in msg.txt --out msg.rsapss
+```
+
+Ký dạng Base64:
+
+```powershell
+.\bin\windows\RSAPSS.exe sign --priv rsa_priv.pem --in msg.txt --out msg.b64 --encode base64
+```
+
+### Xác Minh Chữ Ký
+
+```powershell
+.\bin\windows\RSAPSS.exe verify --pub rsa_pub.pem --in msg.txt --sig msg.rsapss
+```
+
+Verify Base64:
+
+```powershell
+.\bin\windows\RSAPSS.exe verify --pub rsa_pub.pem --in msg.txt --sig msg.b64 --encode base64
+```
+
+### Benchmark RSA-PSS
+
+```powershell
+.\bin\windows\RSAPSS.exe bench --op keygen --bits 3072 --n 30 --block 1000 --log logs\windows\rsapss_3072_keygen.csv
+.\bin\windows\RSAPSS.exe bench --op sign   --bits 3072 --n 30 --block 1000 --size 1024 --log logs\windows\rsapss_3072_sign_1KiB.csv
+.\bin\windows\RSAPSS.exe bench --op verify --bits 3072 --n 30 --block 1000 --size 1024 --log logs\windows\rsapss_3072_verify_1KiB.csv
+```
+
+Lưu ý: RSA-PSS keygen với `--block 1000` rất lâu, nhất là 4096-bit.
+
+## Lệnh ECDSA Trên Linux
 
 ```bash
-# 1) Sinh cặp khoá P-256 (PEM, mặc định)
-ECDSA keygen --algo ecdsa-p256 --priv ec_priv.pem --pub ec_pub.pem
+printf 'Hello Lab5 ECDSA' > msg.txt
 
-#    P-384 + DER (bonus +5 theo spec):
-ECDSA keygen --algo ecdsa-p384 --priv ec384_priv.der --pub ec384_pub.der --format der
-
-# 2) Ký file → mặc định chữ ký DER (ASN.1) ghi ra .sig
-ECDSA sign --priv ec_priv.pem --in msg.txt --out msg.sig
-
-#    Ký dạng raw r||s (IEEE P1363) hoặc base64 cho dễ paste:
-ECDSA sign --priv ec_priv.pem --in msg.txt --out msg.raw --encode raw
-ECDSA sign --priv ec_priv.pem --in msg.txt --out msg.b64 --encode base64
-
-# 3) Verify
-ECDSA verify --pub ec_pub.pem --in msg.txt --sig msg.sig
-ECDSA verify --pub ec_pub.pem --in msg.txt --sig msg.raw --encode raw
-
-# 4) Batch verify: thư mục chứa từng cặp <name>.bin + <name>.sig
-ECDSA batch --pub ec_pub.pem --dir tests/sigs/
-
-# 5) Benchmark — theo đúng spec: warm-up 1 giây, N round, mỗi round
-#    block ops, đo mean/median/sd/95%-CI per-op. Mặc định N=30, block=1000
-#    (đúng yêu cầu trong PDF của Lab 5).
-ECDSA bench --op sign   --algo ecdsa-p256 --n 30 --block 1000 --size 1024
-ECDSA bench --op verify --algo ecdsa-p256 --n 30 --block 1000 --size 1024
-ECDSA bench --op keygen --algo ecdsa-p256 --n 30 --block 100
-
-#    Ghi log CSV để dựng bảng/biểu đồ trong report (import Excel/Pandas):
-ECDSA bench --op sign --algo ecdsa-p256 --n 30 --block 1000 --size 1048576 \
-            --log logs/ecdsa_sign_p256_1MB.csv
+./bin/linux/ECDSA keygen --algo ecdsa-p256 --priv ec_priv.pem --pub ec_pub.pem
+./bin/linux/ECDSA sign --priv ec_priv.pem --in msg.txt --out msg.sig
+./bin/linux/ECDSA verify --pub ec_pub.pem --in msg.txt --sig msg.sig
 ```
 
-### RSA-PSS
+Benchmark:
 
 ```bash
-# 1) Sinh cặp khoá 3072-bit PSS (PEM). Tool từ chối <3072 theo spec.
-RSAPSS keygen --bits 3072 --priv rsa_priv.pem --pub rsa_pub.pem
-
-# 2) Ký với SHA-256 + salt = hashLen (mặc định, đúng spec)
-RSAPSS sign --priv rsa_priv.pem --in msg.txt --out msg.sig
-
-#    Có thể chọn salt-len 0 (test only), encode base64:
-RSAPSS sign --priv rsa_priv.pem --in msg.txt --out msg.b64 \
-            --salt-len 0 --encode base64
-
-# 3) Verify
-RSAPSS verify --pub rsa_pub.pem --in msg.txt --sig msg.sig
-
-# 4) Batch verify
-RSAPSS batch --pub rsa_pub.pem --dir tests/sigs/
-
-# 5) Benchmark — keygen RSA-3072 rất chậm, mặc định block=1000 sẽ tốn vài giờ.
-#    Lúc test nhanh thì truyền --block 1:
-RSAPSS bench --op keygen --bits 3072 --n 30 --block 1
-RSAPSS bench --op sign   --bits 3072 --n 30 --block 1000 --size 1024
-RSAPSS bench --op verify --bits 3072 --n 30 --block 1000 --size 1024 \
-             --log logs/rsapss_verify_3072.csv
+./bin/linux/ECDSA bench --op keygen --algo ecdsa-p256 --n 30 --block 1000 --log logs/linux/ecdsa_p256_keygen.csv
+./bin/linux/ECDSA bench --op sign   --algo ecdsa-p256 --n 30 --block 1000 --size 1024 --log logs/linux/ecdsa_p256_sign_1KiB.csv
+./bin/linux/ECDSA bench --op verify --algo ecdsa-p256 --n 30 --block 1000 --size 1024 --log logs/linux/ecdsa_p256_verify_1KiB.csv
 ```
 
-Định dạng CSV log:
+## Lệnh RSA-PSS Trên Linux
 
-```
-op,algo|bits,N,block,msg_size,round,us_per_op
-sign,ecdsa-p256,30,1000,1024,0,87.3
-...
-# summary,mean,87.21,median,86.50,sd,1.42,ci95_lo,86.71,ci95_hi,87.71
+```bash
+printf 'Hello Lab5 RSA-PSS' > msg.txt
+
+./bin/linux/RSAPSS keygen --bits 3072 --priv rsa_priv.pem --pub rsa_pub.pem
+./bin/linux/RSAPSS sign --priv rsa_priv.pem --in msg.txt --out msg.rsapss
+./bin/linux/RSAPSS verify --pub rsa_pub.pem --in msg.txt --sig msg.rsapss
 ```
 
-## Chạy benchmark hàng loạt
+Benchmark:
+
+```bash
+./bin/linux/RSAPSS bench --op keygen --bits 3072 --n 30 --block 1000 --log logs/linux/rsapss_3072_keygen.csv
+./bin/linux/RSAPSS bench --op sign   --bits 3072 --n 30 --block 1000 --size 1024 --log logs/linux/rsapss_3072_sign_1KiB.csv
+./bin/linux/RSAPSS bench --op verify --bits 3072 --n 30 --block 1000 --size 1024 --log logs/linux/rsapss_3072_verify_1KiB.csv
+```
+
+## Chạy Test Tự Động
+
+### Windows
+
+```powershell
+.\bin\windows\ECDSA.exe kat --algo ecdsa-p256
+.\bin\windows\ECDSA.exe kat --algo ecdsa-p384
+.\bin\windows\RSAPSS.exe kat --bits 3072
+.\bin\windows\RSAPSS.exe kat --bits 4096
+```
+
+### Linux
+
+```bash
+./bin/linux/ECDSA kat --algo ecdsa-p256
+./bin/linux/ECDSA kat --algo ecdsa-p384
+./bin/linux/RSAPSS kat --bits 3072
+./bin/linux/RSAPSS kat --bits 4096
+```
+
+Kết quả đúng là tất cả case đều `PASS`.
+
+## Chạy Benchmark Hàng Loạt
 
 ### Windows
 
@@ -167,13 +307,17 @@ sign,ecdsa-p256,30,1000,1024,0,87.3
 powershell -ExecutionPolicy Bypass -File scripts\run_bench.ps1
 ```
 
-Hoặc chạy:
+Hoặc:
 
 ```powershell
-scripts\run_bench.bat
+.\scripts\run_bench.bat
 ```
 
-Log CSV sẽ được ghi vào `logs/windows/`.
+Log CSV được ghi vào:
+
+```text
+logs/windows/
+```
 
 ### Linux
 
@@ -182,67 +326,78 @@ chmod +x scripts/run_bench.sh
 ./scripts/run_bench.sh
 ```
 
-Log CSV sẽ được ghi vào `logs/linux/`.
+Log CSV được ghi vào:
 
-Lưu ý:
-- Script giữ cùng bộ benchmark như bản Windows.
-- `RSA-PSS keygen` với `--block 1000` sẽ chạy rất lâu; nếu chỉ test nhanh, nên chạy lệnh `bench` thủ công với `--block 1`.
+```text
+logs/linux/
+```
+
+## Định Dạng Log CSV
+
+ECDSA:
+
+```text
+op,algo,N,block,msg_size,round,us_per_op
+sign,ecdsa-p256,30,1000,1024,0,114.710
+...
+# summary,mean,114.710,median,...,sd,...,ci95_lo,...,ci95_hi,...
+```
+
+RSA-PSS:
+
+```text
+op,bits,N,block,msg_size,hash,round,us_per_op
+sign,3072,30,1000,1024,sha256,0,2860.450
+...
+# summary,mean,2860.450,median,...,sd,...,ci95_lo,...,ci95_hi,...
+```
 
 ## Chạy GUI
 
-```bash
+Cài PySide6:
+
+```powershell
 pip install PySide6
-python gui/sig_gui.py
 ```
 
-GUI sẽ tự tìm `libsig_core.dll` / `libsig_core.so` ở: cùng thư mục với
-file `.py`, `bin/windows/`, `bin/linux/`, hoặc `build/`. Toàn bộ crypto
-chạy trong DLL — Python chỉ gọi qua C ABI khai báo ở `src/c_api.h`.
+Chạy GUI:
 
-## Bảng negative test
-
-| Tình huống                              | Kết quả mong muốn                |
-|-----------------------------------------|----------------------------------|
-| Sai message khi verify                  | `[FAIL] Signature INVALID`       |
-| Sửa 1 byte trong file `.sig`            | `[FAIL] Signature INVALID`       |
-| Sai public key                          | `[FAIL] Signature INVALID`       |
-| `--hash sha384` khi ký bằng SHA-256     | `[FAIL] Signature INVALID`       |
-| `--encode raw` nhưng sig là DER         | `[FAIL] Signature INVALID`       |
-| Private key bị cắt / không đúng PEM     | `ERROR: parse private key: ...`  |
-| `RSAPSS keygen --bits 2048`             | `ERROR: ... ≥ 3072 ...`          |
-
-Cách tái hiện thủ công:
-
-```bash
-ECDSA sign   --priv ec_priv.pem --in msg.txt --out msg.sig
-ECDSA verify --pub  ec_pub.pem  --in msg2.txt --sig msg.sig         # phải fail
-
-# Lật 1 byte chữ ký
-python -c "b=open('msg.sig','rb').read(); open('msg.sig','wb').write(bytes([b[0]^1])+b[1:])"
-ECDSA verify --pub ec_pub.pem --in msg.txt --sig msg.sig             # phải fail
+```powershell
+python gui\sig_gui.py
 ```
 
-## Hạn chế đã biết
+GUI sẽ tự tìm thư viện:
 
-- ECDSA mặc định dùng OpenSSL nên là **nonce ngẫu nhiên** (an toàn nếu RNG
-  tốt). Phần thảo luận trong report so sánh với RFC 6979 deterministic
-  ECDSA (Crypto++ có hỗ trợ). Đây là điểm sẽ phân tích trong mục
-  Security Discussion bonus.
-- Salt length của RSA-PSS mặc định bằng hashLen (32 byte với SHA-256) —
-  đúng spec; có thể override bằng `--salt-len N`.
-- Benchmark dùng `std::chrono::steady_clock`. Việc pin CPU governor, tắt
-  HyperThreading, isolate core,… như spec gợi ý là trách nhiệm của
-  người chạy đo (xem hướng dẫn ở mục Reporting Template).
+```text
+bin/windows/libsig_core.dll
+bin/linux/libsig_core.so
+```
 
-## Phân tích bảo mật (đối chiếu phần 5 của report)
+## Các Trường Hợp Test Sai
 
-- **ECDSA nonce reuse** ⇒ rò rỉ private key (lịch sử PlayStation 3). Phần
-  report giải thích vì sao OpenSSL/Crypto++ đều dùng deterministic hoặc
-  CSPRNG-driven nonce.
-- **RSA-PSS ưu việt hơn PKCS#1 v1.5** vì có chứng minh bảo mật chặt chẽ
-  trong ROM, không bị Bleichenbacher signature forgery.
-- **Constant-time verify**: OpenSSL EVP_DigestVerifyFinal so sánh dùng
-  hàm constant-time → không leak signature qua timing.
-- **Fail-closed**: mọi đường parse đều validate, throw `runtime_error`;
-  C API map exception thành mã lỗi khác 0 kèm `sig_last_error()` an toàn
-  với thread (thread_local).
+| Tình huống | Kết quả mong muốn |
+|---|---|
+| Thay đổi message sau khi ký | `[FAIL] Signature INVALID` |
+| Sửa 1 byte trong chữ ký | `[FAIL] Signature INVALID` |
+| Dùng sai public key | `[FAIL] Signature INVALID` |
+| Dùng sai hash khi verify | `[FAIL] Signature INVALID` |
+| Dùng sai encoding chữ ký | `[FAIL] Signature INVALID` |
+| Private key sai định dạng | `ERROR: parse private key: ...` |
+| RSA keygen nhỏ hơn 3072 bit | `ERROR: Key size must be >= 3072 bits` |
+
+Ví dụ Windows:
+
+```powershell
+Set-Content -NoNewline -Encoding utf8 msg1.txt "Hello Lab5"
+Set-Content -NoNewline -Encoding utf8 msg2.txt "Tampered message"
+
+.\bin\windows\ECDSA.exe keygen --algo ecdsa-p256 --priv ec_priv.pem --pub ec_pub.pem
+.\bin\windows\ECDSA.exe sign --priv ec_priv.pem --in msg1.txt --out msg.sig
+.\bin\windows\ECDSA.exe verify --pub ec_pub.pem --in msg2.txt --sig msg.sig
+```
+
+Kết quả mong muốn:
+
+```text
+[FAIL] Signature INVALID
+```

@@ -35,37 +35,55 @@ def _candidate_paths() -> list[Path]:
     return out
 
 
-def _add_windows_dll_dirs() -> list[str]:
-    """Python 3.8+: PATH không còn được dùng để dò DLL dependency.
-    Phải gọi os.add_dll_directory() cho MinGW runtime + OpenSSL trước khi load.
+_DLL_HANDLES: list[C.CDLL] = []
+
+
+def _prepare_windows_dlls() -> list[str]:
+    """Load đúng một bộ MinGW runtime trước khi load libsig_core.
+
+    Không add đồng thời mingw64/ucrt64/clang64 vì các DLL trùng tên có thể bị
+    trộn version, làm ctypes crash bên trong OpenSSL/C++ runtime.
     """
     if platform.system() != "Windows" or not hasattr(os, "add_dll_directory"):
         return []
+
     candidates = [
+        os.environ.get("LAB5_MINGW_BIN", ""),
         os.environ.get("MINGW_PREFIX", ""),
         r"C:\msys64\mingw64\bin",
         r"C:\msys64\ucrt64\bin",
         r"C:\msys64\clang64\bin",
-        r"C:\Program Files\OpenSSL-Win64\bin",
-        r"C:\Program Files\OpenSSL\bin",
-        r"C:\OpenSSL-Win64\bin",
     ]
-    # MINGW_PREFIX là root → thêm /bin
-    if candidates[0] and not candidates[0].lower().endswith("bin"):
-        candidates[0] = str(Path(candidates[0]) / "bin")
-    added: list[str] = []
+
+    chosen = ""
     for d in candidates:
-        if d and Path(d).is_dir():
-            try:
-                os.add_dll_directory(d)
-                added.append(d)
-            except (OSError, FileNotFoundError):
-                pass
-    return added
+        if not d:
+            continue
+        p = Path(d)
+        if p.name.lower() != "bin":
+            p = p / "bin"
+        if (p / "libstdc++-6.dll").exists() and (p / "libcrypto-3-x64.dll").exists():
+            chosen = str(p)
+            break
+
+    if not chosen:
+        return []
+
+    os.add_dll_directory(chosen)
+    for name in [
+        "libgcc_s_seh-1.dll",
+        "libstdc++-6.dll",
+        "libwinpthread-1.dll",
+        "libcrypto-3-x64.dll",
+    ]:
+        dll = Path(chosen) / name
+        if dll.exists():
+            _DLL_HANDLES.append(C.CDLL(str(dll)))
+    return [chosen]
 
 
 def _load_lib() -> C.CDLL:
-    extra_dirs = _add_windows_dll_dirs()
+    extra_dirs = _prepare_windows_dlls()
     tried: list[str] = []
     for p in _candidate_paths():
         if p.exists():
@@ -116,6 +134,16 @@ def _b(s: str | None) -> bytes | None:
 def _last_err() -> str:
     e = LIB.sig_last_error()
     return e.decode("utf-8", errors="replace") if e else ""
+
+
+def _native_crash_msg(e: OSError) -> str:
+    return (
+        "Native DLL call failed.\n"
+        f"{e}\n\n"
+        "Kiểm tra lại MSYS2/MinGW runtime. GUI đã ưu tiên load DLL từ "
+        "C:\\msys64\\mingw64\\bin; nếu máy dùng runtime khác, đặt biến "
+        "LAB5_MINGW_BIN trỏ tới thư mục bin tương ứng rồi chạy lại."
+    )
 
 
 # ── Helpers UI ───────────────────────────────────────────────────────────
@@ -205,24 +233,33 @@ class EcdsaTab(QtWidgets.QWidget):
             self, "ECDSA", msg)
 
     def do_keygen(self) -> None:
-        r = LIB.sig_ecdsa_keygen(_b(self.cb_curve.currentText()),
-                                 _b(self.k_priv.text()), _b(self.k_pub.text()),
-                                 _b(self.cb_fmt.currentText()))
+        try:
+            r = LIB.sig_ecdsa_keygen(_b(self.cb_curve.currentText()),
+                                     _b(self.k_priv.text()), _b(self.k_pub.text()),
+                                     _b(self.cb_fmt.currentText()))
+        except OSError as e:
+            self._info(False, _native_crash_msg(e)); return
         self._info(r == 0, f"Keypair created\nPriv: {self.k_priv.text()}\nPub : {self.k_pub.text()}"
                           if r == 0 else f"Keygen failed: {_last_err()}")
 
     def do_sign(self) -> None:
         n = C.c_size_t(0)
-        r = LIB.sig_ecdsa_sign(_b(self.s_priv.text()), _b(self.s_in.text()),
-                               _b(self.s_out.text()), _b(self.cb_s_hash.currentText()),
-                               _b(self.cb_s_enc.currentText()), C.byref(n))
+        try:
+            r = LIB.sig_ecdsa_sign(_b(self.s_priv.text()), _b(self.s_in.text()),
+                                   _b(self.s_out.text()), _b(self.cb_s_hash.currentText()),
+                                   _b(self.cb_s_enc.currentText()), C.byref(n))
+        except OSError as e:
+            self._info(False, _native_crash_msg(e)); return
         self._info(r == 0, f"Signed ({n.value} bytes) → {self.s_out.text()}"
                            if r == 0 else f"Sign failed: {_last_err()}")
 
     def do_verify(self) -> None:
-        r = LIB.sig_ecdsa_verify(_b(self.v_pub.text()), _b(self.v_in.text()),
-                                 _b(self.v_sig.text()), _b(self.cb_v_hash.currentText()),
-                                 _b(self.cb_v_enc.currentText()))
+        try:
+            r = LIB.sig_ecdsa_verify(_b(self.v_pub.text()), _b(self.v_in.text()),
+                                     _b(self.v_sig.text()), _b(self.cb_v_hash.currentText()),
+                                     _b(self.cb_v_enc.currentText()))
+        except OSError as e:
+            self._info(False, _native_crash_msg(e)); return
         if r == 0:   self._info(True,  "Signature VALID")
         elif r == 1: self._info(False, "Signature INVALID")
         else:        self._info(False, f"Verify error: {_last_err()}")
@@ -284,25 +321,34 @@ class RsaPssTab(QtWidgets.QWidget):
             self, "RSA-PSS", msg)
 
     def do_keygen(self) -> None:
-        r = LIB.sig_rsapss_keygen(self.sp_bits.value(),
-                                  _b(self.k_priv.text()), _b(self.k_pub.text()),
-                                  _b(self.cb_fmt.currentText()))
+        try:
+            r = LIB.sig_rsapss_keygen(self.sp_bits.value(),
+                                      _b(self.k_priv.text()), _b(self.k_pub.text()),
+                                      _b(self.cb_fmt.currentText()))
+        except OSError as e:
+            self._info(False, _native_crash_msg(e)); return
         self._info(r == 0, f"Keypair created ({self.sp_bits.value()}-bit)"
                           if r == 0 else f"Keygen failed: {_last_err()}")
 
     def do_sign(self) -> None:
         n = C.c_size_t(0)
-        r = LIB.sig_rsapss_sign(_b(self.s_priv.text()), _b(self.s_in.text()),
-                                _b(self.s_out.text()), _b(self.cb_s_hash.currentText()),
-                                self.sp_s_salt.value(), _b(self.cb_s_enc.currentText()),
-                                C.byref(n))
+        try:
+            r = LIB.sig_rsapss_sign(_b(self.s_priv.text()), _b(self.s_in.text()),
+                                    _b(self.s_out.text()), _b(self.cb_s_hash.currentText()),
+                                    self.sp_s_salt.value(), _b(self.cb_s_enc.currentText()),
+                                    C.byref(n))
+        except OSError as e:
+            self._info(False, _native_crash_msg(e)); return
         self._info(r == 0, f"Signed ({n.value} bytes) → {self.s_out.text()}"
                            if r == 0 else f"Sign failed: {_last_err()}")
 
     def do_verify(self) -> None:
-        r = LIB.sig_rsapss_verify(_b(self.v_pub.text()), _b(self.v_in.text()),
-                                  _b(self.v_sig.text()), _b(self.cb_v_hash.currentText()),
-                                  self.sp_v_salt.value(), _b(self.cb_v_enc.currentText()))
+        try:
+            r = LIB.sig_rsapss_verify(_b(self.v_pub.text()), _b(self.v_in.text()),
+                                      _b(self.v_sig.text()), _b(self.cb_v_hash.currentText()),
+                                      self.sp_v_salt.value(), _b(self.cb_v_enc.currentText()))
+        except OSError as e:
+            self._info(False, _native_crash_msg(e)); return
         if r == 0:   self._info(True,  "Signature VALID")
         elif r == 1: self._info(False, "Signature INVALID")
         else:        self._info(False, f"Verify error: {_last_err()}")
