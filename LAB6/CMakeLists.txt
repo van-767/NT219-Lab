@@ -35,6 +35,7 @@ message(STATUS "Binaries → ${_PQ_BIN_DIR}")
 #   3) Hint paths: MSYS2 mingw64, /usr, vcpkg
 # ---------------------------------------------------------------------------
 set(LIBOQS_TARGET "")
+find_package(OpenSSL REQUIRED COMPONENTS Crypto)
 find_package(liboqs CONFIG QUIET)
 if(TARGET OQS::oqs)
   set(LIBOQS_TARGET OQS::oqs)
@@ -66,7 +67,8 @@ else()
   add_library(oqs_imported UNKNOWN IMPORTED)
   set_target_properties(oqs_imported PROPERTIES
     IMPORTED_LOCATION "${LIBOQS_LIBRARY}"
-    INTERFACE_INCLUDE_DIRECTORIES "${LIBOQS_INCLUDE_DIR}")
+    INTERFACE_INCLUDE_DIRECTORIES "${LIBOQS_INCLUDE_DIR}"
+    INTERFACE_LINK_LIBRARIES OpenSSL::Crypto)
   set(LIBOQS_TARGET oqs_imported)
 endif()
 message(STATUS "liboqs include : ${LIBOQS_INCLUDE_DIR}")
