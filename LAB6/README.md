@@ -165,7 +165,7 @@ Set-Location D:\Study\NT219\CODE\BTVN\LAB6
 $env:PATH = "C:\msys64\mingw64\bin;$env:PATH"
 .\bin\windows\MLDSA.exe keygen --algo mldsa-44 --priv ca_priv.pem --pub ca_pub.pem
 .\bin\windows\MLDSA.exe keygen --algo mldsa-44 --priv sub_priv.pem --pub sub_pub.pem
-.\bin\windows\MLDSA.exe cert --make --ca-priv ca_priv.pem --ca-pub ca_pub.pem --subj-pub sub_pub.pem --subject "UIT-Student-22520123" --algo mldsa-44 --out cert.json
+.\bin\windows\MLDSA.exe cert --make --ca-priv ca_priv.pem --ca-pub ca_pub.pem --subj-pub sub_pub.pem --subject "UIT-Student-24521973" --algo mldsa-44 --out cert.json
 .\bin\windows\MLDSA.exe cert --verify --ca-pub ca_pub.pem --cert cert.json
 ```
 

@@ -65,10 +65,13 @@ lib = load_lib()
 lib.pq_last_error.restype = c_char_p
 
 for fn in ("pq_mldsa_keygen", "pq_mldsa_sign", "pq_mldsa_verify",
-           "pq_mlkem_keygen", "pq_mlkem_encaps", "pq_mlkem_decaps",
-           "pq_cert_verify"):
+           "pq_mlkem_keygen", "pq_mlkem_encaps", "pq_mlkem_decaps"):
     f = getattr(lib, fn)
     f.argtypes = [c_char_p, c_char_p, c_char_p]; f.restype = c_int
+
+# pq_cert_verify chỉ nhận 2 tham số (ca_pub_path, cert_path)
+lib.pq_cert_verify.argtypes = [c_char_p, c_char_p]
+lib.pq_cert_verify.restype  = c_int
 
 lib.pq_cert_make.argtypes = [c_char_p, c_char_p, c_char_p, c_char_p, c_char_p]
 lib.pq_cert_make.restype  = c_int
