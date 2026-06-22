@@ -1,0 +1,14 @@
+/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs/lib/cmake/liboqs/liboqsConfig.cmake
+/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs/lib/cmake/liboqs/liboqsConfigVersion.cmake
+/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs/lib/pkgconfig/liboqs.pc
+/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs/lib/liboqs.a
+/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs/lib/cmake/liboqs/liboqsTargets.cmake
+/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs/lib/cmake/liboqs/liboqsTargets-noconfig.cmake
+/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs/include/oqs/oqs.h
+/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs/include/oqs/common.h
+/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs/include/oqs/rand.h
+/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs/include/oqs/kem.h
+/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs/include/oqs/sig.h
+/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs/include/oqs/kem_ml_kem.h
+/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs/include/oqs/sig_ml_dsa.h
+/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs/include/oqs/oqsconfig.h

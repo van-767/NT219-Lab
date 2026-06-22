@@ -1,0 +1,980 @@
+[
+{
+  "directory": "/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-build",
+  "command": "/usr/bin/cc -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-build/include -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src -std=gnu11 -fPIC -fvisibility=hidden -Wa,--noexecstack -O3 -fomit-frame-pointer -fdata-sections -ffunction-sections -Wl,--gc-sections -o src/CMakeFiles/oqs.dir/kem/kem.c.o -c /home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/kem/kem.c",
+  "file": "/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/kem/kem.c",
+  "output": "src/CMakeFiles/oqs.dir/kem/kem.c.o"
+},
+{
+  "directory": "/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-build",
+  "command": "/usr/bin/cc -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-build/include -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src -std=gnu11 -fPIC -fvisibility=hidden -Wa,--noexecstack -O3 -fomit-frame-pointer -fdata-sections -ffunction-sections -Wl,--gc-sections -o src/CMakeFiles/oqs.dir/sig/sig.c.o -c /home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/sig/sig.c",
+  "file": "/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/sig/sig.c",
+  "output": "src/CMakeFiles/oqs.dir/sig/sig.c.o"
+},
+{
+  "directory": "/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-build",
+  "command": "/usr/bin/cc -DOQS_HAVE_ALIGNED_ALLOC -DOQS_HAVE_EXPLICIT_BZERO -DOQS_HAVE_MEMALIGN -DOQS_HAVE_POSIX_MEMALIGN -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-build/include -std=gnu11 -fPIC -fvisibility=hidden -Wa,--noexecstack -O3 -fomit-frame-pointer -fdata-sections -ffunction-sections -Wl,--gc-sections -Wbad-function-cast -o src/common/CMakeFiles/common.dir/aes/aes.c.o -c /home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/common/aes/aes.c",
+  "file": "/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/common/aes/aes.c",
+  "output": "src/common/CMakeFiles/common.dir/aes/aes.c.o"
+},
+{
+  "directory": "/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-build",
+  "command": "/usr/bin/cc -DOQS_HAVE_ALIGNED_ALLOC -DOQS_HAVE_EXPLICIT_BZERO -DOQS_HAVE_MEMALIGN -DOQS_HAVE_POSIX_MEMALIGN -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-build/include -std=gnu11 -fPIC -fvisibility=hidden -Wa,--noexecstack -O3 -fomit-frame-pointer -fdata-sections -ffunction-sections -Wl,--gc-sections -Wbad-function-cast -o src/common/CMakeFiles/common.dir/aes/aes_c.c.o -c /home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/common/aes/aes_c.c",
+  "file": "/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/common/aes/aes_c.c",
+  "output": "src/common/CMakeFiles/common.dir/aes/aes_c.c.o"
+},
+{
+  "directory": "/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-build",
+  "command": "/usr/bin/cc -DOQS_HAVE_ALIGNED_ALLOC -DOQS_HAVE_EXPLICIT_BZERO -DOQS_HAVE_MEMALIGN -DOQS_HAVE_POSIX_MEMALIGN -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-build/include -std=gnu11 -fPIC -fvisibility=hidden -Wa,--noexecstack -O3 -fomit-frame-pointer -fdata-sections -ffunction-sections -Wl,--gc-sections -Wbad-function-cast -maes -o src/common/CMakeFiles/common.dir/aes/aes128_ni.c.o -c /home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/common/aes/aes128_ni.c",
+  "file": "/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/common/aes/aes128_ni.c",
+  "output": "src/common/CMakeFiles/common.dir/aes/aes128_ni.c.o"
+},
+{
+  "directory": "/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-build",
+  "command": "/usr/bin/cc -DOQS_HAVE_ALIGNED_ALLOC -DOQS_HAVE_EXPLICIT_BZERO -DOQS_HAVE_MEMALIGN -DOQS_HAVE_POSIX_MEMALIGN -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-build/include -std=gnu11 -fPIC -fvisibility=hidden -Wa,--noexecstack -O3 -fomit-frame-pointer -fdata-sections -ffunction-sections -Wl,--gc-sections -Wbad-function-cast -maes -mssse3 -o src/common/CMakeFiles/common.dir/aes/aes256_ni.c.o -c /home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/common/aes/aes256_ni.c",
+  "file": "/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/common/aes/aes256_ni.c",
+  "output": "src/common/CMakeFiles/common.dir/aes/aes256_ni.c.o"
+},
+{
+  "directory": "/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-build",
+  "command": "/usr/bin/cc -DOQS_HAVE_ALIGNED_ALLOC -DOQS_HAVE_EXPLICIT_BZERO -DOQS_HAVE_MEMALIGN -DOQS_HAVE_POSIX_MEMALIGN -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-build/include -std=gnu11 -fPIC -fvisibility=hidden -Wa,--noexecstack -O3 -fomit-frame-pointer -fdata-sections -ffunction-sections -Wl,--gc-sections -Wbad-function-cast -o src/common/CMakeFiles/common.dir/sha2/sha2_ossl.c.o -c /home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/common/sha2/sha2_ossl.c",
+  "file": "/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/common/sha2/sha2_ossl.c",
+  "output": "src/common/CMakeFiles/common.dir/sha2/sha2_ossl.c.o"
+},
+{
+  "directory": "/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-build",
+  "command": "/usr/bin/cc -DOQS_HAVE_ALIGNED_ALLOC -DOQS_HAVE_EXPLICIT_BZERO -DOQS_HAVE_MEMALIGN -DOQS_HAVE_POSIX_MEMALIGN -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-build/include -std=gnu11 -fPIC -fvisibility=hidden -Wa,--noexecstack -O3 -fomit-frame-pointer -fdata-sections -ffunction-sections -Wl,--gc-sections -Wbad-function-cast -o src/common/CMakeFiles/common.dir/sha3/xkcp_sha3.c.o -c /home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/common/sha3/xkcp_sha3.c",
+  "file": "/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/common/sha3/xkcp_sha3.c",
+  "output": "src/common/CMakeFiles/common.dir/sha3/xkcp_sha3.c.o"
+},
+{
+  "directory": "/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-build",
+  "command": "/usr/bin/cc -DOQS_HAVE_ALIGNED_ALLOC -DOQS_HAVE_EXPLICIT_BZERO -DOQS_HAVE_MEMALIGN -DOQS_HAVE_POSIX_MEMALIGN -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-build/include -std=gnu11 -fPIC -fvisibility=hidden -Wa,--noexecstack -O3 -fomit-frame-pointer -fdata-sections -ffunction-sections -Wl,--gc-sections -Wbad-function-cast -o src/common/CMakeFiles/common.dir/sha3/xkcp_sha3x4.c.o -c /home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/common/sha3/xkcp_sha3x4.c",
+  "file": "/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/common/sha3/xkcp_sha3x4.c",
+  "output": "src/common/CMakeFiles/common.dir/sha3/xkcp_sha3x4.c.o"
+},
+{
+  "directory": "/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-build",
+  "command": "/usr/bin/cc -DOQS_HAVE_ALIGNED_ALLOC -DOQS_HAVE_EXPLICIT_BZERO -DOQS_HAVE_MEMALIGN -DOQS_HAVE_POSIX_MEMALIGN -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-build/include -std=gnu11 -fPIC -fvisibility=hidden -Wa,--noexecstack -O3 -fomit-frame-pointer -fdata-sections -ffunction-sections -Wl,--gc-sections -Wbad-function-cast -o src/common/CMakeFiles/common.dir/ossl_helpers.c.o -c /home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/common/ossl_helpers.c",
+  "file": "/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/common/ossl_helpers.c",
+  "output": "src/common/CMakeFiles/common.dir/ossl_helpers.c.o"
+},
+{
+  "directory": "/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-build",
+  "command": "/usr/bin/cc -DOQS_HAVE_ALIGNED_ALLOC -DOQS_HAVE_EXPLICIT_BZERO -DOQS_HAVE_MEMALIGN -DOQS_HAVE_POSIX_MEMALIGN -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-build/include -std=gnu11 -fPIC -fvisibility=hidden -Wa,--noexecstack -O3 -fomit-frame-pointer -fdata-sections -ffunction-sections -Wl,--gc-sections -Wbad-function-cast -o src/common/CMakeFiles/common.dir/common.c.o -c /home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/common/common.c",
+  "file": "/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/common/common.c",
+  "output": "src/common/CMakeFiles/common.dir/common.c.o"
+},
+{
+  "directory": "/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-build",
+  "command": "/usr/bin/cc -DOQS_HAVE_ALIGNED_ALLOC -DOQS_HAVE_EXPLICIT_BZERO -DOQS_HAVE_MEMALIGN -DOQS_HAVE_POSIX_MEMALIGN -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-build/include -std=gnu11 -fPIC -fvisibility=hidden -Wa,--noexecstack -O3 -fomit-frame-pointer -fdata-sections -ffunction-sections -Wl,--gc-sections -Wbad-function-cast -o src/common/CMakeFiles/common.dir/pqclean_shims/fips202.c.o -c /home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/common/pqclean_shims/fips202.c",
+  "file": "/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/common/pqclean_shims/fips202.c",
+  "output": "src/common/CMakeFiles/common.dir/pqclean_shims/fips202.c.o"
+},
+{
+  "directory": "/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-build",
+  "command": "/usr/bin/cc -DOQS_HAVE_ALIGNED_ALLOC -DOQS_HAVE_EXPLICIT_BZERO -DOQS_HAVE_MEMALIGN -DOQS_HAVE_POSIX_MEMALIGN -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-build/include -std=gnu11 -fPIC -fvisibility=hidden -Wa,--noexecstack -O3 -fomit-frame-pointer -fdata-sections -ffunction-sections -Wl,--gc-sections -Wbad-function-cast -o src/common/CMakeFiles/common.dir/pqclean_shims/fips202x4.c.o -c /home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/common/pqclean_shims/fips202x4.c",
+  "file": "/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/common/pqclean_shims/fips202x4.c",
+  "output": "src/common/CMakeFiles/common.dir/pqclean_shims/fips202x4.c.o"
+},
+{
+  "directory": "/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-build",
+  "command": "/usr/bin/cc -DOQS_HAVE_ALIGNED_ALLOC -DOQS_HAVE_EXPLICIT_BZERO -DOQS_HAVE_MEMALIGN -DOQS_HAVE_POSIX_MEMALIGN -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-build/include -std=gnu11 -fPIC -fvisibility=hidden -Wa,--noexecstack -O3 -fomit-frame-pointer -fdata-sections -ffunction-sections -Wl,--gc-sections -Wbad-function-cast -o src/common/CMakeFiles/common.dir/rand/rand.c.o -c /home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/common/rand/rand.c",
+  "file": "/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/common/rand/rand.c",
+  "output": "src/common/CMakeFiles/common.dir/rand/rand.c.o"
+},
+{
+  "directory": "/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-build",
+  "command": "/usr/bin/cc -DOQS_HAVE_ALIGNED_ALLOC -DOQS_HAVE_EXPLICIT_BZERO -DOQS_HAVE_MEMALIGN -DOQS_HAVE_POSIX_MEMALIGN -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-build/include -std=gnu11 -fPIC -fvisibility=default -Wa,--noexecstack -O3 -fomit-frame-pointer -fdata-sections -ffunction-sections -Wl,--gc-sections -Wbad-function-cast -o src/common/CMakeFiles/internal.dir/aes/aes.c.o -c /home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/common/aes/aes.c",
+  "file": "/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/common/aes/aes.c",
+  "output": "src/common/CMakeFiles/internal.dir/aes/aes.c.o"
+},
+{
+  "directory": "/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-build",
+  "command": "/usr/bin/cc -DOQS_HAVE_ALIGNED_ALLOC -DOQS_HAVE_EXPLICIT_BZERO -DOQS_HAVE_MEMALIGN -DOQS_HAVE_POSIX_MEMALIGN -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-build/include -std=gnu11 -fPIC -fvisibility=default -Wa,--noexecstack -O3 -fomit-frame-pointer -fdata-sections -ffunction-sections -Wl,--gc-sections -Wbad-function-cast -o src/common/CMakeFiles/internal.dir/aes/aes_c.c.o -c /home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/common/aes/aes_c.c",
+  "file": "/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/common/aes/aes_c.c",
+  "output": "src/common/CMakeFiles/internal.dir/aes/aes_c.c.o"
+},
+{
+  "directory": "/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-build",
+  "command": "/usr/bin/cc -DOQS_HAVE_ALIGNED_ALLOC -DOQS_HAVE_EXPLICIT_BZERO -DOQS_HAVE_MEMALIGN -DOQS_HAVE_POSIX_MEMALIGN -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-build/include -std=gnu11 -fPIC -fvisibility=default -Wa,--noexecstack -O3 -fomit-frame-pointer -fdata-sections -ffunction-sections -Wl,--gc-sections -Wbad-function-cast -maes -o src/common/CMakeFiles/internal.dir/aes/aes128_ni.c.o -c /home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/common/aes/aes128_ni.c",
+  "file": "/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/common/aes/aes128_ni.c",
+  "output": "src/common/CMakeFiles/internal.dir/aes/aes128_ni.c.o"
+},
+{
+  "directory": "/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-build",
+  "command": "/usr/bin/cc -DOQS_HAVE_ALIGNED_ALLOC -DOQS_HAVE_EXPLICIT_BZERO -DOQS_HAVE_MEMALIGN -DOQS_HAVE_POSIX_MEMALIGN -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-build/include -std=gnu11 -fPIC -fvisibility=default -Wa,--noexecstack -O3 -fomit-frame-pointer -fdata-sections -ffunction-sections -Wl,--gc-sections -Wbad-function-cast -maes -mssse3 -o src/common/CMakeFiles/internal.dir/aes/aes256_ni.c.o -c /home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/common/aes/aes256_ni.c",
+  "file": "/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/common/aes/aes256_ni.c",
+  "output": "src/common/CMakeFiles/internal.dir/aes/aes256_ni.c.o"
+},
+{
+  "directory": "/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-build",
+  "command": "/usr/bin/cc -DOQS_HAVE_ALIGNED_ALLOC -DOQS_HAVE_EXPLICIT_BZERO -DOQS_HAVE_MEMALIGN -DOQS_HAVE_POSIX_MEMALIGN -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-build/include -std=gnu11 -fPIC -fvisibility=default -Wa,--noexecstack -O3 -fomit-frame-pointer -fdata-sections -ffunction-sections -Wl,--gc-sections -Wbad-function-cast -o src/common/CMakeFiles/internal.dir/sha2/sha2_ossl.c.o -c /home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/common/sha2/sha2_ossl.c",
+  "file": "/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/common/sha2/sha2_ossl.c",
+  "output": "src/common/CMakeFiles/internal.dir/sha2/sha2_ossl.c.o"
+},
+{
+  "directory": "/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-build",
+  "command": "/usr/bin/cc -DOQS_HAVE_ALIGNED_ALLOC -DOQS_HAVE_EXPLICIT_BZERO -DOQS_HAVE_MEMALIGN -DOQS_HAVE_POSIX_MEMALIGN -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-build/include -std=gnu11 -fPIC -fvisibility=default -Wa,--noexecstack -O3 -fomit-frame-pointer -fdata-sections -ffunction-sections -Wl,--gc-sections -Wbad-function-cast -o src/common/CMakeFiles/internal.dir/sha3/xkcp_sha3.c.o -c /home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/common/sha3/xkcp_sha3.c",
+  "file": "/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/common/sha3/xkcp_sha3.c",
+  "output": "src/common/CMakeFiles/internal.dir/sha3/xkcp_sha3.c.o"
+},
+{
+  "directory": "/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-build",
+  "command": "/usr/bin/cc -DOQS_HAVE_ALIGNED_ALLOC -DOQS_HAVE_EXPLICIT_BZERO -DOQS_HAVE_MEMALIGN -DOQS_HAVE_POSIX_MEMALIGN -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-build/include -std=gnu11 -fPIC -fvisibility=default -Wa,--noexecstack -O3 -fomit-frame-pointer -fdata-sections -ffunction-sections -Wl,--gc-sections -Wbad-function-cast -o src/common/CMakeFiles/internal.dir/sha3/xkcp_sha3x4.c.o -c /home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/common/sha3/xkcp_sha3x4.c",
+  "file": "/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/common/sha3/xkcp_sha3x4.c",
+  "output": "src/common/CMakeFiles/internal.dir/sha3/xkcp_sha3x4.c.o"
+},
+{
+  "directory": "/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-build",
+  "command": "/usr/bin/cc -DOQS_HAVE_ALIGNED_ALLOC -DOQS_HAVE_EXPLICIT_BZERO -DOQS_HAVE_MEMALIGN -DOQS_HAVE_POSIX_MEMALIGN -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-build/include -std=gnu11 -fPIC -fvisibility=default -Wa,--noexecstack -O3 -fomit-frame-pointer -fdata-sections -ffunction-sections -Wl,--gc-sections -Wbad-function-cast -o src/common/CMakeFiles/internal.dir/ossl_helpers.c.o -c /home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/common/ossl_helpers.c",
+  "file": "/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/common/ossl_helpers.c",
+  "output": "src/common/CMakeFiles/internal.dir/ossl_helpers.c.o"
+},
+{
+  "directory": "/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-build",
+  "command": "/usr/bin/cc -DOQS_HAVE_ALIGNED_ALLOC -DOQS_HAVE_EXPLICIT_BZERO -DOQS_HAVE_MEMALIGN -DOQS_HAVE_POSIX_MEMALIGN -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-build/include -std=gnu11 -fPIC -fvisibility=default -Wa,--noexecstack -O3 -fomit-frame-pointer -fdata-sections -ffunction-sections -Wl,--gc-sections -Wbad-function-cast -o src/common/CMakeFiles/internal.dir/common.c.o -c /home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/common/common.c",
+  "file": "/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/common/common.c",
+  "output": "src/common/CMakeFiles/internal.dir/common.c.o"
+},
+{
+  "directory": "/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-build",
+  "command": "/usr/bin/cc -DOQS_HAVE_ALIGNED_ALLOC -DOQS_HAVE_EXPLICIT_BZERO -DOQS_HAVE_MEMALIGN -DOQS_HAVE_POSIX_MEMALIGN -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-build/include -std=gnu11 -fPIC -fvisibility=default -Wa,--noexecstack -O3 -fomit-frame-pointer -fdata-sections -ffunction-sections -Wl,--gc-sections -Wbad-function-cast -o src/common/CMakeFiles/internal.dir/rand/rand_nist.c.o -c /home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/common/rand/rand_nist.c",
+  "file": "/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/common/rand/rand_nist.c",
+  "output": "src/common/CMakeFiles/internal.dir/rand/rand_nist.c.o"
+},
+{
+  "directory": "/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-build",
+  "command": "/usr/bin/cc -DADD_SYMBOL_SUFFIX -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-build/include -std=gnu11 -fPIC -fvisibility=hidden -Wa,--noexecstack -O3 -fomit-frame-pointer -fdata-sections -ffunction-sections -Wl,--gc-sections -Wbad-function-cast -o src/common/sha3/xkcp_low/CMakeFiles/xkcp_low_keccakp_1600_plain64.dir/KeccakP-1600/plain-64bits/KeccakP-1600-opt64.c.o -c /home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/common/sha3/xkcp_low/KeccakP-1600/plain-64bits/KeccakP-1600-opt64.c",
+  "file": "/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/common/sha3/xkcp_low/KeccakP-1600/plain-64bits/KeccakP-1600-opt64.c",
+  "output": "src/common/sha3/xkcp_low/CMakeFiles/xkcp_low_keccakp_1600_plain64.dir/KeccakP-1600/plain-64bits/KeccakP-1600-opt64.c.o"
+},
+{
+  "directory": "/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-build",
+  "command": "/usr/bin/cc -DADD_SYMBOL_SUFFIX -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-build/include -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/common/sha3/xkcp_low/KeccakP-1600/plain-64bits -std=gnu11 -fPIC -fvisibility=hidden -Wa,--noexecstack -O3 -fomit-frame-pointer -fdata-sections -ffunction-sections -Wl,--gc-sections -Wbad-function-cast -o src/common/sha3/xkcp_low/CMakeFiles/xkcp_low_keccakp_1600times4_serial.dir/KeccakP-1600times4/serial/KeccakP-1600-times4-on1.c.o -c /home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/common/sha3/xkcp_low/KeccakP-1600times4/serial/KeccakP-1600-times4-on1.c",
+  "file": "/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/common/sha3/xkcp_low/KeccakP-1600times4/serial/KeccakP-1600-times4-on1.c",
+  "output": "src/common/sha3/xkcp_low/CMakeFiles/xkcp_low_keccakp_1600times4_serial.dir/KeccakP-1600times4/serial/KeccakP-1600-times4-on1.c.o"
+},
+{
+  "directory": "/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-build",
+  "command": "/usr/bin/cc -DADD_SYMBOL_SUFFIX -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-build/include -fPIC -Wa,--noexecstack -O3 -fomit-frame-pointer -fdata-sections -ffunction-sections -Wl,--gc-sections -Wbad-function-cast -o src/common/sha3/xkcp_low/CMakeFiles/xkcp_low_keccakp_1600_avx2.dir/KeccakP-1600/avx2/KeccakP-1600-AVX2.S.o -c /home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/common/sha3/xkcp_low/KeccakP-1600/avx2/KeccakP-1600-AVX2.S",
+  "file": "/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/common/sha3/xkcp_low/KeccakP-1600/avx2/KeccakP-1600-AVX2.S",
+  "output": "src/common/sha3/xkcp_low/CMakeFiles/xkcp_low_keccakp_1600_avx2.dir/KeccakP-1600/avx2/KeccakP-1600-AVX2.S.o"
+},
+{
+  "directory": "/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-build",
+  "command": "/usr/bin/cc -DADD_SYMBOL_SUFFIX -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-build/include -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/common/sha3/xkcp_low/KeccakP-1600/avx2 -std=gnu11 -fPIC -fvisibility=hidden -Wa,--noexecstack -O3 -fomit-frame-pointer -fdata-sections -ffunction-sections -Wl,--gc-sections -Wbad-function-cast -mavx2 -o src/common/sha3/xkcp_low/CMakeFiles/xkcp_low_keccakp_1600times4_avx2.dir/KeccakP-1600times4/avx2/KeccakP-1600-times4-SIMD256.c.o -c /home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/common/sha3/xkcp_low/KeccakP-1600times4/avx2/KeccakP-1600-times4-SIMD256.c",
+  "file": "/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/common/sha3/xkcp_low/KeccakP-1600times4/avx2/KeccakP-1600-times4-SIMD256.c",
+  "output": "src/common/sha3/xkcp_low/CMakeFiles/xkcp_low_keccakp_1600times4_avx2.dir/KeccakP-1600times4/avx2/KeccakP-1600-times4-SIMD256.c.o"
+},
+{
+  "directory": "/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-build",
+  "command": "/usr/bin/cc -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-build/include -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/kem/ml_kem/pqcrystals-kyber-standard_ml-kem-512-ipd_ref -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/common/pqclean_shims -std=gnu11 -fPIC -fvisibility=hidden -Wa,--noexecstack -O3 -fomit-frame-pointer -fdata-sections -ffunction-sections -Wl,--gc-sections -DKYBER_K=2 -o src/kem/ml_kem/CMakeFiles/ml_kem_512_ipd_ref.dir/kem_ml_kem_512_ipd.c.o -c /home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/kem/ml_kem/kem_ml_kem_512_ipd.c",
+  "file": "/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/kem/ml_kem/kem_ml_kem_512_ipd.c",
+  "output": "src/kem/ml_kem/CMakeFiles/ml_kem_512_ipd_ref.dir/kem_ml_kem_512_ipd.c.o"
+},
+{
+  "directory": "/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-build",
+  "command": "/usr/bin/cc -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-build/include -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/kem/ml_kem/pqcrystals-kyber-standard_ml-kem-512-ipd_ref -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/common/pqclean_shims -std=gnu11 -fPIC -fvisibility=hidden -Wa,--noexecstack -O3 -fomit-frame-pointer -fdata-sections -ffunction-sections -Wl,--gc-sections -DKYBER_K=2 -o src/kem/ml_kem/CMakeFiles/ml_kem_512_ipd_ref.dir/pqcrystals-kyber-standard_ml-kem-512-ipd_ref/cbd.c.o -c /home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/kem/ml_kem/pqcrystals-kyber-standard_ml-kem-512-ipd_ref/cbd.c",
+  "file": "/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/kem/ml_kem/pqcrystals-kyber-standard_ml-kem-512-ipd_ref/cbd.c",
+  "output": "src/kem/ml_kem/CMakeFiles/ml_kem_512_ipd_ref.dir/pqcrystals-kyber-standard_ml-kem-512-ipd_ref/cbd.c.o"
+},
+{
+  "directory": "/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-build",
+  "command": "/usr/bin/cc -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-build/include -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/kem/ml_kem/pqcrystals-kyber-standard_ml-kem-512-ipd_ref -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/common/pqclean_shims -std=gnu11 -fPIC -fvisibility=hidden -Wa,--noexecstack -O3 -fomit-frame-pointer -fdata-sections -ffunction-sections -Wl,--gc-sections -DKYBER_K=2 -o src/kem/ml_kem/CMakeFiles/ml_kem_512_ipd_ref.dir/pqcrystals-kyber-standard_ml-kem-512-ipd_ref/indcpa.c.o -c /home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/kem/ml_kem/pqcrystals-kyber-standard_ml-kem-512-ipd_ref/indcpa.c",
+  "file": "/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/kem/ml_kem/pqcrystals-kyber-standard_ml-kem-512-ipd_ref/indcpa.c",
+  "output": "src/kem/ml_kem/CMakeFiles/ml_kem_512_ipd_ref.dir/pqcrystals-kyber-standard_ml-kem-512-ipd_ref/indcpa.c.o"
+},
+{
+  "directory": "/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-build",
+  "command": "/usr/bin/cc -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-build/include -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/kem/ml_kem/pqcrystals-kyber-standard_ml-kem-512-ipd_ref -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/common/pqclean_shims -std=gnu11 -fPIC -fvisibility=hidden -Wa,--noexecstack -O3 -fomit-frame-pointer -fdata-sections -ffunction-sections -Wl,--gc-sections -DKYBER_K=2 -o src/kem/ml_kem/CMakeFiles/ml_kem_512_ipd_ref.dir/pqcrystals-kyber-standard_ml-kem-512-ipd_ref/kem.c.o -c /home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/kem/ml_kem/pqcrystals-kyber-standard_ml-kem-512-ipd_ref/kem.c",
+  "file": "/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/kem/ml_kem/pqcrystals-kyber-standard_ml-kem-512-ipd_ref/kem.c",
+  "output": "src/kem/ml_kem/CMakeFiles/ml_kem_512_ipd_ref.dir/pqcrystals-kyber-standard_ml-kem-512-ipd_ref/kem.c.o"
+},
+{
+  "directory": "/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-build",
+  "command": "/usr/bin/cc -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-build/include -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/kem/ml_kem/pqcrystals-kyber-standard_ml-kem-512-ipd_ref -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/common/pqclean_shims -std=gnu11 -fPIC -fvisibility=hidden -Wa,--noexecstack -O3 -fomit-frame-pointer -fdata-sections -ffunction-sections -Wl,--gc-sections -DKYBER_K=2 -o src/kem/ml_kem/CMakeFiles/ml_kem_512_ipd_ref.dir/pqcrystals-kyber-standard_ml-kem-512-ipd_ref/ntt.c.o -c /home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/kem/ml_kem/pqcrystals-kyber-standard_ml-kem-512-ipd_ref/ntt.c",
+  "file": "/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/kem/ml_kem/pqcrystals-kyber-standard_ml-kem-512-ipd_ref/ntt.c",
+  "output": "src/kem/ml_kem/CMakeFiles/ml_kem_512_ipd_ref.dir/pqcrystals-kyber-standard_ml-kem-512-ipd_ref/ntt.c.o"
+},
+{
+  "directory": "/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-build",
+  "command": "/usr/bin/cc -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-build/include -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/kem/ml_kem/pqcrystals-kyber-standard_ml-kem-512-ipd_ref -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/common/pqclean_shims -std=gnu11 -fPIC -fvisibility=hidden -Wa,--noexecstack -O3 -fomit-frame-pointer -fdata-sections -ffunction-sections -Wl,--gc-sections -DKYBER_K=2 -o src/kem/ml_kem/CMakeFiles/ml_kem_512_ipd_ref.dir/pqcrystals-kyber-standard_ml-kem-512-ipd_ref/poly.c.o -c /home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/kem/ml_kem/pqcrystals-kyber-standard_ml-kem-512-ipd_ref/poly.c",
+  "file": "/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/kem/ml_kem/pqcrystals-kyber-standard_ml-kem-512-ipd_ref/poly.c",
+  "output": "src/kem/ml_kem/CMakeFiles/ml_kem_512_ipd_ref.dir/pqcrystals-kyber-standard_ml-kem-512-ipd_ref/poly.c.o"
+},
+{
+  "directory": "/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-build",
+  "command": "/usr/bin/cc -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-build/include -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/kem/ml_kem/pqcrystals-kyber-standard_ml-kem-512-ipd_ref -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/common/pqclean_shims -std=gnu11 -fPIC -fvisibility=hidden -Wa,--noexecstack -O3 -fomit-frame-pointer -fdata-sections -ffunction-sections -Wl,--gc-sections -DKYBER_K=2 -o src/kem/ml_kem/CMakeFiles/ml_kem_512_ipd_ref.dir/pqcrystals-kyber-standard_ml-kem-512-ipd_ref/polyvec.c.o -c /home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/kem/ml_kem/pqcrystals-kyber-standard_ml-kem-512-ipd_ref/polyvec.c",
+  "file": "/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/kem/ml_kem/pqcrystals-kyber-standard_ml-kem-512-ipd_ref/polyvec.c",
+  "output": "src/kem/ml_kem/CMakeFiles/ml_kem_512_ipd_ref.dir/pqcrystals-kyber-standard_ml-kem-512-ipd_ref/polyvec.c.o"
+},
+{
+  "directory": "/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-build",
+  "command": "/usr/bin/cc -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-build/include -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/kem/ml_kem/pqcrystals-kyber-standard_ml-kem-512-ipd_ref -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/common/pqclean_shims -std=gnu11 -fPIC -fvisibility=hidden -Wa,--noexecstack -O3 -fomit-frame-pointer -fdata-sections -ffunction-sections -Wl,--gc-sections -DKYBER_K=2 -o src/kem/ml_kem/CMakeFiles/ml_kem_512_ipd_ref.dir/pqcrystals-kyber-standard_ml-kem-512-ipd_ref/reduce.c.o -c /home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/kem/ml_kem/pqcrystals-kyber-standard_ml-kem-512-ipd_ref/reduce.c",
+  "file": "/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/kem/ml_kem/pqcrystals-kyber-standard_ml-kem-512-ipd_ref/reduce.c",
+  "output": "src/kem/ml_kem/CMakeFiles/ml_kem_512_ipd_ref.dir/pqcrystals-kyber-standard_ml-kem-512-ipd_ref/reduce.c.o"
+},
+{
+  "directory": "/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-build",
+  "command": "/usr/bin/cc -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-build/include -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/kem/ml_kem/pqcrystals-kyber-standard_ml-kem-512-ipd_ref -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/common/pqclean_shims -std=gnu11 -fPIC -fvisibility=hidden -Wa,--noexecstack -O3 -fomit-frame-pointer -fdata-sections -ffunction-sections -Wl,--gc-sections -DKYBER_K=2 -o src/kem/ml_kem/CMakeFiles/ml_kem_512_ipd_ref.dir/pqcrystals-kyber-standard_ml-kem-512-ipd_ref/symmetric-shake.c.o -c /home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/kem/ml_kem/pqcrystals-kyber-standard_ml-kem-512-ipd_ref/symmetric-shake.c",
+  "file": "/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/kem/ml_kem/pqcrystals-kyber-standard_ml-kem-512-ipd_ref/symmetric-shake.c",
+  "output": "src/kem/ml_kem/CMakeFiles/ml_kem_512_ipd_ref.dir/pqcrystals-kyber-standard_ml-kem-512-ipd_ref/symmetric-shake.c.o"
+},
+{
+  "directory": "/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-build",
+  "command": "/usr/bin/cc -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-build/include -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/kem/ml_kem/pqcrystals-kyber-standard_ml-kem-512-ipd_ref -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/common/pqclean_shims -std=gnu11 -fPIC -fvisibility=hidden -Wa,--noexecstack -O3 -fomit-frame-pointer -fdata-sections -ffunction-sections -Wl,--gc-sections -DKYBER_K=2 -o src/kem/ml_kem/CMakeFiles/ml_kem_512_ipd_ref.dir/pqcrystals-kyber-standard_ml-kem-512-ipd_ref/verify.c.o -c /home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/kem/ml_kem/pqcrystals-kyber-standard_ml-kem-512-ipd_ref/verify.c",
+  "file": "/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/kem/ml_kem/pqcrystals-kyber-standard_ml-kem-512-ipd_ref/verify.c",
+  "output": "src/kem/ml_kem/CMakeFiles/ml_kem_512_ipd_ref.dir/pqcrystals-kyber-standard_ml-kem-512-ipd_ref/verify.c.o"
+},
+{
+  "directory": "/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-build",
+  "command": "/usr/bin/cc -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-build/include -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/kem/ml_kem/pqcrystals-kyber-standard_ml-kem-512-ipd_avx2 -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/common/pqclean_shims -fPIC -Wa,--noexecstack -O3 -fomit-frame-pointer -fdata-sections -ffunction-sections -Wl,--gc-sections -mavx2 -mbmi2 -mpopcnt -DKYBER_K=2 -o src/kem/ml_kem/CMakeFiles/ml_kem_512_ipd_avx2.dir/pqcrystals-kyber-standard_ml-kem-512-ipd_avx2/basemul.S.o -c /home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/kem/ml_kem/pqcrystals-kyber-standard_ml-kem-512-ipd_avx2/basemul.S",
+  "file": "/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/kem/ml_kem/pqcrystals-kyber-standard_ml-kem-512-ipd_avx2/basemul.S",
+  "output": "src/kem/ml_kem/CMakeFiles/ml_kem_512_ipd_avx2.dir/pqcrystals-kyber-standard_ml-kem-512-ipd_avx2/basemul.S.o"
+},
+{
+  "directory": "/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-build",
+  "command": "/usr/bin/cc -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-build/include -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/kem/ml_kem/pqcrystals-kyber-standard_ml-kem-512-ipd_avx2 -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/common/pqclean_shims -std=gnu11 -fPIC -fvisibility=hidden -Wa,--noexecstack -O3 -fomit-frame-pointer -fdata-sections -ffunction-sections -Wl,--gc-sections -mavx2 -mbmi2 -mpopcnt -DKYBER_K=2 -o src/kem/ml_kem/CMakeFiles/ml_kem_512_ipd_avx2.dir/pqcrystals-kyber-standard_ml-kem-512-ipd_avx2/cbd.c.o -c /home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/kem/ml_kem/pqcrystals-kyber-standard_ml-kem-512-ipd_avx2/cbd.c",
+  "file": "/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/kem/ml_kem/pqcrystals-kyber-standard_ml-kem-512-ipd_avx2/cbd.c",
+  "output": "src/kem/ml_kem/CMakeFiles/ml_kem_512_ipd_avx2.dir/pqcrystals-kyber-standard_ml-kem-512-ipd_avx2/cbd.c.o"
+},
+{
+  "directory": "/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-build",
+  "command": "/usr/bin/cc -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-build/include -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/kem/ml_kem/pqcrystals-kyber-standard_ml-kem-512-ipd_avx2 -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/common/pqclean_shims -std=gnu11 -fPIC -fvisibility=hidden -Wa,--noexecstack -O3 -fomit-frame-pointer -fdata-sections -ffunction-sections -Wl,--gc-sections -mavx2 -mbmi2 -mpopcnt -DKYBER_K=2 -o src/kem/ml_kem/CMakeFiles/ml_kem_512_ipd_avx2.dir/pqcrystals-kyber-standard_ml-kem-512-ipd_avx2/consts.c.o -c /home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/kem/ml_kem/pqcrystals-kyber-standard_ml-kem-512-ipd_avx2/consts.c",
+  "file": "/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/kem/ml_kem/pqcrystals-kyber-standard_ml-kem-512-ipd_avx2/consts.c",
+  "output": "src/kem/ml_kem/CMakeFiles/ml_kem_512_ipd_avx2.dir/pqcrystals-kyber-standard_ml-kem-512-ipd_avx2/consts.c.o"
+},
+{
+  "directory": "/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-build",
+  "command": "/usr/bin/cc -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-build/include -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/kem/ml_kem/pqcrystals-kyber-standard_ml-kem-512-ipd_avx2 -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/common/pqclean_shims -fPIC -Wa,--noexecstack -O3 -fomit-frame-pointer -fdata-sections -ffunction-sections -Wl,--gc-sections -mavx2 -mbmi2 -mpopcnt -DKYBER_K=2 -o src/kem/ml_kem/CMakeFiles/ml_kem_512_ipd_avx2.dir/pqcrystals-kyber-standard_ml-kem-512-ipd_avx2/fq.S.o -c /home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/kem/ml_kem/pqcrystals-kyber-standard_ml-kem-512-ipd_avx2/fq.S",
+  "file": "/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/kem/ml_kem/pqcrystals-kyber-standard_ml-kem-512-ipd_avx2/fq.S",
+  "output": "src/kem/ml_kem/CMakeFiles/ml_kem_512_ipd_avx2.dir/pqcrystals-kyber-standard_ml-kem-512-ipd_avx2/fq.S.o"
+},
+{
+  "directory": "/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-build",
+  "command": "/usr/bin/cc -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-build/include -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/kem/ml_kem/pqcrystals-kyber-standard_ml-kem-512-ipd_avx2 -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/common/pqclean_shims -std=gnu11 -fPIC -fvisibility=hidden -Wa,--noexecstack -O3 -fomit-frame-pointer -fdata-sections -ffunction-sections -Wl,--gc-sections -mavx2 -mbmi2 -mpopcnt -DKYBER_K=2 -o src/kem/ml_kem/CMakeFiles/ml_kem_512_ipd_avx2.dir/pqcrystals-kyber-standard_ml-kem-512-ipd_avx2/indcpa.c.o -c /home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/kem/ml_kem/pqcrystals-kyber-standard_ml-kem-512-ipd_avx2/indcpa.c",
+  "file": "/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/kem/ml_kem/pqcrystals-kyber-standard_ml-kem-512-ipd_avx2/indcpa.c",
+  "output": "src/kem/ml_kem/CMakeFiles/ml_kem_512_ipd_avx2.dir/pqcrystals-kyber-standard_ml-kem-512-ipd_avx2/indcpa.c.o"
+},
+{
+  "directory": "/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-build",
+  "command": "/usr/bin/cc -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-build/include -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/kem/ml_kem/pqcrystals-kyber-standard_ml-kem-512-ipd_avx2 -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/common/pqclean_shims -fPIC -Wa,--noexecstack -O3 -fomit-frame-pointer -fdata-sections -ffunction-sections -Wl,--gc-sections -mavx2 -mbmi2 -mpopcnt -DKYBER_K=2 -o src/kem/ml_kem/CMakeFiles/ml_kem_512_ipd_avx2.dir/pqcrystals-kyber-standard_ml-kem-512-ipd_avx2/invntt.S.o -c /home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/kem/ml_kem/pqcrystals-kyber-standard_ml-kem-512-ipd_avx2/invntt.S",
+  "file": "/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/kem/ml_kem/pqcrystals-kyber-standard_ml-kem-512-ipd_avx2/invntt.S",
+  "output": "src/kem/ml_kem/CMakeFiles/ml_kem_512_ipd_avx2.dir/pqcrystals-kyber-standard_ml-kem-512-ipd_avx2/invntt.S.o"
+},
+{
+  "directory": "/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-build",
+  "command": "/usr/bin/cc -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-build/include -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/kem/ml_kem/pqcrystals-kyber-standard_ml-kem-512-ipd_avx2 -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/common/pqclean_shims -std=gnu11 -fPIC -fvisibility=hidden -Wa,--noexecstack -O3 -fomit-frame-pointer -fdata-sections -ffunction-sections -Wl,--gc-sections -mavx2 -mbmi2 -mpopcnt -DKYBER_K=2 -o src/kem/ml_kem/CMakeFiles/ml_kem_512_ipd_avx2.dir/pqcrystals-kyber-standard_ml-kem-512-ipd_avx2/kem.c.o -c /home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/kem/ml_kem/pqcrystals-kyber-standard_ml-kem-512-ipd_avx2/kem.c",
+  "file": "/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/kem/ml_kem/pqcrystals-kyber-standard_ml-kem-512-ipd_avx2/kem.c",
+  "output": "src/kem/ml_kem/CMakeFiles/ml_kem_512_ipd_avx2.dir/pqcrystals-kyber-standard_ml-kem-512-ipd_avx2/kem.c.o"
+},
+{
+  "directory": "/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-build",
+  "command": "/usr/bin/cc -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-build/include -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/kem/ml_kem/pqcrystals-kyber-standard_ml-kem-512-ipd_avx2 -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/common/pqclean_shims -fPIC -Wa,--noexecstack -O3 -fomit-frame-pointer -fdata-sections -ffunction-sections -Wl,--gc-sections -mavx2 -mbmi2 -mpopcnt -DKYBER_K=2 -o src/kem/ml_kem/CMakeFiles/ml_kem_512_ipd_avx2.dir/pqcrystals-kyber-standard_ml-kem-512-ipd_avx2/ntt.S.o -c /home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/kem/ml_kem/pqcrystals-kyber-standard_ml-kem-512-ipd_avx2/ntt.S",
+  "file": "/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/kem/ml_kem/pqcrystals-kyber-standard_ml-kem-512-ipd_avx2/ntt.S",
+  "output": "src/kem/ml_kem/CMakeFiles/ml_kem_512_ipd_avx2.dir/pqcrystals-kyber-standard_ml-kem-512-ipd_avx2/ntt.S.o"
+},
+{
+  "directory": "/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-build",
+  "command": "/usr/bin/cc -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-build/include -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/kem/ml_kem/pqcrystals-kyber-standard_ml-kem-512-ipd_avx2 -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/common/pqclean_shims -std=gnu11 -fPIC -fvisibility=hidden -Wa,--noexecstack -O3 -fomit-frame-pointer -fdata-sections -ffunction-sections -Wl,--gc-sections -mavx2 -mbmi2 -mpopcnt -DKYBER_K=2 -o src/kem/ml_kem/CMakeFiles/ml_kem_512_ipd_avx2.dir/pqcrystals-kyber-standard_ml-kem-512-ipd_avx2/poly.c.o -c /home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/kem/ml_kem/pqcrystals-kyber-standard_ml-kem-512-ipd_avx2/poly.c",
+  "file": "/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/kem/ml_kem/pqcrystals-kyber-standard_ml-kem-512-ipd_avx2/poly.c",
+  "output": "src/kem/ml_kem/CMakeFiles/ml_kem_512_ipd_avx2.dir/pqcrystals-kyber-standard_ml-kem-512-ipd_avx2/poly.c.o"
+},
+{
+  "directory": "/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-build",
+  "command": "/usr/bin/cc -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-build/include -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/kem/ml_kem/pqcrystals-kyber-standard_ml-kem-512-ipd_avx2 -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/common/pqclean_shims -std=gnu11 -fPIC -fvisibility=hidden -Wa,--noexecstack -O3 -fomit-frame-pointer -fdata-sections -ffunction-sections -Wl,--gc-sections -mavx2 -mbmi2 -mpopcnt -DKYBER_K=2 -o src/kem/ml_kem/CMakeFiles/ml_kem_512_ipd_avx2.dir/pqcrystals-kyber-standard_ml-kem-512-ipd_avx2/polyvec.c.o -c /home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/kem/ml_kem/pqcrystals-kyber-standard_ml-kem-512-ipd_avx2/polyvec.c",
+  "file": "/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/kem/ml_kem/pqcrystals-kyber-standard_ml-kem-512-ipd_avx2/polyvec.c",
+  "output": "src/kem/ml_kem/CMakeFiles/ml_kem_512_ipd_avx2.dir/pqcrystals-kyber-standard_ml-kem-512-ipd_avx2/polyvec.c.o"
+},
+{
+  "directory": "/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-build",
+  "command": "/usr/bin/cc -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-build/include -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/kem/ml_kem/pqcrystals-kyber-standard_ml-kem-512-ipd_avx2 -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/common/pqclean_shims -std=gnu11 -fPIC -fvisibility=hidden -Wa,--noexecstack -O3 -fomit-frame-pointer -fdata-sections -ffunction-sections -Wl,--gc-sections -mavx2 -mbmi2 -mpopcnt -DKYBER_K=2 -o src/kem/ml_kem/CMakeFiles/ml_kem_512_ipd_avx2.dir/pqcrystals-kyber-standard_ml-kem-512-ipd_avx2/rejsample.c.o -c /home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/kem/ml_kem/pqcrystals-kyber-standard_ml-kem-512-ipd_avx2/rejsample.c",
+  "file": "/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/kem/ml_kem/pqcrystals-kyber-standard_ml-kem-512-ipd_avx2/rejsample.c",
+  "output": "src/kem/ml_kem/CMakeFiles/ml_kem_512_ipd_avx2.dir/pqcrystals-kyber-standard_ml-kem-512-ipd_avx2/rejsample.c.o"
+},
+{
+  "directory": "/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-build",
+  "command": "/usr/bin/cc -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-build/include -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/kem/ml_kem/pqcrystals-kyber-standard_ml-kem-512-ipd_avx2 -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/common/pqclean_shims -fPIC -Wa,--noexecstack -O3 -fomit-frame-pointer -fdata-sections -ffunction-sections -Wl,--gc-sections -mavx2 -mbmi2 -mpopcnt -DKYBER_K=2 -o src/kem/ml_kem/CMakeFiles/ml_kem_512_ipd_avx2.dir/pqcrystals-kyber-standard_ml-kem-512-ipd_avx2/shuffle.S.o -c /home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/kem/ml_kem/pqcrystals-kyber-standard_ml-kem-512-ipd_avx2/shuffle.S",
+  "file": "/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/kem/ml_kem/pqcrystals-kyber-standard_ml-kem-512-ipd_avx2/shuffle.S",
+  "output": "src/kem/ml_kem/CMakeFiles/ml_kem_512_ipd_avx2.dir/pqcrystals-kyber-standard_ml-kem-512-ipd_avx2/shuffle.S.o"
+},
+{
+  "directory": "/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-build",
+  "command": "/usr/bin/cc -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-build/include -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/kem/ml_kem/pqcrystals-kyber-standard_ml-kem-512-ipd_avx2 -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/common/pqclean_shims -std=gnu11 -fPIC -fvisibility=hidden -Wa,--noexecstack -O3 -fomit-frame-pointer -fdata-sections -ffunction-sections -Wl,--gc-sections -mavx2 -mbmi2 -mpopcnt -DKYBER_K=2 -o src/kem/ml_kem/CMakeFiles/ml_kem_512_ipd_avx2.dir/pqcrystals-kyber-standard_ml-kem-512-ipd_avx2/symmetric-shake.c.o -c /home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/kem/ml_kem/pqcrystals-kyber-standard_ml-kem-512-ipd_avx2/symmetric-shake.c",
+  "file": "/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/kem/ml_kem/pqcrystals-kyber-standard_ml-kem-512-ipd_avx2/symmetric-shake.c",
+  "output": "src/kem/ml_kem/CMakeFiles/ml_kem_512_ipd_avx2.dir/pqcrystals-kyber-standard_ml-kem-512-ipd_avx2/symmetric-shake.c.o"
+},
+{
+  "directory": "/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-build",
+  "command": "/usr/bin/cc -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-build/include -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/kem/ml_kem/pqcrystals-kyber-standard_ml-kem-512-ipd_avx2 -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/common/pqclean_shims -std=gnu11 -fPIC -fvisibility=hidden -Wa,--noexecstack -O3 -fomit-frame-pointer -fdata-sections -ffunction-sections -Wl,--gc-sections -mavx2 -mbmi2 -mpopcnt -DKYBER_K=2 -o src/kem/ml_kem/CMakeFiles/ml_kem_512_ipd_avx2.dir/pqcrystals-kyber-standard_ml-kem-512-ipd_avx2/verify.c.o -c /home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/kem/ml_kem/pqcrystals-kyber-standard_ml-kem-512-ipd_avx2/verify.c",
+  "file": "/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/kem/ml_kem/pqcrystals-kyber-standard_ml-kem-512-ipd_avx2/verify.c",
+  "output": "src/kem/ml_kem/CMakeFiles/ml_kem_512_ipd_avx2.dir/pqcrystals-kyber-standard_ml-kem-512-ipd_avx2/verify.c.o"
+},
+{
+  "directory": "/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-build",
+  "command": "/usr/bin/cc -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-build/include -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/kem/ml_kem/pqcrystals-kyber-standard_ml-kem-768-ipd_ref -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/common/pqclean_shims -std=gnu11 -fPIC -fvisibility=hidden -Wa,--noexecstack -O3 -fomit-frame-pointer -fdata-sections -ffunction-sections -Wl,--gc-sections -DKYBER_K=3 -o src/kem/ml_kem/CMakeFiles/ml_kem_768_ipd_ref.dir/kem_ml_kem_768_ipd.c.o -c /home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/kem/ml_kem/kem_ml_kem_768_ipd.c",
+  "file": "/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/kem/ml_kem/kem_ml_kem_768_ipd.c",
+  "output": "src/kem/ml_kem/CMakeFiles/ml_kem_768_ipd_ref.dir/kem_ml_kem_768_ipd.c.o"
+},
+{
+  "directory": "/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-build",
+  "command": "/usr/bin/cc -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-build/include -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/kem/ml_kem/pqcrystals-kyber-standard_ml-kem-768-ipd_ref -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/common/pqclean_shims -std=gnu11 -fPIC -fvisibility=hidden -Wa,--noexecstack -O3 -fomit-frame-pointer -fdata-sections -ffunction-sections -Wl,--gc-sections -DKYBER_K=3 -o src/kem/ml_kem/CMakeFiles/ml_kem_768_ipd_ref.dir/pqcrystals-kyber-standard_ml-kem-768-ipd_ref/cbd.c.o -c /home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/kem/ml_kem/pqcrystals-kyber-standard_ml-kem-768-ipd_ref/cbd.c",
+  "file": "/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/kem/ml_kem/pqcrystals-kyber-standard_ml-kem-768-ipd_ref/cbd.c",
+  "output": "src/kem/ml_kem/CMakeFiles/ml_kem_768_ipd_ref.dir/pqcrystals-kyber-standard_ml-kem-768-ipd_ref/cbd.c.o"
+},
+{
+  "directory": "/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-build",
+  "command": "/usr/bin/cc -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-build/include -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/kem/ml_kem/pqcrystals-kyber-standard_ml-kem-768-ipd_ref -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/common/pqclean_shims -std=gnu11 -fPIC -fvisibility=hidden -Wa,--noexecstack -O3 -fomit-frame-pointer -fdata-sections -ffunction-sections -Wl,--gc-sections -DKYBER_K=3 -o src/kem/ml_kem/CMakeFiles/ml_kem_768_ipd_ref.dir/pqcrystals-kyber-standard_ml-kem-768-ipd_ref/indcpa.c.o -c /home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/kem/ml_kem/pqcrystals-kyber-standard_ml-kem-768-ipd_ref/indcpa.c",
+  "file": "/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/kem/ml_kem/pqcrystals-kyber-standard_ml-kem-768-ipd_ref/indcpa.c",
+  "output": "src/kem/ml_kem/CMakeFiles/ml_kem_768_ipd_ref.dir/pqcrystals-kyber-standard_ml-kem-768-ipd_ref/indcpa.c.o"
+},
+{
+  "directory": "/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-build",
+  "command": "/usr/bin/cc -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-build/include -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/kem/ml_kem/pqcrystals-kyber-standard_ml-kem-768-ipd_ref -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/common/pqclean_shims -std=gnu11 -fPIC -fvisibility=hidden -Wa,--noexecstack -O3 -fomit-frame-pointer -fdata-sections -ffunction-sections -Wl,--gc-sections -DKYBER_K=3 -o src/kem/ml_kem/CMakeFiles/ml_kem_768_ipd_ref.dir/pqcrystals-kyber-standard_ml-kem-768-ipd_ref/kem.c.o -c /home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/kem/ml_kem/pqcrystals-kyber-standard_ml-kem-768-ipd_ref/kem.c",
+  "file": "/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/kem/ml_kem/pqcrystals-kyber-standard_ml-kem-768-ipd_ref/kem.c",
+  "output": "src/kem/ml_kem/CMakeFiles/ml_kem_768_ipd_ref.dir/pqcrystals-kyber-standard_ml-kem-768-ipd_ref/kem.c.o"
+},
+{
+  "directory": "/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-build",
+  "command": "/usr/bin/cc -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-build/include -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/kem/ml_kem/pqcrystals-kyber-standard_ml-kem-768-ipd_ref -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/common/pqclean_shims -std=gnu11 -fPIC -fvisibility=hidden -Wa,--noexecstack -O3 -fomit-frame-pointer -fdata-sections -ffunction-sections -Wl,--gc-sections -DKYBER_K=3 -o src/kem/ml_kem/CMakeFiles/ml_kem_768_ipd_ref.dir/pqcrystals-kyber-standard_ml-kem-768-ipd_ref/ntt.c.o -c /home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/kem/ml_kem/pqcrystals-kyber-standard_ml-kem-768-ipd_ref/ntt.c",
+  "file": "/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/kem/ml_kem/pqcrystals-kyber-standard_ml-kem-768-ipd_ref/ntt.c",
+  "output": "src/kem/ml_kem/CMakeFiles/ml_kem_768_ipd_ref.dir/pqcrystals-kyber-standard_ml-kem-768-ipd_ref/ntt.c.o"
+},
+{
+  "directory": "/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-build",
+  "command": "/usr/bin/cc -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-build/include -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/kem/ml_kem/pqcrystals-kyber-standard_ml-kem-768-ipd_ref -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/common/pqclean_shims -std=gnu11 -fPIC -fvisibility=hidden -Wa,--noexecstack -O3 -fomit-frame-pointer -fdata-sections -ffunction-sections -Wl,--gc-sections -DKYBER_K=3 -o src/kem/ml_kem/CMakeFiles/ml_kem_768_ipd_ref.dir/pqcrystals-kyber-standard_ml-kem-768-ipd_ref/poly.c.o -c /home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/kem/ml_kem/pqcrystals-kyber-standard_ml-kem-768-ipd_ref/poly.c",
+  "file": "/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/kem/ml_kem/pqcrystals-kyber-standard_ml-kem-768-ipd_ref/poly.c",
+  "output": "src/kem/ml_kem/CMakeFiles/ml_kem_768_ipd_ref.dir/pqcrystals-kyber-standard_ml-kem-768-ipd_ref/poly.c.o"
+},
+{
+  "directory": "/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-build",
+  "command": "/usr/bin/cc -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-build/include -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/kem/ml_kem/pqcrystals-kyber-standard_ml-kem-768-ipd_ref -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/common/pqclean_shims -std=gnu11 -fPIC -fvisibility=hidden -Wa,--noexecstack -O3 -fomit-frame-pointer -fdata-sections -ffunction-sections -Wl,--gc-sections -DKYBER_K=3 -o src/kem/ml_kem/CMakeFiles/ml_kem_768_ipd_ref.dir/pqcrystals-kyber-standard_ml-kem-768-ipd_ref/polyvec.c.o -c /home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/kem/ml_kem/pqcrystals-kyber-standard_ml-kem-768-ipd_ref/polyvec.c",
+  "file": "/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/kem/ml_kem/pqcrystals-kyber-standard_ml-kem-768-ipd_ref/polyvec.c",
+  "output": "src/kem/ml_kem/CMakeFiles/ml_kem_768_ipd_ref.dir/pqcrystals-kyber-standard_ml-kem-768-ipd_ref/polyvec.c.o"
+},
+{
+  "directory": "/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-build",
+  "command": "/usr/bin/cc -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-build/include -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/kem/ml_kem/pqcrystals-kyber-standard_ml-kem-768-ipd_ref -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/common/pqclean_shims -std=gnu11 -fPIC -fvisibility=hidden -Wa,--noexecstack -O3 -fomit-frame-pointer -fdata-sections -ffunction-sections -Wl,--gc-sections -DKYBER_K=3 -o src/kem/ml_kem/CMakeFiles/ml_kem_768_ipd_ref.dir/pqcrystals-kyber-standard_ml-kem-768-ipd_ref/reduce.c.o -c /home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/kem/ml_kem/pqcrystals-kyber-standard_ml-kem-768-ipd_ref/reduce.c",
+  "file": "/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/kem/ml_kem/pqcrystals-kyber-standard_ml-kem-768-ipd_ref/reduce.c",
+  "output": "src/kem/ml_kem/CMakeFiles/ml_kem_768_ipd_ref.dir/pqcrystals-kyber-standard_ml-kem-768-ipd_ref/reduce.c.o"
+},
+{
+  "directory": "/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-build",
+  "command": "/usr/bin/cc -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-build/include -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/kem/ml_kem/pqcrystals-kyber-standard_ml-kem-768-ipd_ref -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/common/pqclean_shims -std=gnu11 -fPIC -fvisibility=hidden -Wa,--noexecstack -O3 -fomit-frame-pointer -fdata-sections -ffunction-sections -Wl,--gc-sections -DKYBER_K=3 -o src/kem/ml_kem/CMakeFiles/ml_kem_768_ipd_ref.dir/pqcrystals-kyber-standard_ml-kem-768-ipd_ref/symmetric-shake.c.o -c /home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/kem/ml_kem/pqcrystals-kyber-standard_ml-kem-768-ipd_ref/symmetric-shake.c",
+  "file": "/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/kem/ml_kem/pqcrystals-kyber-standard_ml-kem-768-ipd_ref/symmetric-shake.c",
+  "output": "src/kem/ml_kem/CMakeFiles/ml_kem_768_ipd_ref.dir/pqcrystals-kyber-standard_ml-kem-768-ipd_ref/symmetric-shake.c.o"
+},
+{
+  "directory": "/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-build",
+  "command": "/usr/bin/cc -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-build/include -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/kem/ml_kem/pqcrystals-kyber-standard_ml-kem-768-ipd_ref -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/common/pqclean_shims -std=gnu11 -fPIC -fvisibility=hidden -Wa,--noexecstack -O3 -fomit-frame-pointer -fdata-sections -ffunction-sections -Wl,--gc-sections -DKYBER_K=3 -o src/kem/ml_kem/CMakeFiles/ml_kem_768_ipd_ref.dir/pqcrystals-kyber-standard_ml-kem-768-ipd_ref/verify.c.o -c /home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/kem/ml_kem/pqcrystals-kyber-standard_ml-kem-768-ipd_ref/verify.c",
+  "file": "/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/kem/ml_kem/pqcrystals-kyber-standard_ml-kem-768-ipd_ref/verify.c",
+  "output": "src/kem/ml_kem/CMakeFiles/ml_kem_768_ipd_ref.dir/pqcrystals-kyber-standard_ml-kem-768-ipd_ref/verify.c.o"
+},
+{
+  "directory": "/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-build",
+  "command": "/usr/bin/cc -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-build/include -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/kem/ml_kem/pqcrystals-kyber-standard_ml-kem-768-ipd_avx2 -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/common/pqclean_shims -fPIC -Wa,--noexecstack -O3 -fomit-frame-pointer -fdata-sections -ffunction-sections -Wl,--gc-sections -mavx2 -mbmi2 -mpopcnt -DKYBER_K=3 -o src/kem/ml_kem/CMakeFiles/ml_kem_768_ipd_avx2.dir/pqcrystals-kyber-standard_ml-kem-768-ipd_avx2/basemul.S.o -c /home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/kem/ml_kem/pqcrystals-kyber-standard_ml-kem-768-ipd_avx2/basemul.S",
+  "file": "/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/kem/ml_kem/pqcrystals-kyber-standard_ml-kem-768-ipd_avx2/basemul.S",
+  "output": "src/kem/ml_kem/CMakeFiles/ml_kem_768_ipd_avx2.dir/pqcrystals-kyber-standard_ml-kem-768-ipd_avx2/basemul.S.o"
+},
+{
+  "directory": "/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-build",
+  "command": "/usr/bin/cc -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-build/include -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/kem/ml_kem/pqcrystals-kyber-standard_ml-kem-768-ipd_avx2 -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/common/pqclean_shims -std=gnu11 -fPIC -fvisibility=hidden -Wa,--noexecstack -O3 -fomit-frame-pointer -fdata-sections -ffunction-sections -Wl,--gc-sections -mavx2 -mbmi2 -mpopcnt -DKYBER_K=3 -o src/kem/ml_kem/CMakeFiles/ml_kem_768_ipd_avx2.dir/pqcrystals-kyber-standard_ml-kem-768-ipd_avx2/cbd.c.o -c /home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/kem/ml_kem/pqcrystals-kyber-standard_ml-kem-768-ipd_avx2/cbd.c",
+  "file": "/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/kem/ml_kem/pqcrystals-kyber-standard_ml-kem-768-ipd_avx2/cbd.c",
+  "output": "src/kem/ml_kem/CMakeFiles/ml_kem_768_ipd_avx2.dir/pqcrystals-kyber-standard_ml-kem-768-ipd_avx2/cbd.c.o"
+},
+{
+  "directory": "/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-build",
+  "command": "/usr/bin/cc -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-build/include -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/kem/ml_kem/pqcrystals-kyber-standard_ml-kem-768-ipd_avx2 -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/common/pqclean_shims -std=gnu11 -fPIC -fvisibility=hidden -Wa,--noexecstack -O3 -fomit-frame-pointer -fdata-sections -ffunction-sections -Wl,--gc-sections -mavx2 -mbmi2 -mpopcnt -DKYBER_K=3 -o src/kem/ml_kem/CMakeFiles/ml_kem_768_ipd_avx2.dir/pqcrystals-kyber-standard_ml-kem-768-ipd_avx2/consts.c.o -c /home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/kem/ml_kem/pqcrystals-kyber-standard_ml-kem-768-ipd_avx2/consts.c",
+  "file": "/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/kem/ml_kem/pqcrystals-kyber-standard_ml-kem-768-ipd_avx2/consts.c",
+  "output": "src/kem/ml_kem/CMakeFiles/ml_kem_768_ipd_avx2.dir/pqcrystals-kyber-standard_ml-kem-768-ipd_avx2/consts.c.o"
+},
+{
+  "directory": "/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-build",
+  "command": "/usr/bin/cc -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-build/include -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/kem/ml_kem/pqcrystals-kyber-standard_ml-kem-768-ipd_avx2 -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/common/pqclean_shims -fPIC -Wa,--noexecstack -O3 -fomit-frame-pointer -fdata-sections -ffunction-sections -Wl,--gc-sections -mavx2 -mbmi2 -mpopcnt -DKYBER_K=3 -o src/kem/ml_kem/CMakeFiles/ml_kem_768_ipd_avx2.dir/pqcrystals-kyber-standard_ml-kem-768-ipd_avx2/fq.S.o -c /home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/kem/ml_kem/pqcrystals-kyber-standard_ml-kem-768-ipd_avx2/fq.S",
+  "file": "/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/kem/ml_kem/pqcrystals-kyber-standard_ml-kem-768-ipd_avx2/fq.S",
+  "output": "src/kem/ml_kem/CMakeFiles/ml_kem_768_ipd_avx2.dir/pqcrystals-kyber-standard_ml-kem-768-ipd_avx2/fq.S.o"
+},
+{
+  "directory": "/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-build",
+  "command": "/usr/bin/cc -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-build/include -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/kem/ml_kem/pqcrystals-kyber-standard_ml-kem-768-ipd_avx2 -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/common/pqclean_shims -std=gnu11 -fPIC -fvisibility=hidden -Wa,--noexecstack -O3 -fomit-frame-pointer -fdata-sections -ffunction-sections -Wl,--gc-sections -mavx2 -mbmi2 -mpopcnt -DKYBER_K=3 -o src/kem/ml_kem/CMakeFiles/ml_kem_768_ipd_avx2.dir/pqcrystals-kyber-standard_ml-kem-768-ipd_avx2/indcpa.c.o -c /home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/kem/ml_kem/pqcrystals-kyber-standard_ml-kem-768-ipd_avx2/indcpa.c",
+  "file": "/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/kem/ml_kem/pqcrystals-kyber-standard_ml-kem-768-ipd_avx2/indcpa.c",
+  "output": "src/kem/ml_kem/CMakeFiles/ml_kem_768_ipd_avx2.dir/pqcrystals-kyber-standard_ml-kem-768-ipd_avx2/indcpa.c.o"
+},
+{
+  "directory": "/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-build",
+  "command": "/usr/bin/cc -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-build/include -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/kem/ml_kem/pqcrystals-kyber-standard_ml-kem-768-ipd_avx2 -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/common/pqclean_shims -fPIC -Wa,--noexecstack -O3 -fomit-frame-pointer -fdata-sections -ffunction-sections -Wl,--gc-sections -mavx2 -mbmi2 -mpopcnt -DKYBER_K=3 -o src/kem/ml_kem/CMakeFiles/ml_kem_768_ipd_avx2.dir/pqcrystals-kyber-standard_ml-kem-768-ipd_avx2/invntt.S.o -c /home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/kem/ml_kem/pqcrystals-kyber-standard_ml-kem-768-ipd_avx2/invntt.S",
+  "file": "/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/kem/ml_kem/pqcrystals-kyber-standard_ml-kem-768-ipd_avx2/invntt.S",
+  "output": "src/kem/ml_kem/CMakeFiles/ml_kem_768_ipd_avx2.dir/pqcrystals-kyber-standard_ml-kem-768-ipd_avx2/invntt.S.o"
+},
+{
+  "directory": "/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-build",
+  "command": "/usr/bin/cc -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-build/include -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/kem/ml_kem/pqcrystals-kyber-standard_ml-kem-768-ipd_avx2 -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/common/pqclean_shims -std=gnu11 -fPIC -fvisibility=hidden -Wa,--noexecstack -O3 -fomit-frame-pointer -fdata-sections -ffunction-sections -Wl,--gc-sections -mavx2 -mbmi2 -mpopcnt -DKYBER_K=3 -o src/kem/ml_kem/CMakeFiles/ml_kem_768_ipd_avx2.dir/pqcrystals-kyber-standard_ml-kem-768-ipd_avx2/kem.c.o -c /home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/kem/ml_kem/pqcrystals-kyber-standard_ml-kem-768-ipd_avx2/kem.c",
+  "file": "/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/kem/ml_kem/pqcrystals-kyber-standard_ml-kem-768-ipd_avx2/kem.c",
+  "output": "src/kem/ml_kem/CMakeFiles/ml_kem_768_ipd_avx2.dir/pqcrystals-kyber-standard_ml-kem-768-ipd_avx2/kem.c.o"
+},
+{
+  "directory": "/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-build",
+  "command": "/usr/bin/cc -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-build/include -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/kem/ml_kem/pqcrystals-kyber-standard_ml-kem-768-ipd_avx2 -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/common/pqclean_shims -fPIC -Wa,--noexecstack -O3 -fomit-frame-pointer -fdata-sections -ffunction-sections -Wl,--gc-sections -mavx2 -mbmi2 -mpopcnt -DKYBER_K=3 -o src/kem/ml_kem/CMakeFiles/ml_kem_768_ipd_avx2.dir/pqcrystals-kyber-standard_ml-kem-768-ipd_avx2/ntt.S.o -c /home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/kem/ml_kem/pqcrystals-kyber-standard_ml-kem-768-ipd_avx2/ntt.S",
+  "file": "/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/kem/ml_kem/pqcrystals-kyber-standard_ml-kem-768-ipd_avx2/ntt.S",
+  "output": "src/kem/ml_kem/CMakeFiles/ml_kem_768_ipd_avx2.dir/pqcrystals-kyber-standard_ml-kem-768-ipd_avx2/ntt.S.o"
+},
+{
+  "directory": "/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-build",
+  "command": "/usr/bin/cc -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-build/include -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/kem/ml_kem/pqcrystals-kyber-standard_ml-kem-768-ipd_avx2 -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/common/pqclean_shims -std=gnu11 -fPIC -fvisibility=hidden -Wa,--noexecstack -O3 -fomit-frame-pointer -fdata-sections -ffunction-sections -Wl,--gc-sections -mavx2 -mbmi2 -mpopcnt -DKYBER_K=3 -o src/kem/ml_kem/CMakeFiles/ml_kem_768_ipd_avx2.dir/pqcrystals-kyber-standard_ml-kem-768-ipd_avx2/poly.c.o -c /home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/kem/ml_kem/pqcrystals-kyber-standard_ml-kem-768-ipd_avx2/poly.c",
+  "file": "/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/kem/ml_kem/pqcrystals-kyber-standard_ml-kem-768-ipd_avx2/poly.c",
+  "output": "src/kem/ml_kem/CMakeFiles/ml_kem_768_ipd_avx2.dir/pqcrystals-kyber-standard_ml-kem-768-ipd_avx2/poly.c.o"
+},
+{
+  "directory": "/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-build",
+  "command": "/usr/bin/cc -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-build/include -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/kem/ml_kem/pqcrystals-kyber-standard_ml-kem-768-ipd_avx2 -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/common/pqclean_shims -std=gnu11 -fPIC -fvisibility=hidden -Wa,--noexecstack -O3 -fomit-frame-pointer -fdata-sections -ffunction-sections -Wl,--gc-sections -mavx2 -mbmi2 -mpopcnt -DKYBER_K=3 -o src/kem/ml_kem/CMakeFiles/ml_kem_768_ipd_avx2.dir/pqcrystals-kyber-standard_ml-kem-768-ipd_avx2/polyvec.c.o -c /home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/kem/ml_kem/pqcrystals-kyber-standard_ml-kem-768-ipd_avx2/polyvec.c",
+  "file": "/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/kem/ml_kem/pqcrystals-kyber-standard_ml-kem-768-ipd_avx2/polyvec.c",
+  "output": "src/kem/ml_kem/CMakeFiles/ml_kem_768_ipd_avx2.dir/pqcrystals-kyber-standard_ml-kem-768-ipd_avx2/polyvec.c.o"
+},
+{
+  "directory": "/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-build",
+  "command": "/usr/bin/cc -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-build/include -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/kem/ml_kem/pqcrystals-kyber-standard_ml-kem-768-ipd_avx2 -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/common/pqclean_shims -std=gnu11 -fPIC -fvisibility=hidden -Wa,--noexecstack -O3 -fomit-frame-pointer -fdata-sections -ffunction-sections -Wl,--gc-sections -mavx2 -mbmi2 -mpopcnt -DKYBER_K=3 -o src/kem/ml_kem/CMakeFiles/ml_kem_768_ipd_avx2.dir/pqcrystals-kyber-standard_ml-kem-768-ipd_avx2/rejsample.c.o -c /home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/kem/ml_kem/pqcrystals-kyber-standard_ml-kem-768-ipd_avx2/rejsample.c",
+  "file": "/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/kem/ml_kem/pqcrystals-kyber-standard_ml-kem-768-ipd_avx2/rejsample.c",
+  "output": "src/kem/ml_kem/CMakeFiles/ml_kem_768_ipd_avx2.dir/pqcrystals-kyber-standard_ml-kem-768-ipd_avx2/rejsample.c.o"
+},
+{
+  "directory": "/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-build",
+  "command": "/usr/bin/cc -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-build/include -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/kem/ml_kem/pqcrystals-kyber-standard_ml-kem-768-ipd_avx2 -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/common/pqclean_shims -fPIC -Wa,--noexecstack -O3 -fomit-frame-pointer -fdata-sections -ffunction-sections -Wl,--gc-sections -mavx2 -mbmi2 -mpopcnt -DKYBER_K=3 -o src/kem/ml_kem/CMakeFiles/ml_kem_768_ipd_avx2.dir/pqcrystals-kyber-standard_ml-kem-768-ipd_avx2/shuffle.S.o -c /home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/kem/ml_kem/pqcrystals-kyber-standard_ml-kem-768-ipd_avx2/shuffle.S",
+  "file": "/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/kem/ml_kem/pqcrystals-kyber-standard_ml-kem-768-ipd_avx2/shuffle.S",
+  "output": "src/kem/ml_kem/CMakeFiles/ml_kem_768_ipd_avx2.dir/pqcrystals-kyber-standard_ml-kem-768-ipd_avx2/shuffle.S.o"
+},
+{
+  "directory": "/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-build",
+  "command": "/usr/bin/cc -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-build/include -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/kem/ml_kem/pqcrystals-kyber-standard_ml-kem-768-ipd_avx2 -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/common/pqclean_shims -std=gnu11 -fPIC -fvisibility=hidden -Wa,--noexecstack -O3 -fomit-frame-pointer -fdata-sections -ffunction-sections -Wl,--gc-sections -mavx2 -mbmi2 -mpopcnt -DKYBER_K=3 -o src/kem/ml_kem/CMakeFiles/ml_kem_768_ipd_avx2.dir/pqcrystals-kyber-standard_ml-kem-768-ipd_avx2/symmetric-shake.c.o -c /home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/kem/ml_kem/pqcrystals-kyber-standard_ml-kem-768-ipd_avx2/symmetric-shake.c",
+  "file": "/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/kem/ml_kem/pqcrystals-kyber-standard_ml-kem-768-ipd_avx2/symmetric-shake.c",
+  "output": "src/kem/ml_kem/CMakeFiles/ml_kem_768_ipd_avx2.dir/pqcrystals-kyber-standard_ml-kem-768-ipd_avx2/symmetric-shake.c.o"
+},
+{
+  "directory": "/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-build",
+  "command": "/usr/bin/cc -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-build/include -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/kem/ml_kem/pqcrystals-kyber-standard_ml-kem-768-ipd_avx2 -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/common/pqclean_shims -std=gnu11 -fPIC -fvisibility=hidden -Wa,--noexecstack -O3 -fomit-frame-pointer -fdata-sections -ffunction-sections -Wl,--gc-sections -mavx2 -mbmi2 -mpopcnt -DKYBER_K=3 -o src/kem/ml_kem/CMakeFiles/ml_kem_768_ipd_avx2.dir/pqcrystals-kyber-standard_ml-kem-768-ipd_avx2/verify.c.o -c /home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/kem/ml_kem/pqcrystals-kyber-standard_ml-kem-768-ipd_avx2/verify.c",
+  "file": "/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/kem/ml_kem/pqcrystals-kyber-standard_ml-kem-768-ipd_avx2/verify.c",
+  "output": "src/kem/ml_kem/CMakeFiles/ml_kem_768_ipd_avx2.dir/pqcrystals-kyber-standard_ml-kem-768-ipd_avx2/verify.c.o"
+},
+{
+  "directory": "/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-build",
+  "command": "/usr/bin/cc -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-build/include -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/kem/ml_kem/pqcrystals-kyber-standard_ml-kem-1024-ipd_ref -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/common/pqclean_shims -std=gnu11 -fPIC -fvisibility=hidden -Wa,--noexecstack -O3 -fomit-frame-pointer -fdata-sections -ffunction-sections -Wl,--gc-sections -DKYBER_K=4 -o src/kem/ml_kem/CMakeFiles/ml_kem_1024_ipd_ref.dir/kem_ml_kem_1024_ipd.c.o -c /home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/kem/ml_kem/kem_ml_kem_1024_ipd.c",
+  "file": "/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/kem/ml_kem/kem_ml_kem_1024_ipd.c",
+  "output": "src/kem/ml_kem/CMakeFiles/ml_kem_1024_ipd_ref.dir/kem_ml_kem_1024_ipd.c.o"
+},
+{
+  "directory": "/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-build",
+  "command": "/usr/bin/cc -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-build/include -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/kem/ml_kem/pqcrystals-kyber-standard_ml-kem-1024-ipd_ref -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/common/pqclean_shims -std=gnu11 -fPIC -fvisibility=hidden -Wa,--noexecstack -O3 -fomit-frame-pointer -fdata-sections -ffunction-sections -Wl,--gc-sections -DKYBER_K=4 -o src/kem/ml_kem/CMakeFiles/ml_kem_1024_ipd_ref.dir/pqcrystals-kyber-standard_ml-kem-1024-ipd_ref/cbd.c.o -c /home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/kem/ml_kem/pqcrystals-kyber-standard_ml-kem-1024-ipd_ref/cbd.c",
+  "file": "/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/kem/ml_kem/pqcrystals-kyber-standard_ml-kem-1024-ipd_ref/cbd.c",
+  "output": "src/kem/ml_kem/CMakeFiles/ml_kem_1024_ipd_ref.dir/pqcrystals-kyber-standard_ml-kem-1024-ipd_ref/cbd.c.o"
+},
+{
+  "directory": "/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-build",
+  "command": "/usr/bin/cc -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-build/include -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/kem/ml_kem/pqcrystals-kyber-standard_ml-kem-1024-ipd_ref -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/common/pqclean_shims -std=gnu11 -fPIC -fvisibility=hidden -Wa,--noexecstack -O3 -fomit-frame-pointer -fdata-sections -ffunction-sections -Wl,--gc-sections -DKYBER_K=4 -o src/kem/ml_kem/CMakeFiles/ml_kem_1024_ipd_ref.dir/pqcrystals-kyber-standard_ml-kem-1024-ipd_ref/indcpa.c.o -c /home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/kem/ml_kem/pqcrystals-kyber-standard_ml-kem-1024-ipd_ref/indcpa.c",
+  "file": "/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/kem/ml_kem/pqcrystals-kyber-standard_ml-kem-1024-ipd_ref/indcpa.c",
+  "output": "src/kem/ml_kem/CMakeFiles/ml_kem_1024_ipd_ref.dir/pqcrystals-kyber-standard_ml-kem-1024-ipd_ref/indcpa.c.o"
+},
+{
+  "directory": "/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-build",
+  "command": "/usr/bin/cc -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-build/include -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/kem/ml_kem/pqcrystals-kyber-standard_ml-kem-1024-ipd_ref -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/common/pqclean_shims -std=gnu11 -fPIC -fvisibility=hidden -Wa,--noexecstack -O3 -fomit-frame-pointer -fdata-sections -ffunction-sections -Wl,--gc-sections -DKYBER_K=4 -o src/kem/ml_kem/CMakeFiles/ml_kem_1024_ipd_ref.dir/pqcrystals-kyber-standard_ml-kem-1024-ipd_ref/kem.c.o -c /home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/kem/ml_kem/pqcrystals-kyber-standard_ml-kem-1024-ipd_ref/kem.c",
+  "file": "/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/kem/ml_kem/pqcrystals-kyber-standard_ml-kem-1024-ipd_ref/kem.c",
+  "output": "src/kem/ml_kem/CMakeFiles/ml_kem_1024_ipd_ref.dir/pqcrystals-kyber-standard_ml-kem-1024-ipd_ref/kem.c.o"
+},
+{
+  "directory": "/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-build",
+  "command": "/usr/bin/cc -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-build/include -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/kem/ml_kem/pqcrystals-kyber-standard_ml-kem-1024-ipd_ref -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/common/pqclean_shims -std=gnu11 -fPIC -fvisibility=hidden -Wa,--noexecstack -O3 -fomit-frame-pointer -fdata-sections -ffunction-sections -Wl,--gc-sections -DKYBER_K=4 -o src/kem/ml_kem/CMakeFiles/ml_kem_1024_ipd_ref.dir/pqcrystals-kyber-standard_ml-kem-1024-ipd_ref/ntt.c.o -c /home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/kem/ml_kem/pqcrystals-kyber-standard_ml-kem-1024-ipd_ref/ntt.c",
+  "file": "/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/kem/ml_kem/pqcrystals-kyber-standard_ml-kem-1024-ipd_ref/ntt.c",
+  "output": "src/kem/ml_kem/CMakeFiles/ml_kem_1024_ipd_ref.dir/pqcrystals-kyber-standard_ml-kem-1024-ipd_ref/ntt.c.o"
+},
+{
+  "directory": "/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-build",
+  "command": "/usr/bin/cc -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-build/include -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/kem/ml_kem/pqcrystals-kyber-standard_ml-kem-1024-ipd_ref -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/common/pqclean_shims -std=gnu11 -fPIC -fvisibility=hidden -Wa,--noexecstack -O3 -fomit-frame-pointer -fdata-sections -ffunction-sections -Wl,--gc-sections -DKYBER_K=4 -o src/kem/ml_kem/CMakeFiles/ml_kem_1024_ipd_ref.dir/pqcrystals-kyber-standard_ml-kem-1024-ipd_ref/poly.c.o -c /home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/kem/ml_kem/pqcrystals-kyber-standard_ml-kem-1024-ipd_ref/poly.c",
+  "file": "/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/kem/ml_kem/pqcrystals-kyber-standard_ml-kem-1024-ipd_ref/poly.c",
+  "output": "src/kem/ml_kem/CMakeFiles/ml_kem_1024_ipd_ref.dir/pqcrystals-kyber-standard_ml-kem-1024-ipd_ref/poly.c.o"
+},
+{
+  "directory": "/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-build",
+  "command": "/usr/bin/cc -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-build/include -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/kem/ml_kem/pqcrystals-kyber-standard_ml-kem-1024-ipd_ref -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/common/pqclean_shims -std=gnu11 -fPIC -fvisibility=hidden -Wa,--noexecstack -O3 -fomit-frame-pointer -fdata-sections -ffunction-sections -Wl,--gc-sections -DKYBER_K=4 -o src/kem/ml_kem/CMakeFiles/ml_kem_1024_ipd_ref.dir/pqcrystals-kyber-standard_ml-kem-1024-ipd_ref/polyvec.c.o -c /home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/kem/ml_kem/pqcrystals-kyber-standard_ml-kem-1024-ipd_ref/polyvec.c",
+  "file": "/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/kem/ml_kem/pqcrystals-kyber-standard_ml-kem-1024-ipd_ref/polyvec.c",
+  "output": "src/kem/ml_kem/CMakeFiles/ml_kem_1024_ipd_ref.dir/pqcrystals-kyber-standard_ml-kem-1024-ipd_ref/polyvec.c.o"
+},
+{
+  "directory": "/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-build",
+  "command": "/usr/bin/cc -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-build/include -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/kem/ml_kem/pqcrystals-kyber-standard_ml-kem-1024-ipd_ref -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/common/pqclean_shims -std=gnu11 -fPIC -fvisibility=hidden -Wa,--noexecstack -O3 -fomit-frame-pointer -fdata-sections -ffunction-sections -Wl,--gc-sections -DKYBER_K=4 -o src/kem/ml_kem/CMakeFiles/ml_kem_1024_ipd_ref.dir/pqcrystals-kyber-standard_ml-kem-1024-ipd_ref/reduce.c.o -c /home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/kem/ml_kem/pqcrystals-kyber-standard_ml-kem-1024-ipd_ref/reduce.c",
+  "file": "/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/kem/ml_kem/pqcrystals-kyber-standard_ml-kem-1024-ipd_ref/reduce.c",
+  "output": "src/kem/ml_kem/CMakeFiles/ml_kem_1024_ipd_ref.dir/pqcrystals-kyber-standard_ml-kem-1024-ipd_ref/reduce.c.o"
+},
+{
+  "directory": "/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-build",
+  "command": "/usr/bin/cc -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-build/include -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/kem/ml_kem/pqcrystals-kyber-standard_ml-kem-1024-ipd_ref -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/common/pqclean_shims -std=gnu11 -fPIC -fvisibility=hidden -Wa,--noexecstack -O3 -fomit-frame-pointer -fdata-sections -ffunction-sections -Wl,--gc-sections -DKYBER_K=4 -o src/kem/ml_kem/CMakeFiles/ml_kem_1024_ipd_ref.dir/pqcrystals-kyber-standard_ml-kem-1024-ipd_ref/symmetric-shake.c.o -c /home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/kem/ml_kem/pqcrystals-kyber-standard_ml-kem-1024-ipd_ref/symmetric-shake.c",
+  "file": "/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/kem/ml_kem/pqcrystals-kyber-standard_ml-kem-1024-ipd_ref/symmetric-shake.c",
+  "output": "src/kem/ml_kem/CMakeFiles/ml_kem_1024_ipd_ref.dir/pqcrystals-kyber-standard_ml-kem-1024-ipd_ref/symmetric-shake.c.o"
+},
+{
+  "directory": "/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-build",
+  "command": "/usr/bin/cc -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-build/include -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/kem/ml_kem/pqcrystals-kyber-standard_ml-kem-1024-ipd_ref -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/common/pqclean_shims -std=gnu11 -fPIC -fvisibility=hidden -Wa,--noexecstack -O3 -fomit-frame-pointer -fdata-sections -ffunction-sections -Wl,--gc-sections -DKYBER_K=4 -o src/kem/ml_kem/CMakeFiles/ml_kem_1024_ipd_ref.dir/pqcrystals-kyber-standard_ml-kem-1024-ipd_ref/verify.c.o -c /home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/kem/ml_kem/pqcrystals-kyber-standard_ml-kem-1024-ipd_ref/verify.c",
+  "file": "/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/kem/ml_kem/pqcrystals-kyber-standard_ml-kem-1024-ipd_ref/verify.c",
+  "output": "src/kem/ml_kem/CMakeFiles/ml_kem_1024_ipd_ref.dir/pqcrystals-kyber-standard_ml-kem-1024-ipd_ref/verify.c.o"
+},
+{
+  "directory": "/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-build",
+  "command": "/usr/bin/cc -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-build/include -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/kem/ml_kem/pqcrystals-kyber-standard_ml-kem-1024-ipd_avx2 -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/common/pqclean_shims -fPIC -Wa,--noexecstack -O3 -fomit-frame-pointer -fdata-sections -ffunction-sections -Wl,--gc-sections -mavx2 -mbmi2 -mpopcnt -DKYBER_K=4 -o src/kem/ml_kem/CMakeFiles/ml_kem_1024_ipd_avx2.dir/pqcrystals-kyber-standard_ml-kem-1024-ipd_avx2/basemul.S.o -c /home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/kem/ml_kem/pqcrystals-kyber-standard_ml-kem-1024-ipd_avx2/basemul.S",
+  "file": "/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/kem/ml_kem/pqcrystals-kyber-standard_ml-kem-1024-ipd_avx2/basemul.S",
+  "output": "src/kem/ml_kem/CMakeFiles/ml_kem_1024_ipd_avx2.dir/pqcrystals-kyber-standard_ml-kem-1024-ipd_avx2/basemul.S.o"
+},
+{
+  "directory": "/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-build",
+  "command": "/usr/bin/cc -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-build/include -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/kem/ml_kem/pqcrystals-kyber-standard_ml-kem-1024-ipd_avx2 -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/common/pqclean_shims -std=gnu11 -fPIC -fvisibility=hidden -Wa,--noexecstack -O3 -fomit-frame-pointer -fdata-sections -ffunction-sections -Wl,--gc-sections -mavx2 -mbmi2 -mpopcnt -DKYBER_K=4 -o src/kem/ml_kem/CMakeFiles/ml_kem_1024_ipd_avx2.dir/pqcrystals-kyber-standard_ml-kem-1024-ipd_avx2/cbd.c.o -c /home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/kem/ml_kem/pqcrystals-kyber-standard_ml-kem-1024-ipd_avx2/cbd.c",
+  "file": "/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/kem/ml_kem/pqcrystals-kyber-standard_ml-kem-1024-ipd_avx2/cbd.c",
+  "output": "src/kem/ml_kem/CMakeFiles/ml_kem_1024_ipd_avx2.dir/pqcrystals-kyber-standard_ml-kem-1024-ipd_avx2/cbd.c.o"
+},
+{
+  "directory": "/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-build",
+  "command": "/usr/bin/cc -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-build/include -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/kem/ml_kem/pqcrystals-kyber-standard_ml-kem-1024-ipd_avx2 -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/common/pqclean_shims -std=gnu11 -fPIC -fvisibility=hidden -Wa,--noexecstack -O3 -fomit-frame-pointer -fdata-sections -ffunction-sections -Wl,--gc-sections -mavx2 -mbmi2 -mpopcnt -DKYBER_K=4 -o src/kem/ml_kem/CMakeFiles/ml_kem_1024_ipd_avx2.dir/pqcrystals-kyber-standard_ml-kem-1024-ipd_avx2/consts.c.o -c /home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/kem/ml_kem/pqcrystals-kyber-standard_ml-kem-1024-ipd_avx2/consts.c",
+  "file": "/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/kem/ml_kem/pqcrystals-kyber-standard_ml-kem-1024-ipd_avx2/consts.c",
+  "output": "src/kem/ml_kem/CMakeFiles/ml_kem_1024_ipd_avx2.dir/pqcrystals-kyber-standard_ml-kem-1024-ipd_avx2/consts.c.o"
+},
+{
+  "directory": "/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-build",
+  "command": "/usr/bin/cc -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-build/include -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/kem/ml_kem/pqcrystals-kyber-standard_ml-kem-1024-ipd_avx2 -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/common/pqclean_shims -fPIC -Wa,--noexecstack -O3 -fomit-frame-pointer -fdata-sections -ffunction-sections -Wl,--gc-sections -mavx2 -mbmi2 -mpopcnt -DKYBER_K=4 -o src/kem/ml_kem/CMakeFiles/ml_kem_1024_ipd_avx2.dir/pqcrystals-kyber-standard_ml-kem-1024-ipd_avx2/fq.S.o -c /home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/kem/ml_kem/pqcrystals-kyber-standard_ml-kem-1024-ipd_avx2/fq.S",
+  "file": "/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/kem/ml_kem/pqcrystals-kyber-standard_ml-kem-1024-ipd_avx2/fq.S",
+  "output": "src/kem/ml_kem/CMakeFiles/ml_kem_1024_ipd_avx2.dir/pqcrystals-kyber-standard_ml-kem-1024-ipd_avx2/fq.S.o"
+},
+{
+  "directory": "/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-build",
+  "command": "/usr/bin/cc -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-build/include -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/kem/ml_kem/pqcrystals-kyber-standard_ml-kem-1024-ipd_avx2 -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/common/pqclean_shims -std=gnu11 -fPIC -fvisibility=hidden -Wa,--noexecstack -O3 -fomit-frame-pointer -fdata-sections -ffunction-sections -Wl,--gc-sections -mavx2 -mbmi2 -mpopcnt -DKYBER_K=4 -o src/kem/ml_kem/CMakeFiles/ml_kem_1024_ipd_avx2.dir/pqcrystals-kyber-standard_ml-kem-1024-ipd_avx2/indcpa.c.o -c /home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/kem/ml_kem/pqcrystals-kyber-standard_ml-kem-1024-ipd_avx2/indcpa.c",
+  "file": "/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/kem/ml_kem/pqcrystals-kyber-standard_ml-kem-1024-ipd_avx2/indcpa.c",
+  "output": "src/kem/ml_kem/CMakeFiles/ml_kem_1024_ipd_avx2.dir/pqcrystals-kyber-standard_ml-kem-1024-ipd_avx2/indcpa.c.o"
+},
+{
+  "directory": "/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-build",
+  "command": "/usr/bin/cc -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-build/include -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/kem/ml_kem/pqcrystals-kyber-standard_ml-kem-1024-ipd_avx2 -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/common/pqclean_shims -fPIC -Wa,--noexecstack -O3 -fomit-frame-pointer -fdata-sections -ffunction-sections -Wl,--gc-sections -mavx2 -mbmi2 -mpopcnt -DKYBER_K=4 -o src/kem/ml_kem/CMakeFiles/ml_kem_1024_ipd_avx2.dir/pqcrystals-kyber-standard_ml-kem-1024-ipd_avx2/invntt.S.o -c /home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/kem/ml_kem/pqcrystals-kyber-standard_ml-kem-1024-ipd_avx2/invntt.S",
+  "file": "/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/kem/ml_kem/pqcrystals-kyber-standard_ml-kem-1024-ipd_avx2/invntt.S",
+  "output": "src/kem/ml_kem/CMakeFiles/ml_kem_1024_ipd_avx2.dir/pqcrystals-kyber-standard_ml-kem-1024-ipd_avx2/invntt.S.o"
+},
+{
+  "directory": "/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-build",
+  "command": "/usr/bin/cc -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-build/include -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/kem/ml_kem/pqcrystals-kyber-standard_ml-kem-1024-ipd_avx2 -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/common/pqclean_shims -std=gnu11 -fPIC -fvisibility=hidden -Wa,--noexecstack -O3 -fomit-frame-pointer -fdata-sections -ffunction-sections -Wl,--gc-sections -mavx2 -mbmi2 -mpopcnt -DKYBER_K=4 -o src/kem/ml_kem/CMakeFiles/ml_kem_1024_ipd_avx2.dir/pqcrystals-kyber-standard_ml-kem-1024-ipd_avx2/kem.c.o -c /home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/kem/ml_kem/pqcrystals-kyber-standard_ml-kem-1024-ipd_avx2/kem.c",
+  "file": "/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/kem/ml_kem/pqcrystals-kyber-standard_ml-kem-1024-ipd_avx2/kem.c",
+  "output": "src/kem/ml_kem/CMakeFiles/ml_kem_1024_ipd_avx2.dir/pqcrystals-kyber-standard_ml-kem-1024-ipd_avx2/kem.c.o"
+},
+{
+  "directory": "/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-build",
+  "command": "/usr/bin/cc -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-build/include -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/kem/ml_kem/pqcrystals-kyber-standard_ml-kem-1024-ipd_avx2 -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/common/pqclean_shims -fPIC -Wa,--noexecstack -O3 -fomit-frame-pointer -fdata-sections -ffunction-sections -Wl,--gc-sections -mavx2 -mbmi2 -mpopcnt -DKYBER_K=4 -o src/kem/ml_kem/CMakeFiles/ml_kem_1024_ipd_avx2.dir/pqcrystals-kyber-standard_ml-kem-1024-ipd_avx2/ntt.S.o -c /home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/kem/ml_kem/pqcrystals-kyber-standard_ml-kem-1024-ipd_avx2/ntt.S",
+  "file": "/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/kem/ml_kem/pqcrystals-kyber-standard_ml-kem-1024-ipd_avx2/ntt.S",
+  "output": "src/kem/ml_kem/CMakeFiles/ml_kem_1024_ipd_avx2.dir/pqcrystals-kyber-standard_ml-kem-1024-ipd_avx2/ntt.S.o"
+},
+{
+  "directory": "/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-build",
+  "command": "/usr/bin/cc -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-build/include -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/kem/ml_kem/pqcrystals-kyber-standard_ml-kem-1024-ipd_avx2 -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/common/pqclean_shims -std=gnu11 -fPIC -fvisibility=hidden -Wa,--noexecstack -O3 -fomit-frame-pointer -fdata-sections -ffunction-sections -Wl,--gc-sections -mavx2 -mbmi2 -mpopcnt -DKYBER_K=4 -o src/kem/ml_kem/CMakeFiles/ml_kem_1024_ipd_avx2.dir/pqcrystals-kyber-standard_ml-kem-1024-ipd_avx2/poly.c.o -c /home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/kem/ml_kem/pqcrystals-kyber-standard_ml-kem-1024-ipd_avx2/poly.c",
+  "file": "/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/kem/ml_kem/pqcrystals-kyber-standard_ml-kem-1024-ipd_avx2/poly.c",
+  "output": "src/kem/ml_kem/CMakeFiles/ml_kem_1024_ipd_avx2.dir/pqcrystals-kyber-standard_ml-kem-1024-ipd_avx2/poly.c.o"
+},
+{
+  "directory": "/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-build",
+  "command": "/usr/bin/cc -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-build/include -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/kem/ml_kem/pqcrystals-kyber-standard_ml-kem-1024-ipd_avx2 -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/common/pqclean_shims -std=gnu11 -fPIC -fvisibility=hidden -Wa,--noexecstack -O3 -fomit-frame-pointer -fdata-sections -ffunction-sections -Wl,--gc-sections -mavx2 -mbmi2 -mpopcnt -DKYBER_K=4 -o src/kem/ml_kem/CMakeFiles/ml_kem_1024_ipd_avx2.dir/pqcrystals-kyber-standard_ml-kem-1024-ipd_avx2/polyvec.c.o -c /home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/kem/ml_kem/pqcrystals-kyber-standard_ml-kem-1024-ipd_avx2/polyvec.c",
+  "file": "/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/kem/ml_kem/pqcrystals-kyber-standard_ml-kem-1024-ipd_avx2/polyvec.c",
+  "output": "src/kem/ml_kem/CMakeFiles/ml_kem_1024_ipd_avx2.dir/pqcrystals-kyber-standard_ml-kem-1024-ipd_avx2/polyvec.c.o"
+},
+{
+  "directory": "/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-build",
+  "command": "/usr/bin/cc -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-build/include -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/kem/ml_kem/pqcrystals-kyber-standard_ml-kem-1024-ipd_avx2 -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/common/pqclean_shims -std=gnu11 -fPIC -fvisibility=hidden -Wa,--noexecstack -O3 -fomit-frame-pointer -fdata-sections -ffunction-sections -Wl,--gc-sections -mavx2 -mbmi2 -mpopcnt -DKYBER_K=4 -o src/kem/ml_kem/CMakeFiles/ml_kem_1024_ipd_avx2.dir/pqcrystals-kyber-standard_ml-kem-1024-ipd_avx2/rejsample.c.o -c /home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/kem/ml_kem/pqcrystals-kyber-standard_ml-kem-1024-ipd_avx2/rejsample.c",
+  "file": "/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/kem/ml_kem/pqcrystals-kyber-standard_ml-kem-1024-ipd_avx2/rejsample.c",
+  "output": "src/kem/ml_kem/CMakeFiles/ml_kem_1024_ipd_avx2.dir/pqcrystals-kyber-standard_ml-kem-1024-ipd_avx2/rejsample.c.o"
+},
+{
+  "directory": "/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-build",
+  "command": "/usr/bin/cc -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-build/include -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/kem/ml_kem/pqcrystals-kyber-standard_ml-kem-1024-ipd_avx2 -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/common/pqclean_shims -fPIC -Wa,--noexecstack -O3 -fomit-frame-pointer -fdata-sections -ffunction-sections -Wl,--gc-sections -mavx2 -mbmi2 -mpopcnt -DKYBER_K=4 -o src/kem/ml_kem/CMakeFiles/ml_kem_1024_ipd_avx2.dir/pqcrystals-kyber-standard_ml-kem-1024-ipd_avx2/shuffle.S.o -c /home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/kem/ml_kem/pqcrystals-kyber-standard_ml-kem-1024-ipd_avx2/shuffle.S",
+  "file": "/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/kem/ml_kem/pqcrystals-kyber-standard_ml-kem-1024-ipd_avx2/shuffle.S",
+  "output": "src/kem/ml_kem/CMakeFiles/ml_kem_1024_ipd_avx2.dir/pqcrystals-kyber-standard_ml-kem-1024-ipd_avx2/shuffle.S.o"
+},
+{
+  "directory": "/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-build",
+  "command": "/usr/bin/cc -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-build/include -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/kem/ml_kem/pqcrystals-kyber-standard_ml-kem-1024-ipd_avx2 -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/common/pqclean_shims -std=gnu11 -fPIC -fvisibility=hidden -Wa,--noexecstack -O3 -fomit-frame-pointer -fdata-sections -ffunction-sections -Wl,--gc-sections -mavx2 -mbmi2 -mpopcnt -DKYBER_K=4 -o src/kem/ml_kem/CMakeFiles/ml_kem_1024_ipd_avx2.dir/pqcrystals-kyber-standard_ml-kem-1024-ipd_avx2/symmetric-shake.c.o -c /home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/kem/ml_kem/pqcrystals-kyber-standard_ml-kem-1024-ipd_avx2/symmetric-shake.c",
+  "file": "/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/kem/ml_kem/pqcrystals-kyber-standard_ml-kem-1024-ipd_avx2/symmetric-shake.c",
+  "output": "src/kem/ml_kem/CMakeFiles/ml_kem_1024_ipd_avx2.dir/pqcrystals-kyber-standard_ml-kem-1024-ipd_avx2/symmetric-shake.c.o"
+},
+{
+  "directory": "/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-build",
+  "command": "/usr/bin/cc -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-build/include -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/kem/ml_kem/pqcrystals-kyber-standard_ml-kem-1024-ipd_avx2 -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/common/pqclean_shims -std=gnu11 -fPIC -fvisibility=hidden -Wa,--noexecstack -O3 -fomit-frame-pointer -fdata-sections -ffunction-sections -Wl,--gc-sections -mavx2 -mbmi2 -mpopcnt -DKYBER_K=4 -o src/kem/ml_kem/CMakeFiles/ml_kem_1024_ipd_avx2.dir/pqcrystals-kyber-standard_ml-kem-1024-ipd_avx2/verify.c.o -c /home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/kem/ml_kem/pqcrystals-kyber-standard_ml-kem-1024-ipd_avx2/verify.c",
+  "file": "/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/kem/ml_kem/pqcrystals-kyber-standard_ml-kem-1024-ipd_avx2/verify.c",
+  "output": "src/kem/ml_kem/CMakeFiles/ml_kem_1024_ipd_avx2.dir/pqcrystals-kyber-standard_ml-kem-1024-ipd_avx2/verify.c.o"
+},
+{
+  "directory": "/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-build",
+  "command": "/usr/bin/cc -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-build/include -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/sig/ml_dsa/pqcrystals-dilithium-standard_ml-dsa-44-ipd_ref -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/common/pqclean_shims -std=gnu11 -fPIC -fvisibility=hidden -Wa,--noexecstack -O3 -fomit-frame-pointer -fdata-sections -ffunction-sections -Wl,--gc-sections -DDILITHIUM_MODE=2 -o src/sig/ml_dsa/CMakeFiles/ml_dsa_44_ipd_ref.dir/sig_ml_dsa_44_ipd.c.o -c /home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/sig/ml_dsa/sig_ml_dsa_44_ipd.c",
+  "file": "/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/sig/ml_dsa/sig_ml_dsa_44_ipd.c",
+  "output": "src/sig/ml_dsa/CMakeFiles/ml_dsa_44_ipd_ref.dir/sig_ml_dsa_44_ipd.c.o"
+},
+{
+  "directory": "/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-build",
+  "command": "/usr/bin/cc -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-build/include -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/sig/ml_dsa/pqcrystals-dilithium-standard_ml-dsa-44-ipd_ref -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/common/pqclean_shims -std=gnu11 -fPIC -fvisibility=hidden -Wa,--noexecstack -O3 -fomit-frame-pointer -fdata-sections -ffunction-sections -Wl,--gc-sections -DDILITHIUM_MODE=2 -o src/sig/ml_dsa/CMakeFiles/ml_dsa_44_ipd_ref.dir/pqcrystals-dilithium-standard_ml-dsa-44-ipd_ref/ntt.c.o -c /home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/sig/ml_dsa/pqcrystals-dilithium-standard_ml-dsa-44-ipd_ref/ntt.c",
+  "file": "/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/sig/ml_dsa/pqcrystals-dilithium-standard_ml-dsa-44-ipd_ref/ntt.c",
+  "output": "src/sig/ml_dsa/CMakeFiles/ml_dsa_44_ipd_ref.dir/pqcrystals-dilithium-standard_ml-dsa-44-ipd_ref/ntt.c.o"
+},
+{
+  "directory": "/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-build",
+  "command": "/usr/bin/cc -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-build/include -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/sig/ml_dsa/pqcrystals-dilithium-standard_ml-dsa-44-ipd_ref -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/common/pqclean_shims -std=gnu11 -fPIC -fvisibility=hidden -Wa,--noexecstack -O3 -fomit-frame-pointer -fdata-sections -ffunction-sections -Wl,--gc-sections -DDILITHIUM_MODE=2 -o src/sig/ml_dsa/CMakeFiles/ml_dsa_44_ipd_ref.dir/pqcrystals-dilithium-standard_ml-dsa-44-ipd_ref/packing.c.o -c /home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/sig/ml_dsa/pqcrystals-dilithium-standard_ml-dsa-44-ipd_ref/packing.c",
+  "file": "/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/sig/ml_dsa/pqcrystals-dilithium-standard_ml-dsa-44-ipd_ref/packing.c",
+  "output": "src/sig/ml_dsa/CMakeFiles/ml_dsa_44_ipd_ref.dir/pqcrystals-dilithium-standard_ml-dsa-44-ipd_ref/packing.c.o"
+},
+{
+  "directory": "/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-build",
+  "command": "/usr/bin/cc -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-build/include -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/sig/ml_dsa/pqcrystals-dilithium-standard_ml-dsa-44-ipd_ref -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/common/pqclean_shims -std=gnu11 -fPIC -fvisibility=hidden -Wa,--noexecstack -O3 -fomit-frame-pointer -fdata-sections -ffunction-sections -Wl,--gc-sections -DDILITHIUM_MODE=2 -o src/sig/ml_dsa/CMakeFiles/ml_dsa_44_ipd_ref.dir/pqcrystals-dilithium-standard_ml-dsa-44-ipd_ref/poly.c.o -c /home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/sig/ml_dsa/pqcrystals-dilithium-standard_ml-dsa-44-ipd_ref/poly.c",
+  "file": "/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/sig/ml_dsa/pqcrystals-dilithium-standard_ml-dsa-44-ipd_ref/poly.c",
+  "output": "src/sig/ml_dsa/CMakeFiles/ml_dsa_44_ipd_ref.dir/pqcrystals-dilithium-standard_ml-dsa-44-ipd_ref/poly.c.o"
+},
+{
+  "directory": "/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-build",
+  "command": "/usr/bin/cc -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-build/include -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/sig/ml_dsa/pqcrystals-dilithium-standard_ml-dsa-44-ipd_ref -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/common/pqclean_shims -std=gnu11 -fPIC -fvisibility=hidden -Wa,--noexecstack -O3 -fomit-frame-pointer -fdata-sections -ffunction-sections -Wl,--gc-sections -DDILITHIUM_MODE=2 -o src/sig/ml_dsa/CMakeFiles/ml_dsa_44_ipd_ref.dir/pqcrystals-dilithium-standard_ml-dsa-44-ipd_ref/polyvec.c.o -c /home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/sig/ml_dsa/pqcrystals-dilithium-standard_ml-dsa-44-ipd_ref/polyvec.c",
+  "file": "/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/sig/ml_dsa/pqcrystals-dilithium-standard_ml-dsa-44-ipd_ref/polyvec.c",
+  "output": "src/sig/ml_dsa/CMakeFiles/ml_dsa_44_ipd_ref.dir/pqcrystals-dilithium-standard_ml-dsa-44-ipd_ref/polyvec.c.o"
+},
+{
+  "directory": "/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-build",
+  "command": "/usr/bin/cc -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-build/include -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/sig/ml_dsa/pqcrystals-dilithium-standard_ml-dsa-44-ipd_ref -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/common/pqclean_shims -std=gnu11 -fPIC -fvisibility=hidden -Wa,--noexecstack -O3 -fomit-frame-pointer -fdata-sections -ffunction-sections -Wl,--gc-sections -DDILITHIUM_MODE=2 -o src/sig/ml_dsa/CMakeFiles/ml_dsa_44_ipd_ref.dir/pqcrystals-dilithium-standard_ml-dsa-44-ipd_ref/reduce.c.o -c /home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/sig/ml_dsa/pqcrystals-dilithium-standard_ml-dsa-44-ipd_ref/reduce.c",
+  "file": "/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/sig/ml_dsa/pqcrystals-dilithium-standard_ml-dsa-44-ipd_ref/reduce.c",
+  "output": "src/sig/ml_dsa/CMakeFiles/ml_dsa_44_ipd_ref.dir/pqcrystals-dilithium-standard_ml-dsa-44-ipd_ref/reduce.c.o"
+},
+{
+  "directory": "/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-build",
+  "command": "/usr/bin/cc -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-build/include -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/sig/ml_dsa/pqcrystals-dilithium-standard_ml-dsa-44-ipd_ref -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/common/pqclean_shims -std=gnu11 -fPIC -fvisibility=hidden -Wa,--noexecstack -O3 -fomit-frame-pointer -fdata-sections -ffunction-sections -Wl,--gc-sections -DDILITHIUM_MODE=2 -o src/sig/ml_dsa/CMakeFiles/ml_dsa_44_ipd_ref.dir/pqcrystals-dilithium-standard_ml-dsa-44-ipd_ref/rounding.c.o -c /home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/sig/ml_dsa/pqcrystals-dilithium-standard_ml-dsa-44-ipd_ref/rounding.c",
+  "file": "/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/sig/ml_dsa/pqcrystals-dilithium-standard_ml-dsa-44-ipd_ref/rounding.c",
+  "output": "src/sig/ml_dsa/CMakeFiles/ml_dsa_44_ipd_ref.dir/pqcrystals-dilithium-standard_ml-dsa-44-ipd_ref/rounding.c.o"
+},
+{
+  "directory": "/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-build",
+  "command": "/usr/bin/cc -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-build/include -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/sig/ml_dsa/pqcrystals-dilithium-standard_ml-dsa-44-ipd_ref -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/common/pqclean_shims -std=gnu11 -fPIC -fvisibility=hidden -Wa,--noexecstack -O3 -fomit-frame-pointer -fdata-sections -ffunction-sections -Wl,--gc-sections -DDILITHIUM_MODE=2 -o src/sig/ml_dsa/CMakeFiles/ml_dsa_44_ipd_ref.dir/pqcrystals-dilithium-standard_ml-dsa-44-ipd_ref/sign.c.o -c /home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/sig/ml_dsa/pqcrystals-dilithium-standard_ml-dsa-44-ipd_ref/sign.c",
+  "file": "/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/sig/ml_dsa/pqcrystals-dilithium-standard_ml-dsa-44-ipd_ref/sign.c",
+  "output": "src/sig/ml_dsa/CMakeFiles/ml_dsa_44_ipd_ref.dir/pqcrystals-dilithium-standard_ml-dsa-44-ipd_ref/sign.c.o"
+},
+{
+  "directory": "/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-build",
+  "command": "/usr/bin/cc -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-build/include -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/sig/ml_dsa/pqcrystals-dilithium-standard_ml-dsa-44-ipd_ref -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/common/pqclean_shims -std=gnu11 -fPIC -fvisibility=hidden -Wa,--noexecstack -O3 -fomit-frame-pointer -fdata-sections -ffunction-sections -Wl,--gc-sections -DDILITHIUM_MODE=2 -o src/sig/ml_dsa/CMakeFiles/ml_dsa_44_ipd_ref.dir/pqcrystals-dilithium-standard_ml-dsa-44-ipd_ref/symmetric-shake.c.o -c /home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/sig/ml_dsa/pqcrystals-dilithium-standard_ml-dsa-44-ipd_ref/symmetric-shake.c",
+  "file": "/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/sig/ml_dsa/pqcrystals-dilithium-standard_ml-dsa-44-ipd_ref/symmetric-shake.c",
+  "output": "src/sig/ml_dsa/CMakeFiles/ml_dsa_44_ipd_ref.dir/pqcrystals-dilithium-standard_ml-dsa-44-ipd_ref/symmetric-shake.c.o"
+},
+{
+  "directory": "/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-build",
+  "command": "/usr/bin/cc -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-build/include -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/sig/ml_dsa/pqcrystals-dilithium-standard_ml-dsa-44-ipd_avx2 -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/common/pqclean_shims -std=gnu11 -fPIC -fvisibility=hidden -Wa,--noexecstack -O3 -fomit-frame-pointer -fdata-sections -ffunction-sections -Wl,--gc-sections -mavx2 -mpopcnt -DDILITHIUM_MODE=2 -o src/sig/ml_dsa/CMakeFiles/ml_dsa_44_ipd_avx2.dir/pqcrystals-dilithium-standard_ml-dsa-44-ipd_avx2/consts.c.o -c /home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/sig/ml_dsa/pqcrystals-dilithium-standard_ml-dsa-44-ipd_avx2/consts.c",
+  "file": "/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/sig/ml_dsa/pqcrystals-dilithium-standard_ml-dsa-44-ipd_avx2/consts.c",
+  "output": "src/sig/ml_dsa/CMakeFiles/ml_dsa_44_ipd_avx2.dir/pqcrystals-dilithium-standard_ml-dsa-44-ipd_avx2/consts.c.o"
+},
+{
+  "directory": "/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-build",
+  "command": "/usr/bin/cc -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-build/include -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/sig/ml_dsa/pqcrystals-dilithium-standard_ml-dsa-44-ipd_avx2 -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/common/pqclean_shims -fPIC -Wa,--noexecstack -O3 -fomit-frame-pointer -fdata-sections -ffunction-sections -Wl,--gc-sections -mavx2 -mpopcnt -DDILITHIUM_MODE=2 -o src/sig/ml_dsa/CMakeFiles/ml_dsa_44_ipd_avx2.dir/pqcrystals-dilithium-standard_ml-dsa-44-ipd_avx2/invntt.S.o -c /home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/sig/ml_dsa/pqcrystals-dilithium-standard_ml-dsa-44-ipd_avx2/invntt.S",
+  "file": "/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/sig/ml_dsa/pqcrystals-dilithium-standard_ml-dsa-44-ipd_avx2/invntt.S",
+  "output": "src/sig/ml_dsa/CMakeFiles/ml_dsa_44_ipd_avx2.dir/pqcrystals-dilithium-standard_ml-dsa-44-ipd_avx2/invntt.S.o"
+},
+{
+  "directory": "/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-build",
+  "command": "/usr/bin/cc -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-build/include -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/sig/ml_dsa/pqcrystals-dilithium-standard_ml-dsa-44-ipd_avx2 -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/common/pqclean_shims -fPIC -Wa,--noexecstack -O3 -fomit-frame-pointer -fdata-sections -ffunction-sections -Wl,--gc-sections -mavx2 -mpopcnt -DDILITHIUM_MODE=2 -o src/sig/ml_dsa/CMakeFiles/ml_dsa_44_ipd_avx2.dir/pqcrystals-dilithium-standard_ml-dsa-44-ipd_avx2/ntt.S.o -c /home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/sig/ml_dsa/pqcrystals-dilithium-standard_ml-dsa-44-ipd_avx2/ntt.S",
+  "file": "/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/sig/ml_dsa/pqcrystals-dilithium-standard_ml-dsa-44-ipd_avx2/ntt.S",
+  "output": "src/sig/ml_dsa/CMakeFiles/ml_dsa_44_ipd_avx2.dir/pqcrystals-dilithium-standard_ml-dsa-44-ipd_avx2/ntt.S.o"
+},
+{
+  "directory": "/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-build",
+  "command": "/usr/bin/cc -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-build/include -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/sig/ml_dsa/pqcrystals-dilithium-standard_ml-dsa-44-ipd_avx2 -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/common/pqclean_shims -std=gnu11 -fPIC -fvisibility=hidden -Wa,--noexecstack -O3 -fomit-frame-pointer -fdata-sections -ffunction-sections -Wl,--gc-sections -mavx2 -mpopcnt -DDILITHIUM_MODE=2 -o src/sig/ml_dsa/CMakeFiles/ml_dsa_44_ipd_avx2.dir/pqcrystals-dilithium-standard_ml-dsa-44-ipd_avx2/packing.c.o -c /home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/sig/ml_dsa/pqcrystals-dilithium-standard_ml-dsa-44-ipd_avx2/packing.c",
+  "file": "/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/sig/ml_dsa/pqcrystals-dilithium-standard_ml-dsa-44-ipd_avx2/packing.c",
+  "output": "src/sig/ml_dsa/CMakeFiles/ml_dsa_44_ipd_avx2.dir/pqcrystals-dilithium-standard_ml-dsa-44-ipd_avx2/packing.c.o"
+},
+{
+  "directory": "/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-build",
+  "command": "/usr/bin/cc -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-build/include -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/sig/ml_dsa/pqcrystals-dilithium-standard_ml-dsa-44-ipd_avx2 -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/common/pqclean_shims -fPIC -Wa,--noexecstack -O3 -fomit-frame-pointer -fdata-sections -ffunction-sections -Wl,--gc-sections -mavx2 -mpopcnt -DDILITHIUM_MODE=2 -o src/sig/ml_dsa/CMakeFiles/ml_dsa_44_ipd_avx2.dir/pqcrystals-dilithium-standard_ml-dsa-44-ipd_avx2/pointwise.S.o -c /home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/sig/ml_dsa/pqcrystals-dilithium-standard_ml-dsa-44-ipd_avx2/pointwise.S",
+  "file": "/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/sig/ml_dsa/pqcrystals-dilithium-standard_ml-dsa-44-ipd_avx2/pointwise.S",
+  "output": "src/sig/ml_dsa/CMakeFiles/ml_dsa_44_ipd_avx2.dir/pqcrystals-dilithium-standard_ml-dsa-44-ipd_avx2/pointwise.S.o"
+},
+{
+  "directory": "/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-build",
+  "command": "/usr/bin/cc -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-build/include -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/sig/ml_dsa/pqcrystals-dilithium-standard_ml-dsa-44-ipd_avx2 -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/common/pqclean_shims -std=gnu11 -fPIC -fvisibility=hidden -Wa,--noexecstack -O3 -fomit-frame-pointer -fdata-sections -ffunction-sections -Wl,--gc-sections -mavx2 -mpopcnt -DDILITHIUM_MODE=2 -o src/sig/ml_dsa/CMakeFiles/ml_dsa_44_ipd_avx2.dir/pqcrystals-dilithium-standard_ml-dsa-44-ipd_avx2/poly.c.o -c /home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/sig/ml_dsa/pqcrystals-dilithium-standard_ml-dsa-44-ipd_avx2/poly.c",
+  "file": "/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/sig/ml_dsa/pqcrystals-dilithium-standard_ml-dsa-44-ipd_avx2/poly.c",
+  "output": "src/sig/ml_dsa/CMakeFiles/ml_dsa_44_ipd_avx2.dir/pqcrystals-dilithium-standard_ml-dsa-44-ipd_avx2/poly.c.o"
+},
+{
+  "directory": "/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-build",
+  "command": "/usr/bin/cc -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-build/include -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/sig/ml_dsa/pqcrystals-dilithium-standard_ml-dsa-44-ipd_avx2 -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/common/pqclean_shims -std=gnu11 -fPIC -fvisibility=hidden -Wa,--noexecstack -O3 -fomit-frame-pointer -fdata-sections -ffunction-sections -Wl,--gc-sections -mavx2 -mpopcnt -DDILITHIUM_MODE=2 -o src/sig/ml_dsa/CMakeFiles/ml_dsa_44_ipd_avx2.dir/pqcrystals-dilithium-standard_ml-dsa-44-ipd_avx2/polyvec.c.o -c /home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/sig/ml_dsa/pqcrystals-dilithium-standard_ml-dsa-44-ipd_avx2/polyvec.c",
+  "file": "/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/sig/ml_dsa/pqcrystals-dilithium-standard_ml-dsa-44-ipd_avx2/polyvec.c",
+  "output": "src/sig/ml_dsa/CMakeFiles/ml_dsa_44_ipd_avx2.dir/pqcrystals-dilithium-standard_ml-dsa-44-ipd_avx2/polyvec.c.o"
+},
+{
+  "directory": "/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-build",
+  "command": "/usr/bin/cc -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-build/include -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/sig/ml_dsa/pqcrystals-dilithium-standard_ml-dsa-44-ipd_avx2 -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/common/pqclean_shims -std=gnu11 -fPIC -fvisibility=hidden -Wa,--noexecstack -O3 -fomit-frame-pointer -fdata-sections -ffunction-sections -Wl,--gc-sections -mavx2 -mpopcnt -DDILITHIUM_MODE=2 -o src/sig/ml_dsa/CMakeFiles/ml_dsa_44_ipd_avx2.dir/pqcrystals-dilithium-standard_ml-dsa-44-ipd_avx2/rejsample.c.o -c /home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/sig/ml_dsa/pqcrystals-dilithium-standard_ml-dsa-44-ipd_avx2/rejsample.c",
+  "file": "/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/sig/ml_dsa/pqcrystals-dilithium-standard_ml-dsa-44-ipd_avx2/rejsample.c",
+  "output": "src/sig/ml_dsa/CMakeFiles/ml_dsa_44_ipd_avx2.dir/pqcrystals-dilithium-standard_ml-dsa-44-ipd_avx2/rejsample.c.o"
+},
+{
+  "directory": "/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-build",
+  "command": "/usr/bin/cc -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-build/include -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/sig/ml_dsa/pqcrystals-dilithium-standard_ml-dsa-44-ipd_avx2 -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/common/pqclean_shims -std=gnu11 -fPIC -fvisibility=hidden -Wa,--noexecstack -O3 -fomit-frame-pointer -fdata-sections -ffunction-sections -Wl,--gc-sections -mavx2 -mpopcnt -DDILITHIUM_MODE=2 -o src/sig/ml_dsa/CMakeFiles/ml_dsa_44_ipd_avx2.dir/pqcrystals-dilithium-standard_ml-dsa-44-ipd_avx2/rounding.c.o -c /home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/sig/ml_dsa/pqcrystals-dilithium-standard_ml-dsa-44-ipd_avx2/rounding.c",
+  "file": "/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/sig/ml_dsa/pqcrystals-dilithium-standard_ml-dsa-44-ipd_avx2/rounding.c",
+  "output": "src/sig/ml_dsa/CMakeFiles/ml_dsa_44_ipd_avx2.dir/pqcrystals-dilithium-standard_ml-dsa-44-ipd_avx2/rounding.c.o"
+},
+{
+  "directory": "/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-build",
+  "command": "/usr/bin/cc -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-build/include -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/sig/ml_dsa/pqcrystals-dilithium-standard_ml-dsa-44-ipd_avx2 -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/common/pqclean_shims -fPIC -Wa,--noexecstack -O3 -fomit-frame-pointer -fdata-sections -ffunction-sections -Wl,--gc-sections -mavx2 -mpopcnt -DDILITHIUM_MODE=2 -o src/sig/ml_dsa/CMakeFiles/ml_dsa_44_ipd_avx2.dir/pqcrystals-dilithium-standard_ml-dsa-44-ipd_avx2/shuffle.S.o -c /home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/sig/ml_dsa/pqcrystals-dilithium-standard_ml-dsa-44-ipd_avx2/shuffle.S",
+  "file": "/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/sig/ml_dsa/pqcrystals-dilithium-standard_ml-dsa-44-ipd_avx2/shuffle.S",
+  "output": "src/sig/ml_dsa/CMakeFiles/ml_dsa_44_ipd_avx2.dir/pqcrystals-dilithium-standard_ml-dsa-44-ipd_avx2/shuffle.S.o"
+},
+{
+  "directory": "/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-build",
+  "command": "/usr/bin/cc -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-build/include -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/sig/ml_dsa/pqcrystals-dilithium-standard_ml-dsa-44-ipd_avx2 -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/common/pqclean_shims -std=gnu11 -fPIC -fvisibility=hidden -Wa,--noexecstack -O3 -fomit-frame-pointer -fdata-sections -ffunction-sections -Wl,--gc-sections -mavx2 -mpopcnt -DDILITHIUM_MODE=2 -o src/sig/ml_dsa/CMakeFiles/ml_dsa_44_ipd_avx2.dir/pqcrystals-dilithium-standard_ml-dsa-44-ipd_avx2/sign.c.o -c /home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/sig/ml_dsa/pqcrystals-dilithium-standard_ml-dsa-44-ipd_avx2/sign.c",
+  "file": "/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/sig/ml_dsa/pqcrystals-dilithium-standard_ml-dsa-44-ipd_avx2/sign.c",
+  "output": "src/sig/ml_dsa/CMakeFiles/ml_dsa_44_ipd_avx2.dir/pqcrystals-dilithium-standard_ml-dsa-44-ipd_avx2/sign.c.o"
+},
+{
+  "directory": "/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-build",
+  "command": "/usr/bin/cc -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-build/include -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/sig/ml_dsa/pqcrystals-dilithium-standard_ml-dsa-44-ipd_avx2 -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/common/pqclean_shims -std=gnu11 -fPIC -fvisibility=hidden -Wa,--noexecstack -O3 -fomit-frame-pointer -fdata-sections -ffunction-sections -Wl,--gc-sections -mavx2 -mpopcnt -DDILITHIUM_MODE=2 -o src/sig/ml_dsa/CMakeFiles/ml_dsa_44_ipd_avx2.dir/pqcrystals-dilithium-standard_ml-dsa-44-ipd_avx2/symmetric-shake.c.o -c /home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/sig/ml_dsa/pqcrystals-dilithium-standard_ml-dsa-44-ipd_avx2/symmetric-shake.c",
+  "file": "/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/sig/ml_dsa/pqcrystals-dilithium-standard_ml-dsa-44-ipd_avx2/symmetric-shake.c",
+  "output": "src/sig/ml_dsa/CMakeFiles/ml_dsa_44_ipd_avx2.dir/pqcrystals-dilithium-standard_ml-dsa-44-ipd_avx2/symmetric-shake.c.o"
+},
+{
+  "directory": "/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-build",
+  "command": "/usr/bin/cc -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-build/include -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/sig/ml_dsa/pqcrystals-dilithium-standard_ml-dsa-65-ipd_ref -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/common/pqclean_shims -std=gnu11 -fPIC -fvisibility=hidden -Wa,--noexecstack -O3 -fomit-frame-pointer -fdata-sections -ffunction-sections -Wl,--gc-sections -DDILITHIUM_MODE=3 -o src/sig/ml_dsa/CMakeFiles/ml_dsa_65_ipd_ref.dir/sig_ml_dsa_65_ipd.c.o -c /home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/sig/ml_dsa/sig_ml_dsa_65_ipd.c",
+  "file": "/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/sig/ml_dsa/sig_ml_dsa_65_ipd.c",
+  "output": "src/sig/ml_dsa/CMakeFiles/ml_dsa_65_ipd_ref.dir/sig_ml_dsa_65_ipd.c.o"
+},
+{
+  "directory": "/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-build",
+  "command": "/usr/bin/cc -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-build/include -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/sig/ml_dsa/pqcrystals-dilithium-standard_ml-dsa-65-ipd_ref -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/common/pqclean_shims -std=gnu11 -fPIC -fvisibility=hidden -Wa,--noexecstack -O3 -fomit-frame-pointer -fdata-sections -ffunction-sections -Wl,--gc-sections -DDILITHIUM_MODE=3 -o src/sig/ml_dsa/CMakeFiles/ml_dsa_65_ipd_ref.dir/pqcrystals-dilithium-standard_ml-dsa-65-ipd_ref/ntt.c.o -c /home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/sig/ml_dsa/pqcrystals-dilithium-standard_ml-dsa-65-ipd_ref/ntt.c",
+  "file": "/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/sig/ml_dsa/pqcrystals-dilithium-standard_ml-dsa-65-ipd_ref/ntt.c",
+  "output": "src/sig/ml_dsa/CMakeFiles/ml_dsa_65_ipd_ref.dir/pqcrystals-dilithium-standard_ml-dsa-65-ipd_ref/ntt.c.o"
+},
+{
+  "directory": "/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-build",
+  "command": "/usr/bin/cc -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-build/include -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/sig/ml_dsa/pqcrystals-dilithium-standard_ml-dsa-65-ipd_ref -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/common/pqclean_shims -std=gnu11 -fPIC -fvisibility=hidden -Wa,--noexecstack -O3 -fomit-frame-pointer -fdata-sections -ffunction-sections -Wl,--gc-sections -DDILITHIUM_MODE=3 -o src/sig/ml_dsa/CMakeFiles/ml_dsa_65_ipd_ref.dir/pqcrystals-dilithium-standard_ml-dsa-65-ipd_ref/packing.c.o -c /home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/sig/ml_dsa/pqcrystals-dilithium-standard_ml-dsa-65-ipd_ref/packing.c",
+  "file": "/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/sig/ml_dsa/pqcrystals-dilithium-standard_ml-dsa-65-ipd_ref/packing.c",
+  "output": "src/sig/ml_dsa/CMakeFiles/ml_dsa_65_ipd_ref.dir/pqcrystals-dilithium-standard_ml-dsa-65-ipd_ref/packing.c.o"
+},
+{
+  "directory": "/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-build",
+  "command": "/usr/bin/cc -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-build/include -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/sig/ml_dsa/pqcrystals-dilithium-standard_ml-dsa-65-ipd_ref -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/common/pqclean_shims -std=gnu11 -fPIC -fvisibility=hidden -Wa,--noexecstack -O3 -fomit-frame-pointer -fdata-sections -ffunction-sections -Wl,--gc-sections -DDILITHIUM_MODE=3 -o src/sig/ml_dsa/CMakeFiles/ml_dsa_65_ipd_ref.dir/pqcrystals-dilithium-standard_ml-dsa-65-ipd_ref/poly.c.o -c /home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/sig/ml_dsa/pqcrystals-dilithium-standard_ml-dsa-65-ipd_ref/poly.c",
+  "file": "/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/sig/ml_dsa/pqcrystals-dilithium-standard_ml-dsa-65-ipd_ref/poly.c",
+  "output": "src/sig/ml_dsa/CMakeFiles/ml_dsa_65_ipd_ref.dir/pqcrystals-dilithium-standard_ml-dsa-65-ipd_ref/poly.c.o"
+},
+{
+  "directory": "/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-build",
+  "command": "/usr/bin/cc -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-build/include -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/sig/ml_dsa/pqcrystals-dilithium-standard_ml-dsa-65-ipd_ref -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/common/pqclean_shims -std=gnu11 -fPIC -fvisibility=hidden -Wa,--noexecstack -O3 -fomit-frame-pointer -fdata-sections -ffunction-sections -Wl,--gc-sections -DDILITHIUM_MODE=3 -o src/sig/ml_dsa/CMakeFiles/ml_dsa_65_ipd_ref.dir/pqcrystals-dilithium-standard_ml-dsa-65-ipd_ref/polyvec.c.o -c /home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/sig/ml_dsa/pqcrystals-dilithium-standard_ml-dsa-65-ipd_ref/polyvec.c",
+  "file": "/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/sig/ml_dsa/pqcrystals-dilithium-standard_ml-dsa-65-ipd_ref/polyvec.c",
+  "output": "src/sig/ml_dsa/CMakeFiles/ml_dsa_65_ipd_ref.dir/pqcrystals-dilithium-standard_ml-dsa-65-ipd_ref/polyvec.c.o"
+},
+{
+  "directory": "/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-build",
+  "command": "/usr/bin/cc -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-build/include -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/sig/ml_dsa/pqcrystals-dilithium-standard_ml-dsa-65-ipd_ref -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/common/pqclean_shims -std=gnu11 -fPIC -fvisibility=hidden -Wa,--noexecstack -O3 -fomit-frame-pointer -fdata-sections -ffunction-sections -Wl,--gc-sections -DDILITHIUM_MODE=3 -o src/sig/ml_dsa/CMakeFiles/ml_dsa_65_ipd_ref.dir/pqcrystals-dilithium-standard_ml-dsa-65-ipd_ref/reduce.c.o -c /home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/sig/ml_dsa/pqcrystals-dilithium-standard_ml-dsa-65-ipd_ref/reduce.c",
+  "file": "/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/sig/ml_dsa/pqcrystals-dilithium-standard_ml-dsa-65-ipd_ref/reduce.c",
+  "output": "src/sig/ml_dsa/CMakeFiles/ml_dsa_65_ipd_ref.dir/pqcrystals-dilithium-standard_ml-dsa-65-ipd_ref/reduce.c.o"
+},
+{
+  "directory": "/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-build",
+  "command": "/usr/bin/cc -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-build/include -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/sig/ml_dsa/pqcrystals-dilithium-standard_ml-dsa-65-ipd_ref -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/common/pqclean_shims -std=gnu11 -fPIC -fvisibility=hidden -Wa,--noexecstack -O3 -fomit-frame-pointer -fdata-sections -ffunction-sections -Wl,--gc-sections -DDILITHIUM_MODE=3 -o src/sig/ml_dsa/CMakeFiles/ml_dsa_65_ipd_ref.dir/pqcrystals-dilithium-standard_ml-dsa-65-ipd_ref/rounding.c.o -c /home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/sig/ml_dsa/pqcrystals-dilithium-standard_ml-dsa-65-ipd_ref/rounding.c",
+  "file": "/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/sig/ml_dsa/pqcrystals-dilithium-standard_ml-dsa-65-ipd_ref/rounding.c",
+  "output": "src/sig/ml_dsa/CMakeFiles/ml_dsa_65_ipd_ref.dir/pqcrystals-dilithium-standard_ml-dsa-65-ipd_ref/rounding.c.o"
+},
+{
+  "directory": "/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-build",
+  "command": "/usr/bin/cc -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-build/include -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/sig/ml_dsa/pqcrystals-dilithium-standard_ml-dsa-65-ipd_ref -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/common/pqclean_shims -std=gnu11 -fPIC -fvisibility=hidden -Wa,--noexecstack -O3 -fomit-frame-pointer -fdata-sections -ffunction-sections -Wl,--gc-sections -DDILITHIUM_MODE=3 -o src/sig/ml_dsa/CMakeFiles/ml_dsa_65_ipd_ref.dir/pqcrystals-dilithium-standard_ml-dsa-65-ipd_ref/sign.c.o -c /home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/sig/ml_dsa/pqcrystals-dilithium-standard_ml-dsa-65-ipd_ref/sign.c",
+  "file": "/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/sig/ml_dsa/pqcrystals-dilithium-standard_ml-dsa-65-ipd_ref/sign.c",
+  "output": "src/sig/ml_dsa/CMakeFiles/ml_dsa_65_ipd_ref.dir/pqcrystals-dilithium-standard_ml-dsa-65-ipd_ref/sign.c.o"
+},
+{
+  "directory": "/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-build",
+  "command": "/usr/bin/cc -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-build/include -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/sig/ml_dsa/pqcrystals-dilithium-standard_ml-dsa-65-ipd_ref -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/common/pqclean_shims -std=gnu11 -fPIC -fvisibility=hidden -Wa,--noexecstack -O3 -fomit-frame-pointer -fdata-sections -ffunction-sections -Wl,--gc-sections -DDILITHIUM_MODE=3 -o src/sig/ml_dsa/CMakeFiles/ml_dsa_65_ipd_ref.dir/pqcrystals-dilithium-standard_ml-dsa-65-ipd_ref/symmetric-shake.c.o -c /home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/sig/ml_dsa/pqcrystals-dilithium-standard_ml-dsa-65-ipd_ref/symmetric-shake.c",
+  "file": "/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/sig/ml_dsa/pqcrystals-dilithium-standard_ml-dsa-65-ipd_ref/symmetric-shake.c",
+  "output": "src/sig/ml_dsa/CMakeFiles/ml_dsa_65_ipd_ref.dir/pqcrystals-dilithium-standard_ml-dsa-65-ipd_ref/symmetric-shake.c.o"
+},
+{
+  "directory": "/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-build",
+  "command": "/usr/bin/cc -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-build/include -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/sig/ml_dsa/pqcrystals-dilithium-standard_ml-dsa-65-ipd_avx2 -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/common/pqclean_shims -std=gnu11 -fPIC -fvisibility=hidden -Wa,--noexecstack -O3 -fomit-frame-pointer -fdata-sections -ffunction-sections -Wl,--gc-sections -mavx2 -mpopcnt -DDILITHIUM_MODE=3 -o src/sig/ml_dsa/CMakeFiles/ml_dsa_65_ipd_avx2.dir/pqcrystals-dilithium-standard_ml-dsa-65-ipd_avx2/consts.c.o -c /home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/sig/ml_dsa/pqcrystals-dilithium-standard_ml-dsa-65-ipd_avx2/consts.c",
+  "file": "/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/sig/ml_dsa/pqcrystals-dilithium-standard_ml-dsa-65-ipd_avx2/consts.c",
+  "output": "src/sig/ml_dsa/CMakeFiles/ml_dsa_65_ipd_avx2.dir/pqcrystals-dilithium-standard_ml-dsa-65-ipd_avx2/consts.c.o"
+},
+{
+  "directory": "/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-build",
+  "command": "/usr/bin/cc -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-build/include -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/sig/ml_dsa/pqcrystals-dilithium-standard_ml-dsa-65-ipd_avx2 -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/common/pqclean_shims -fPIC -Wa,--noexecstack -O3 -fomit-frame-pointer -fdata-sections -ffunction-sections -Wl,--gc-sections -mavx2 -mpopcnt -DDILITHIUM_MODE=3 -o src/sig/ml_dsa/CMakeFiles/ml_dsa_65_ipd_avx2.dir/pqcrystals-dilithium-standard_ml-dsa-65-ipd_avx2/invntt.S.o -c /home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/sig/ml_dsa/pqcrystals-dilithium-standard_ml-dsa-65-ipd_avx2/invntt.S",
+  "file": "/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/sig/ml_dsa/pqcrystals-dilithium-standard_ml-dsa-65-ipd_avx2/invntt.S",
+  "output": "src/sig/ml_dsa/CMakeFiles/ml_dsa_65_ipd_avx2.dir/pqcrystals-dilithium-standard_ml-dsa-65-ipd_avx2/invntt.S.o"
+},
+{
+  "directory": "/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-build",
+  "command": "/usr/bin/cc -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-build/include -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/sig/ml_dsa/pqcrystals-dilithium-standard_ml-dsa-65-ipd_avx2 -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/common/pqclean_shims -fPIC -Wa,--noexecstack -O3 -fomit-frame-pointer -fdata-sections -ffunction-sections -Wl,--gc-sections -mavx2 -mpopcnt -DDILITHIUM_MODE=3 -o src/sig/ml_dsa/CMakeFiles/ml_dsa_65_ipd_avx2.dir/pqcrystals-dilithium-standard_ml-dsa-65-ipd_avx2/ntt.S.o -c /home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/sig/ml_dsa/pqcrystals-dilithium-standard_ml-dsa-65-ipd_avx2/ntt.S",
+  "file": "/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/sig/ml_dsa/pqcrystals-dilithium-standard_ml-dsa-65-ipd_avx2/ntt.S",
+  "output": "src/sig/ml_dsa/CMakeFiles/ml_dsa_65_ipd_avx2.dir/pqcrystals-dilithium-standard_ml-dsa-65-ipd_avx2/ntt.S.o"
+},
+{
+  "directory": "/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-build",
+  "command": "/usr/bin/cc -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-build/include -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/sig/ml_dsa/pqcrystals-dilithium-standard_ml-dsa-65-ipd_avx2 -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/common/pqclean_shims -std=gnu11 -fPIC -fvisibility=hidden -Wa,--noexecstack -O3 -fomit-frame-pointer -fdata-sections -ffunction-sections -Wl,--gc-sections -mavx2 -mpopcnt -DDILITHIUM_MODE=3 -o src/sig/ml_dsa/CMakeFiles/ml_dsa_65_ipd_avx2.dir/pqcrystals-dilithium-standard_ml-dsa-65-ipd_avx2/packing.c.o -c /home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/sig/ml_dsa/pqcrystals-dilithium-standard_ml-dsa-65-ipd_avx2/packing.c",
+  "file": "/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/sig/ml_dsa/pqcrystals-dilithium-standard_ml-dsa-65-ipd_avx2/packing.c",
+  "output": "src/sig/ml_dsa/CMakeFiles/ml_dsa_65_ipd_avx2.dir/pqcrystals-dilithium-standard_ml-dsa-65-ipd_avx2/packing.c.o"
+},
+{
+  "directory": "/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-build",
+  "command": "/usr/bin/cc -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-build/include -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/sig/ml_dsa/pqcrystals-dilithium-standard_ml-dsa-65-ipd_avx2 -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/common/pqclean_shims -fPIC -Wa,--noexecstack -O3 -fomit-frame-pointer -fdata-sections -ffunction-sections -Wl,--gc-sections -mavx2 -mpopcnt -DDILITHIUM_MODE=3 -o src/sig/ml_dsa/CMakeFiles/ml_dsa_65_ipd_avx2.dir/pqcrystals-dilithium-standard_ml-dsa-65-ipd_avx2/pointwise.S.o -c /home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/sig/ml_dsa/pqcrystals-dilithium-standard_ml-dsa-65-ipd_avx2/pointwise.S",
+  "file": "/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/sig/ml_dsa/pqcrystals-dilithium-standard_ml-dsa-65-ipd_avx2/pointwise.S",
+  "output": "src/sig/ml_dsa/CMakeFiles/ml_dsa_65_ipd_avx2.dir/pqcrystals-dilithium-standard_ml-dsa-65-ipd_avx2/pointwise.S.o"
+},
+{
+  "directory": "/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-build",
+  "command": "/usr/bin/cc -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-build/include -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/sig/ml_dsa/pqcrystals-dilithium-standard_ml-dsa-65-ipd_avx2 -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/common/pqclean_shims -std=gnu11 -fPIC -fvisibility=hidden -Wa,--noexecstack -O3 -fomit-frame-pointer -fdata-sections -ffunction-sections -Wl,--gc-sections -mavx2 -mpopcnt -DDILITHIUM_MODE=3 -o src/sig/ml_dsa/CMakeFiles/ml_dsa_65_ipd_avx2.dir/pqcrystals-dilithium-standard_ml-dsa-65-ipd_avx2/poly.c.o -c /home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/sig/ml_dsa/pqcrystals-dilithium-standard_ml-dsa-65-ipd_avx2/poly.c",
+  "file": "/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/sig/ml_dsa/pqcrystals-dilithium-standard_ml-dsa-65-ipd_avx2/poly.c",
+  "output": "src/sig/ml_dsa/CMakeFiles/ml_dsa_65_ipd_avx2.dir/pqcrystals-dilithium-standard_ml-dsa-65-ipd_avx2/poly.c.o"
+},
+{
+  "directory": "/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-build",
+  "command": "/usr/bin/cc -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-build/include -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/sig/ml_dsa/pqcrystals-dilithium-standard_ml-dsa-65-ipd_avx2 -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/common/pqclean_shims -std=gnu11 -fPIC -fvisibility=hidden -Wa,--noexecstack -O3 -fomit-frame-pointer -fdata-sections -ffunction-sections -Wl,--gc-sections -mavx2 -mpopcnt -DDILITHIUM_MODE=3 -o src/sig/ml_dsa/CMakeFiles/ml_dsa_65_ipd_avx2.dir/pqcrystals-dilithium-standard_ml-dsa-65-ipd_avx2/polyvec.c.o -c /home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/sig/ml_dsa/pqcrystals-dilithium-standard_ml-dsa-65-ipd_avx2/polyvec.c",
+  "file": "/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/sig/ml_dsa/pqcrystals-dilithium-standard_ml-dsa-65-ipd_avx2/polyvec.c",
+  "output": "src/sig/ml_dsa/CMakeFiles/ml_dsa_65_ipd_avx2.dir/pqcrystals-dilithium-standard_ml-dsa-65-ipd_avx2/polyvec.c.o"
+},
+{
+  "directory": "/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-build",
+  "command": "/usr/bin/cc -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-build/include -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/sig/ml_dsa/pqcrystals-dilithium-standard_ml-dsa-65-ipd_avx2 -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/common/pqclean_shims -std=gnu11 -fPIC -fvisibility=hidden -Wa,--noexecstack -O3 -fomit-frame-pointer -fdata-sections -ffunction-sections -Wl,--gc-sections -mavx2 -mpopcnt -DDILITHIUM_MODE=3 -o src/sig/ml_dsa/CMakeFiles/ml_dsa_65_ipd_avx2.dir/pqcrystals-dilithium-standard_ml-dsa-65-ipd_avx2/rejsample.c.o -c /home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/sig/ml_dsa/pqcrystals-dilithium-standard_ml-dsa-65-ipd_avx2/rejsample.c",
+  "file": "/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/sig/ml_dsa/pqcrystals-dilithium-standard_ml-dsa-65-ipd_avx2/rejsample.c",
+  "output": "src/sig/ml_dsa/CMakeFiles/ml_dsa_65_ipd_avx2.dir/pqcrystals-dilithium-standard_ml-dsa-65-ipd_avx2/rejsample.c.o"
+},
+{
+  "directory": "/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-build",
+  "command": "/usr/bin/cc -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-build/include -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/sig/ml_dsa/pqcrystals-dilithium-standard_ml-dsa-65-ipd_avx2 -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/common/pqclean_shims -std=gnu11 -fPIC -fvisibility=hidden -Wa,--noexecstack -O3 -fomit-frame-pointer -fdata-sections -ffunction-sections -Wl,--gc-sections -mavx2 -mpopcnt -DDILITHIUM_MODE=3 -o src/sig/ml_dsa/CMakeFiles/ml_dsa_65_ipd_avx2.dir/pqcrystals-dilithium-standard_ml-dsa-65-ipd_avx2/rounding.c.o -c /home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/sig/ml_dsa/pqcrystals-dilithium-standard_ml-dsa-65-ipd_avx2/rounding.c",
+  "file": "/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/sig/ml_dsa/pqcrystals-dilithium-standard_ml-dsa-65-ipd_avx2/rounding.c",
+  "output": "src/sig/ml_dsa/CMakeFiles/ml_dsa_65_ipd_avx2.dir/pqcrystals-dilithium-standard_ml-dsa-65-ipd_avx2/rounding.c.o"
+},
+{
+  "directory": "/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-build",
+  "command": "/usr/bin/cc -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-build/include -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/sig/ml_dsa/pqcrystals-dilithium-standard_ml-dsa-65-ipd_avx2 -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/common/pqclean_shims -fPIC -Wa,--noexecstack -O3 -fomit-frame-pointer -fdata-sections -ffunction-sections -Wl,--gc-sections -mavx2 -mpopcnt -DDILITHIUM_MODE=3 -o src/sig/ml_dsa/CMakeFiles/ml_dsa_65_ipd_avx2.dir/pqcrystals-dilithium-standard_ml-dsa-65-ipd_avx2/shuffle.S.o -c /home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/sig/ml_dsa/pqcrystals-dilithium-standard_ml-dsa-65-ipd_avx2/shuffle.S",
+  "file": "/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/sig/ml_dsa/pqcrystals-dilithium-standard_ml-dsa-65-ipd_avx2/shuffle.S",
+  "output": "src/sig/ml_dsa/CMakeFiles/ml_dsa_65_ipd_avx2.dir/pqcrystals-dilithium-standard_ml-dsa-65-ipd_avx2/shuffle.S.o"
+},
+{
+  "directory": "/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-build",
+  "command": "/usr/bin/cc -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-build/include -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/sig/ml_dsa/pqcrystals-dilithium-standard_ml-dsa-65-ipd_avx2 -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/common/pqclean_shims -std=gnu11 -fPIC -fvisibility=hidden -Wa,--noexecstack -O3 -fomit-frame-pointer -fdata-sections -ffunction-sections -Wl,--gc-sections -mavx2 -mpopcnt -DDILITHIUM_MODE=3 -o src/sig/ml_dsa/CMakeFiles/ml_dsa_65_ipd_avx2.dir/pqcrystals-dilithium-standard_ml-dsa-65-ipd_avx2/sign.c.o -c /home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/sig/ml_dsa/pqcrystals-dilithium-standard_ml-dsa-65-ipd_avx2/sign.c",
+  "file": "/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/sig/ml_dsa/pqcrystals-dilithium-standard_ml-dsa-65-ipd_avx2/sign.c",
+  "output": "src/sig/ml_dsa/CMakeFiles/ml_dsa_65_ipd_avx2.dir/pqcrystals-dilithium-standard_ml-dsa-65-ipd_avx2/sign.c.o"
+},
+{
+  "directory": "/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-build",
+  "command": "/usr/bin/cc -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-build/include -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/sig/ml_dsa/pqcrystals-dilithium-standard_ml-dsa-65-ipd_avx2 -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/common/pqclean_shims -std=gnu11 -fPIC -fvisibility=hidden -Wa,--noexecstack -O3 -fomit-frame-pointer -fdata-sections -ffunction-sections -Wl,--gc-sections -mavx2 -mpopcnt -DDILITHIUM_MODE=3 -o src/sig/ml_dsa/CMakeFiles/ml_dsa_65_ipd_avx2.dir/pqcrystals-dilithium-standard_ml-dsa-65-ipd_avx2/symmetric-shake.c.o -c /home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/sig/ml_dsa/pqcrystals-dilithium-standard_ml-dsa-65-ipd_avx2/symmetric-shake.c",
+  "file": "/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/sig/ml_dsa/pqcrystals-dilithium-standard_ml-dsa-65-ipd_avx2/symmetric-shake.c",
+  "output": "src/sig/ml_dsa/CMakeFiles/ml_dsa_65_ipd_avx2.dir/pqcrystals-dilithium-standard_ml-dsa-65-ipd_avx2/symmetric-shake.c.o"
+},
+{
+  "directory": "/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-build",
+  "command": "/usr/bin/cc -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-build/include -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/sig/ml_dsa/pqcrystals-dilithium-standard_ml-dsa-87-ipd_ref -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/common/pqclean_shims -std=gnu11 -fPIC -fvisibility=hidden -Wa,--noexecstack -O3 -fomit-frame-pointer -fdata-sections -ffunction-sections -Wl,--gc-sections -DDILITHIUM_MODE=5 -o src/sig/ml_dsa/CMakeFiles/ml_dsa_87_ipd_ref.dir/sig_ml_dsa_87_ipd.c.o -c /home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/sig/ml_dsa/sig_ml_dsa_87_ipd.c",
+  "file": "/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/sig/ml_dsa/sig_ml_dsa_87_ipd.c",
+  "output": "src/sig/ml_dsa/CMakeFiles/ml_dsa_87_ipd_ref.dir/sig_ml_dsa_87_ipd.c.o"
+},
+{
+  "directory": "/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-build",
+  "command": "/usr/bin/cc -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-build/include -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/sig/ml_dsa/pqcrystals-dilithium-standard_ml-dsa-87-ipd_ref -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/common/pqclean_shims -std=gnu11 -fPIC -fvisibility=hidden -Wa,--noexecstack -O3 -fomit-frame-pointer -fdata-sections -ffunction-sections -Wl,--gc-sections -DDILITHIUM_MODE=5 -o src/sig/ml_dsa/CMakeFiles/ml_dsa_87_ipd_ref.dir/pqcrystals-dilithium-standard_ml-dsa-87-ipd_ref/ntt.c.o -c /home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/sig/ml_dsa/pqcrystals-dilithium-standard_ml-dsa-87-ipd_ref/ntt.c",
+  "file": "/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/sig/ml_dsa/pqcrystals-dilithium-standard_ml-dsa-87-ipd_ref/ntt.c",
+  "output": "src/sig/ml_dsa/CMakeFiles/ml_dsa_87_ipd_ref.dir/pqcrystals-dilithium-standard_ml-dsa-87-ipd_ref/ntt.c.o"
+},
+{
+  "directory": "/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-build",
+  "command": "/usr/bin/cc -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-build/include -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/sig/ml_dsa/pqcrystals-dilithium-standard_ml-dsa-87-ipd_ref -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/common/pqclean_shims -std=gnu11 -fPIC -fvisibility=hidden -Wa,--noexecstack -O3 -fomit-frame-pointer -fdata-sections -ffunction-sections -Wl,--gc-sections -DDILITHIUM_MODE=5 -o src/sig/ml_dsa/CMakeFiles/ml_dsa_87_ipd_ref.dir/pqcrystals-dilithium-standard_ml-dsa-87-ipd_ref/packing.c.o -c /home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/sig/ml_dsa/pqcrystals-dilithium-standard_ml-dsa-87-ipd_ref/packing.c",
+  "file": "/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/sig/ml_dsa/pqcrystals-dilithium-standard_ml-dsa-87-ipd_ref/packing.c",
+  "output": "src/sig/ml_dsa/CMakeFiles/ml_dsa_87_ipd_ref.dir/pqcrystals-dilithium-standard_ml-dsa-87-ipd_ref/packing.c.o"
+},
+{
+  "directory": "/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-build",
+  "command": "/usr/bin/cc -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-build/include -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/sig/ml_dsa/pqcrystals-dilithium-standard_ml-dsa-87-ipd_ref -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/common/pqclean_shims -std=gnu11 -fPIC -fvisibility=hidden -Wa,--noexecstack -O3 -fomit-frame-pointer -fdata-sections -ffunction-sections -Wl,--gc-sections -DDILITHIUM_MODE=5 -o src/sig/ml_dsa/CMakeFiles/ml_dsa_87_ipd_ref.dir/pqcrystals-dilithium-standard_ml-dsa-87-ipd_ref/poly.c.o -c /home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/sig/ml_dsa/pqcrystals-dilithium-standard_ml-dsa-87-ipd_ref/poly.c",
+  "file": "/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/sig/ml_dsa/pqcrystals-dilithium-standard_ml-dsa-87-ipd_ref/poly.c",
+  "output": "src/sig/ml_dsa/CMakeFiles/ml_dsa_87_ipd_ref.dir/pqcrystals-dilithium-standard_ml-dsa-87-ipd_ref/poly.c.o"
+},
+{
+  "directory": "/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-build",
+  "command": "/usr/bin/cc -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-build/include -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/sig/ml_dsa/pqcrystals-dilithium-standard_ml-dsa-87-ipd_ref -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/common/pqclean_shims -std=gnu11 -fPIC -fvisibility=hidden -Wa,--noexecstack -O3 -fomit-frame-pointer -fdata-sections -ffunction-sections -Wl,--gc-sections -DDILITHIUM_MODE=5 -o src/sig/ml_dsa/CMakeFiles/ml_dsa_87_ipd_ref.dir/pqcrystals-dilithium-standard_ml-dsa-87-ipd_ref/polyvec.c.o -c /home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/sig/ml_dsa/pqcrystals-dilithium-standard_ml-dsa-87-ipd_ref/polyvec.c",
+  "file": "/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/sig/ml_dsa/pqcrystals-dilithium-standard_ml-dsa-87-ipd_ref/polyvec.c",
+  "output": "src/sig/ml_dsa/CMakeFiles/ml_dsa_87_ipd_ref.dir/pqcrystals-dilithium-standard_ml-dsa-87-ipd_ref/polyvec.c.o"
+},
+{
+  "directory": "/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-build",
+  "command": "/usr/bin/cc -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-build/include -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/sig/ml_dsa/pqcrystals-dilithium-standard_ml-dsa-87-ipd_ref -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/common/pqclean_shims -std=gnu11 -fPIC -fvisibility=hidden -Wa,--noexecstack -O3 -fomit-frame-pointer -fdata-sections -ffunction-sections -Wl,--gc-sections -DDILITHIUM_MODE=5 -o src/sig/ml_dsa/CMakeFiles/ml_dsa_87_ipd_ref.dir/pqcrystals-dilithium-standard_ml-dsa-87-ipd_ref/reduce.c.o -c /home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/sig/ml_dsa/pqcrystals-dilithium-standard_ml-dsa-87-ipd_ref/reduce.c",
+  "file": "/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/sig/ml_dsa/pqcrystals-dilithium-standard_ml-dsa-87-ipd_ref/reduce.c",
+  "output": "src/sig/ml_dsa/CMakeFiles/ml_dsa_87_ipd_ref.dir/pqcrystals-dilithium-standard_ml-dsa-87-ipd_ref/reduce.c.o"
+},
+{
+  "directory": "/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-build",
+  "command": "/usr/bin/cc -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-build/include -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/sig/ml_dsa/pqcrystals-dilithium-standard_ml-dsa-87-ipd_ref -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/common/pqclean_shims -std=gnu11 -fPIC -fvisibility=hidden -Wa,--noexecstack -O3 -fomit-frame-pointer -fdata-sections -ffunction-sections -Wl,--gc-sections -DDILITHIUM_MODE=5 -o src/sig/ml_dsa/CMakeFiles/ml_dsa_87_ipd_ref.dir/pqcrystals-dilithium-standard_ml-dsa-87-ipd_ref/rounding.c.o -c /home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/sig/ml_dsa/pqcrystals-dilithium-standard_ml-dsa-87-ipd_ref/rounding.c",
+  "file": "/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/sig/ml_dsa/pqcrystals-dilithium-standard_ml-dsa-87-ipd_ref/rounding.c",
+  "output": "src/sig/ml_dsa/CMakeFiles/ml_dsa_87_ipd_ref.dir/pqcrystals-dilithium-standard_ml-dsa-87-ipd_ref/rounding.c.o"
+},
+{
+  "directory": "/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-build",
+  "command": "/usr/bin/cc -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-build/include -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/sig/ml_dsa/pqcrystals-dilithium-standard_ml-dsa-87-ipd_ref -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/common/pqclean_shims -std=gnu11 -fPIC -fvisibility=hidden -Wa,--noexecstack -O3 -fomit-frame-pointer -fdata-sections -ffunction-sections -Wl,--gc-sections -DDILITHIUM_MODE=5 -o src/sig/ml_dsa/CMakeFiles/ml_dsa_87_ipd_ref.dir/pqcrystals-dilithium-standard_ml-dsa-87-ipd_ref/sign.c.o -c /home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/sig/ml_dsa/pqcrystals-dilithium-standard_ml-dsa-87-ipd_ref/sign.c",
+  "file": "/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/sig/ml_dsa/pqcrystals-dilithium-standard_ml-dsa-87-ipd_ref/sign.c",
+  "output": "src/sig/ml_dsa/CMakeFiles/ml_dsa_87_ipd_ref.dir/pqcrystals-dilithium-standard_ml-dsa-87-ipd_ref/sign.c.o"
+},
+{
+  "directory": "/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-build",
+  "command": "/usr/bin/cc -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-build/include -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/sig/ml_dsa/pqcrystals-dilithium-standard_ml-dsa-87-ipd_ref -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/common/pqclean_shims -std=gnu11 -fPIC -fvisibility=hidden -Wa,--noexecstack -O3 -fomit-frame-pointer -fdata-sections -ffunction-sections -Wl,--gc-sections -DDILITHIUM_MODE=5 -o src/sig/ml_dsa/CMakeFiles/ml_dsa_87_ipd_ref.dir/pqcrystals-dilithium-standard_ml-dsa-87-ipd_ref/symmetric-shake.c.o -c /home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/sig/ml_dsa/pqcrystals-dilithium-standard_ml-dsa-87-ipd_ref/symmetric-shake.c",
+  "file": "/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/sig/ml_dsa/pqcrystals-dilithium-standard_ml-dsa-87-ipd_ref/symmetric-shake.c",
+  "output": "src/sig/ml_dsa/CMakeFiles/ml_dsa_87_ipd_ref.dir/pqcrystals-dilithium-standard_ml-dsa-87-ipd_ref/symmetric-shake.c.o"
+},
+{
+  "directory": "/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-build",
+  "command": "/usr/bin/cc -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-build/include -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/sig/ml_dsa/pqcrystals-dilithium-standard_ml-dsa-87-ipd_avx2 -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/common/pqclean_shims -std=gnu11 -fPIC -fvisibility=hidden -Wa,--noexecstack -O3 -fomit-frame-pointer -fdata-sections -ffunction-sections -Wl,--gc-sections -mavx2 -mpopcnt -DDILITHIUM_MODE=5 -o src/sig/ml_dsa/CMakeFiles/ml_dsa_87_ipd_avx2.dir/pqcrystals-dilithium-standard_ml-dsa-87-ipd_avx2/consts.c.o -c /home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/sig/ml_dsa/pqcrystals-dilithium-standard_ml-dsa-87-ipd_avx2/consts.c",
+  "file": "/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/sig/ml_dsa/pqcrystals-dilithium-standard_ml-dsa-87-ipd_avx2/consts.c",
+  "output": "src/sig/ml_dsa/CMakeFiles/ml_dsa_87_ipd_avx2.dir/pqcrystals-dilithium-standard_ml-dsa-87-ipd_avx2/consts.c.o"
+},
+{
+  "directory": "/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-build",
+  "command": "/usr/bin/cc -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-build/include -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/sig/ml_dsa/pqcrystals-dilithium-standard_ml-dsa-87-ipd_avx2 -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/common/pqclean_shims -fPIC -Wa,--noexecstack -O3 -fomit-frame-pointer -fdata-sections -ffunction-sections -Wl,--gc-sections -mavx2 -mpopcnt -DDILITHIUM_MODE=5 -o src/sig/ml_dsa/CMakeFiles/ml_dsa_87_ipd_avx2.dir/pqcrystals-dilithium-standard_ml-dsa-87-ipd_avx2/invntt.S.o -c /home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/sig/ml_dsa/pqcrystals-dilithium-standard_ml-dsa-87-ipd_avx2/invntt.S",
+  "file": "/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/sig/ml_dsa/pqcrystals-dilithium-standard_ml-dsa-87-ipd_avx2/invntt.S",
+  "output": "src/sig/ml_dsa/CMakeFiles/ml_dsa_87_ipd_avx2.dir/pqcrystals-dilithium-standard_ml-dsa-87-ipd_avx2/invntt.S.o"
+},
+{
+  "directory": "/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-build",
+  "command": "/usr/bin/cc -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-build/include -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/sig/ml_dsa/pqcrystals-dilithium-standard_ml-dsa-87-ipd_avx2 -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/common/pqclean_shims -fPIC -Wa,--noexecstack -O3 -fomit-frame-pointer -fdata-sections -ffunction-sections -Wl,--gc-sections -mavx2 -mpopcnt -DDILITHIUM_MODE=5 -o src/sig/ml_dsa/CMakeFiles/ml_dsa_87_ipd_avx2.dir/pqcrystals-dilithium-standard_ml-dsa-87-ipd_avx2/ntt.S.o -c /home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/sig/ml_dsa/pqcrystals-dilithium-standard_ml-dsa-87-ipd_avx2/ntt.S",
+  "file": "/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/sig/ml_dsa/pqcrystals-dilithium-standard_ml-dsa-87-ipd_avx2/ntt.S",
+  "output": "src/sig/ml_dsa/CMakeFiles/ml_dsa_87_ipd_avx2.dir/pqcrystals-dilithium-standard_ml-dsa-87-ipd_avx2/ntt.S.o"
+},
+{
+  "directory": "/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-build",
+  "command": "/usr/bin/cc -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-build/include -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/sig/ml_dsa/pqcrystals-dilithium-standard_ml-dsa-87-ipd_avx2 -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/common/pqclean_shims -std=gnu11 -fPIC -fvisibility=hidden -Wa,--noexecstack -O3 -fomit-frame-pointer -fdata-sections -ffunction-sections -Wl,--gc-sections -mavx2 -mpopcnt -DDILITHIUM_MODE=5 -o src/sig/ml_dsa/CMakeFiles/ml_dsa_87_ipd_avx2.dir/pqcrystals-dilithium-standard_ml-dsa-87-ipd_avx2/packing.c.o -c /home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/sig/ml_dsa/pqcrystals-dilithium-standard_ml-dsa-87-ipd_avx2/packing.c",
+  "file": "/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/sig/ml_dsa/pqcrystals-dilithium-standard_ml-dsa-87-ipd_avx2/packing.c",
+  "output": "src/sig/ml_dsa/CMakeFiles/ml_dsa_87_ipd_avx2.dir/pqcrystals-dilithium-standard_ml-dsa-87-ipd_avx2/packing.c.o"
+},
+{
+  "directory": "/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-build",
+  "command": "/usr/bin/cc -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-build/include -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/sig/ml_dsa/pqcrystals-dilithium-standard_ml-dsa-87-ipd_avx2 -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/common/pqclean_shims -fPIC -Wa,--noexecstack -O3 -fomit-frame-pointer -fdata-sections -ffunction-sections -Wl,--gc-sections -mavx2 -mpopcnt -DDILITHIUM_MODE=5 -o src/sig/ml_dsa/CMakeFiles/ml_dsa_87_ipd_avx2.dir/pqcrystals-dilithium-standard_ml-dsa-87-ipd_avx2/pointwise.S.o -c /home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/sig/ml_dsa/pqcrystals-dilithium-standard_ml-dsa-87-ipd_avx2/pointwise.S",
+  "file": "/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/sig/ml_dsa/pqcrystals-dilithium-standard_ml-dsa-87-ipd_avx2/pointwise.S",
+  "output": "src/sig/ml_dsa/CMakeFiles/ml_dsa_87_ipd_avx2.dir/pqcrystals-dilithium-standard_ml-dsa-87-ipd_avx2/pointwise.S.o"
+},
+{
+  "directory": "/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-build",
+  "command": "/usr/bin/cc -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-build/include -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/sig/ml_dsa/pqcrystals-dilithium-standard_ml-dsa-87-ipd_avx2 -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/common/pqclean_shims -std=gnu11 -fPIC -fvisibility=hidden -Wa,--noexecstack -O3 -fomit-frame-pointer -fdata-sections -ffunction-sections -Wl,--gc-sections -mavx2 -mpopcnt -DDILITHIUM_MODE=5 -o src/sig/ml_dsa/CMakeFiles/ml_dsa_87_ipd_avx2.dir/pqcrystals-dilithium-standard_ml-dsa-87-ipd_avx2/poly.c.o -c /home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/sig/ml_dsa/pqcrystals-dilithium-standard_ml-dsa-87-ipd_avx2/poly.c",
+  "file": "/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/sig/ml_dsa/pqcrystals-dilithium-standard_ml-dsa-87-ipd_avx2/poly.c",
+  "output": "src/sig/ml_dsa/CMakeFiles/ml_dsa_87_ipd_avx2.dir/pqcrystals-dilithium-standard_ml-dsa-87-ipd_avx2/poly.c.o"
+},
+{
+  "directory": "/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-build",
+  "command": "/usr/bin/cc -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-build/include -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/sig/ml_dsa/pqcrystals-dilithium-standard_ml-dsa-87-ipd_avx2 -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/common/pqclean_shims -std=gnu11 -fPIC -fvisibility=hidden -Wa,--noexecstack -O3 -fomit-frame-pointer -fdata-sections -ffunction-sections -Wl,--gc-sections -mavx2 -mpopcnt -DDILITHIUM_MODE=5 -o src/sig/ml_dsa/CMakeFiles/ml_dsa_87_ipd_avx2.dir/pqcrystals-dilithium-standard_ml-dsa-87-ipd_avx2/polyvec.c.o -c /home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/sig/ml_dsa/pqcrystals-dilithium-standard_ml-dsa-87-ipd_avx2/polyvec.c",
+  "file": "/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/sig/ml_dsa/pqcrystals-dilithium-standard_ml-dsa-87-ipd_avx2/polyvec.c",
+  "output": "src/sig/ml_dsa/CMakeFiles/ml_dsa_87_ipd_avx2.dir/pqcrystals-dilithium-standard_ml-dsa-87-ipd_avx2/polyvec.c.o"
+},
+{
+  "directory": "/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-build",
+  "command": "/usr/bin/cc -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-build/include -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/sig/ml_dsa/pqcrystals-dilithium-standard_ml-dsa-87-ipd_avx2 -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/common/pqclean_shims -std=gnu11 -fPIC -fvisibility=hidden -Wa,--noexecstack -O3 -fomit-frame-pointer -fdata-sections -ffunction-sections -Wl,--gc-sections -mavx2 -mpopcnt -DDILITHIUM_MODE=5 -o src/sig/ml_dsa/CMakeFiles/ml_dsa_87_ipd_avx2.dir/pqcrystals-dilithium-standard_ml-dsa-87-ipd_avx2/rejsample.c.o -c /home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/sig/ml_dsa/pqcrystals-dilithium-standard_ml-dsa-87-ipd_avx2/rejsample.c",
+  "file": "/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/sig/ml_dsa/pqcrystals-dilithium-standard_ml-dsa-87-ipd_avx2/rejsample.c",
+  "output": "src/sig/ml_dsa/CMakeFiles/ml_dsa_87_ipd_avx2.dir/pqcrystals-dilithium-standard_ml-dsa-87-ipd_avx2/rejsample.c.o"
+},
+{
+  "directory": "/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-build",
+  "command": "/usr/bin/cc -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-build/include -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/sig/ml_dsa/pqcrystals-dilithium-standard_ml-dsa-87-ipd_avx2 -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/common/pqclean_shims -std=gnu11 -fPIC -fvisibility=hidden -Wa,--noexecstack -O3 -fomit-frame-pointer -fdata-sections -ffunction-sections -Wl,--gc-sections -mavx2 -mpopcnt -DDILITHIUM_MODE=5 -o src/sig/ml_dsa/CMakeFiles/ml_dsa_87_ipd_avx2.dir/pqcrystals-dilithium-standard_ml-dsa-87-ipd_avx2/rounding.c.o -c /home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/sig/ml_dsa/pqcrystals-dilithium-standard_ml-dsa-87-ipd_avx2/rounding.c",
+  "file": "/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/sig/ml_dsa/pqcrystals-dilithium-standard_ml-dsa-87-ipd_avx2/rounding.c",
+  "output": "src/sig/ml_dsa/CMakeFiles/ml_dsa_87_ipd_avx2.dir/pqcrystals-dilithium-standard_ml-dsa-87-ipd_avx2/rounding.c.o"
+},
+{
+  "directory": "/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-build",
+  "command": "/usr/bin/cc -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-build/include -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/sig/ml_dsa/pqcrystals-dilithium-standard_ml-dsa-87-ipd_avx2 -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/common/pqclean_shims -fPIC -Wa,--noexecstack -O3 -fomit-frame-pointer -fdata-sections -ffunction-sections -Wl,--gc-sections -mavx2 -mpopcnt -DDILITHIUM_MODE=5 -o src/sig/ml_dsa/CMakeFiles/ml_dsa_87_ipd_avx2.dir/pqcrystals-dilithium-standard_ml-dsa-87-ipd_avx2/shuffle.S.o -c /home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/sig/ml_dsa/pqcrystals-dilithium-standard_ml-dsa-87-ipd_avx2/shuffle.S",
+  "file": "/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/sig/ml_dsa/pqcrystals-dilithium-standard_ml-dsa-87-ipd_avx2/shuffle.S",
+  "output": "src/sig/ml_dsa/CMakeFiles/ml_dsa_87_ipd_avx2.dir/pqcrystals-dilithium-standard_ml-dsa-87-ipd_avx2/shuffle.S.o"
+},
+{
+  "directory": "/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-build",
+  "command": "/usr/bin/cc -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-build/include -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/sig/ml_dsa/pqcrystals-dilithium-standard_ml-dsa-87-ipd_avx2 -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/common/pqclean_shims -std=gnu11 -fPIC -fvisibility=hidden -Wa,--noexecstack -O3 -fomit-frame-pointer -fdata-sections -ffunction-sections -Wl,--gc-sections -mavx2 -mpopcnt -DDILITHIUM_MODE=5 -o src/sig/ml_dsa/CMakeFiles/ml_dsa_87_ipd_avx2.dir/pqcrystals-dilithium-standard_ml-dsa-87-ipd_avx2/sign.c.o -c /home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/sig/ml_dsa/pqcrystals-dilithium-standard_ml-dsa-87-ipd_avx2/sign.c",
+  "file": "/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/sig/ml_dsa/pqcrystals-dilithium-standard_ml-dsa-87-ipd_avx2/sign.c",
+  "output": "src/sig/ml_dsa/CMakeFiles/ml_dsa_87_ipd_avx2.dir/pqcrystals-dilithium-standard_ml-dsa-87-ipd_avx2/sign.c.o"
+},
+{
+  "directory": "/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-build",
+  "command": "/usr/bin/cc -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-build/include -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/sig/ml_dsa/pqcrystals-dilithium-standard_ml-dsa-87-ipd_avx2 -I/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/common/pqclean_shims -std=gnu11 -fPIC -fvisibility=hidden -Wa,--noexecstack -O3 -fomit-frame-pointer -fdata-sections -ffunction-sections -Wl,--gc-sections -mavx2 -mpopcnt -DDILITHIUM_MODE=5 -o src/sig/ml_dsa/CMakeFiles/ml_dsa_87_ipd_avx2.dir/pqcrystals-dilithium-standard_ml-dsa-87-ipd_avx2/symmetric-shake.c.o -c /home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/sig/ml_dsa/pqcrystals-dilithium-standard_ml-dsa-87-ipd_avx2/symmetric-shake.c",
+  "file": "/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs-src/src/sig/ml_dsa/pqcrystals-dilithium-standard_ml-dsa-87-ipd_avx2/symmetric-shake.c",
+  "output": "src/sig/ml_dsa/CMakeFiles/ml_dsa_87_ipd_avx2.dir/pqcrystals-dilithium-standard_ml-dsa-87-ipd_avx2/symmetric-shake.c.o"
+}
+]

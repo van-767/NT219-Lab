@@ -1,0 +1,10 @@
+prefix=/home/van767/Study/LabVNLabVN/NT219-Lab/LAB6/liboqs
+libdir=${prefix}/lib
+includedir=${prefix}/include
+
+Name: liboqs
+Description: Library for quantum-safe cryptographic algorithms
+Version: 0.10.1
+Requires.private: openssl
+Cflags: -I${includedir}
+Libs: -L${libdir} -loqs
